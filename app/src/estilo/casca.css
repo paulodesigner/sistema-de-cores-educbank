@@ -189,11 +189,6 @@
   .tok__hex { font-size:12px; color:var(--tx2); }
   .tok__var { font-size:11.5px; color:var(--tx3); }
   .tok__uso { font-size:13px; line-height:1.55; color:var(--tx2); }
-  .tok__escuro { display:flex; align-items:center; justify-content:space-between; gap:var(--s2);
-    margin:var(--s1) calc(var(--s4) * -1) calc(var(--s4) * -1); padding:7px var(--s4); background:var(--sf2);
-    font-size:11px; color:var(--tx3); }
-  .tok__escuro span { letter-spacing:.06em; text-transform:uppercase; font-weight:700; }
-  .tok__escuro code { font-size:11px; }
   .ds-copy { font-family:inherit; font-size:11px; font-weight:600; color:var(--tx3); background:none;
     border:1px solid var(--ln); border-radius:6px; padding:2px 7px; cursor:pointer; }
   .ds-copy:hover { color:var(--ac); border-color:var(--ac); }

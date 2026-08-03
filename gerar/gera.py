@@ -192,7 +192,6 @@ def swatch(p):
         <div class="tok__vals"><code class="tok__hex">{p['hex']}</code><code class="tok__var">{esc(p['cssVar'])}</code>
           <button type="button" class="ds-copy" data-copy="var({esc(p['cssVar'])})" title="Copiar a variável CSS">copiar</button></div>
         <p class="tok__uso">{esc(USO[p['nome']])}</p>
-        <div class="tok__escuro"><span>escuro</span><code>{p['dark'] or '—'}</code></div>
       </div>
     </article>'''
 
