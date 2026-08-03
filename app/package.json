@@ -1,0 +1,47 @@
+{
+  "name": "sistema-de-cores-app",
+  "private": true,
+  "type": "module",
+  "description": "Sistema de Cores VIVO: a documentação renderizando os componentes e as páginas REAIS do EducbankPay (alias read-only), com os tokens do padrão aplicados.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@clerk/vue": "2.4.5",
+    "@microsoft/signalr": "10.0.0",
+    "@vee-validate/i18n": "4.15.1",
+    "@vee-validate/rules": "4.15.1",
+    "@vuepic/vue-datepicker": "14.0.0",
+    "axios": "1.18.0",
+    "bootstrap": "5.3.8",
+    "currency.js": "2.0.4",
+    "date-fns": "4.4.0",
+    "json-formatter-js": "2.5.23",
+    "luxon": "3.7.2",
+    "maska": "3.2.0",
+    "pinia": "3.0.4",
+    "qrcode": "1.5.4",
+    "qs": "6.15.2",
+    "quill": "2.0.2",
+    "register-service-worker": "1.7.2",
+    "sanitize-html": "2.17.5",
+    "sweetalert2": "11.26.25",
+    "tiny-emitter": "2.1.0",
+    "tippy.js": "^6.3.7",
+    "v-money": "0.8.1",
+    "vee-validate": "4.15.1",
+    "vue": "3.5.38",
+    "vue-i18n": "11.4.6",
+    "vue-router": "5.1.0",
+    "vue3-tree": "0.11.5"
+  },
+  "devDependencies": {
+    "@vercel/edge": "^1.3.1",
+    "@vitejs/plugin-vue": "6.0.7",
+    "sass": "1.101.0",
+    "typescript": "^5.7.3",
+    "vite": "^7.1.5"
+  }
+}

@@ -1,0 +1,2137 @@
+[
+ {
+  "id": "edsbutton",
+  "titulo": "EdsButton",
+  "grupo": "Botões",
+  "arquivo": "@ebp/components/buttons/EdsButton.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/BrandHover",
+   "Content/OnFill"
+  ],
+  "nota": "",
+  "props": {
+   "variant": "primary"
+  },
+  "slot": "Confirmar"
+ },
+ {
+  "id": "edsbuttonremove",
+  "titulo": "EdsButtonRemove",
+  "grupo": "Botões",
+  "arquivo": "@ebp/components/buttons/EdsButtonRemove.vue",
+  "tokens": [
+   "Background/DangerSubtle",
+   "Background/Surface",
+   "Content/Danger",
+   "Border/Danger"
+  ],
+  "nota": "Passe o mouse, clique ou dê Tab — interação real.",
+  "props": {},
+  "slot": "Remover"
+ },
+ {
+  "id": "edsbuttonicon",
+  "titulo": "EdsButtonIcon",
+  "grupo": "Botões",
+  "arquivo": "@ebp/components/buttons/EdsButtonIcon.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/BrandHover",
+   "Content/OnFill"
+  ],
+  "nota": "Passe o mouse e clique (ou dê Tab) — os dois botões reagem de verdade.",
+  "props": {
+   "icon": "pencil-simple",
+   "variant": "primary"
+  },
+  "slot": ""
+ },
+ {
+  "id": "athinputtext",
+  "titulo": "AthInputText",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/texts/AthInputText.vue",
+  "tokens": [
+   "Background/Hover",
+   "Content/Primary",
+   "Border/Default"
+  ],
+  "nota": "Passe o mouse sem clicar — a borda escurece um pouco antes mesmo de focar.",
+  "props": {
+   "modelValue": "João da Silva",
+   "textLabel": "Nome do responsável"
+  }
+ },
+ {
+  "id": "edsinputselect",
+  "titulo": "EdsInputSelect",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/EdsInputSelect.vue",
+  "tokens": [
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Default",
+   "Border/Focus"
+  ],
+  "nota": "Passe o mouse, clique (foco real) ou use as pastilhas pra erro/desabilitado.",
+  "props": {
+   "label": "Turma",
+   "modelValue": "1",
+   "name": "turma",
+   "rules": "",
+   "options": [
+    {
+     "label": "1º ano",
+     "value": "1"
+    },
+    {
+     "label": "2º ano",
+     "value": "2"
+    },
+    {
+     "label": "3º ano",
+     "value": "3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "athinputdatepicker",
+  "titulo": "AthInputDatepicker",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/datepickers/AthInputDatepicker.vue",
+  "tokens": [
+   "Background/Hover",
+   "Content/Tertiary",
+   "Border/Default"
+  ],
+  "nota": "Clique no campo pra ver o foco real (mesmo comportamento do AthInputText)."
+ },
+ {
+  "id": "athinputmoney",
+  "titulo": "AthInputMoney",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/AthInputMoney.vue",
+  "tokens": [
+   "Background/Hover",
+   "Content/Primary",
+   "Border/Default"
+  ],
+  "nota": "Passe o mouse (hover) e clique (foco) — os dois reais.",
+  "props": {
+   "modelValue": 1250,
+   "textLabel": "Mensalidade"
+  }
+ },
+ {
+  "id": "athinputcheckbox",
+  "titulo": "AthInputCheckbox",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/AthInputCheckbox.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Surface",
+   "Content/Secondary",
+   "Border/Default"
+  ],
+  "nota": "Clique ou dê Tab pra ver marcado/foco reais.",
+  "props": {
+   "label": "Aceito os termos",
+   "modelValue": true
+  }
+ },
+ {
+  "id": "switch",
+  "titulo": "Switch",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/AthInputSwitch.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Surface",
+   "Border/Default"
+  ],
+  "nota": "",
+  "props": {
+   "modelValue": true
+  }
+ },
+ {
+  "id": "athinputdragdropfiles",
+  "titulo": "AthInputDragDropFiles",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/uploads/AthInputDragDropFiles.vue",
+  "tokens": [
+   "Content/Brand",
+   "Content/Tertiary",
+   "Border/Subtle"
+  ],
+  "nota": "Passe o mouse pra ver o hover real (à esquerda ele desbota tudo — não só o fundo)."
+ },
+ {
+  "id": "navsearch",
+  "titulo": "NavSearch",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/navbar/NavSearch.vue",
+  "tokens": [
+   "Background/Surface",
+   "Border/Default",
+   "Border/Subtle"
+  ],
+  "nota": "Clique dentro do campo ou use Tab pra ver o foco real."
+ },
+ {
+  "id": "athinputyearpicker",
+  "titulo": "AthInputYearpicker",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/datepickers/AthInputYearpicker.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Canvas",
+   "Background/Surface",
+   "Content/OnFill",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Subtle"
+  ],
+  "nota": "Tab até o campo à esquerda pra ver que o foco vem só do navegador, sem o anel roxo do resto do produto."
+ },
+ {
+  "id": "athinputrangepicker",
+  "titulo": "AthInputRangePicker",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/datepickers/AthInputRangePicker.vue",
+  "tokens": [
+   "Background/Canvas",
+   "Background/Surface",
+   "Background/Track",
+   "Content/Primary",
+   "Content/Secondary",
+   "Content/Tertiary",
+   "Border/Brand",
+   "Border/Focus",
+   "Border/Subtle"
+  ],
+  "nota": "Passe o mouse — mesmo Border/Hover (contorno sob o mouse) do resto dos campos."
+ },
+ {
+  "id": "athinputtextarea",
+  "titulo": "AthInputTextArea",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/texts/AthInputTextArea.vue",
+  "tokens": [
+   "Background/Hover",
+   "Content/Primary",
+   "Border/Default"
+  ],
+  "nota": "Clique dentro do texto — o foco vem do contorno em volta, não do textarea.",
+  "props": {
+   "modelValue": "Texto de exemplo",
+   "textLabel": "Observação"
+  }
+ },
+ {
+  "id": "athinputpercentage",
+  "titulo": "AthInputPercentage",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/AthInputPercentage.vue",
+  "tokens": [
+   "Background/Hover",
+   "Content/Primary",
+   "Border/Default"
+  ],
+  "nota": "Rótulo em destaque, usado acima de valores de porcentagem.",
+  "props": {
+   "modelValue": 10,
+   "textLabel": "Desconto"
+  }
+ },
+ {
+  "id": "athinputradio",
+  "titulo": "AthInputRadio",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/AthInputRadio.vue",
+  "tokens": [
+   "Content/Primary"
+  ],
+  "nota": "Clique nas opções — são radios reais.",
+  "props": {
+   "label": "Mensal",
+   "modelValue": true
+  }
+ },
+ {
+  "id": "athinputthemedefault",
+  "titulo": "AthInputThemeDefault",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/themes/AthInputThemeDefault.vue",
+  "tokens": [
+   "Background/Hover",
+   "Content/Primary",
+   "Border/Default"
+  ],
+  "nota": "Clique dentro do campo com erro pra ver a diferença no anel de foco.",
+  "props": {
+   "textLabel": "Nome do aluno"
+  },
+  "slots": {
+   "default": "Ana Souza"
+  }
+ },
+ {
+  "id": "athformaddress",
+  "titulo": "AthFormAddress",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/forms/address/AthFormAddress.vue",
+  "tokens": [
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Danger",
+   "Content/Primary",
+   "Border/Default"
+  ],
+  "nota": "Passe o mouse — mesmo Border/Hover (contorno sob o mouse) do AthInputText.",
+  "props": {
+   "modelValue": {
+    "zipCode": "01310-100",
+    "street": "Av. Paulista",
+    "number": "1000",
+    "complement": "",
+    "neighborhood": "Bela Vista",
+    "city": "São Paulo",
+    "state": "SP",
+    "country": "BR"
+   }
+  },
+  "largura": "cheia"
+ },
+ {
+  "id": "athinputdiscount",
+  "titulo": "AthInputDiscount",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/AthInputDiscount.vue",
+  "tokens": [
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Default",
+   "Border/Focus"
+  ],
+  "nota": "Passe o mouse — mesmo Border/Hover (contorno sob o mouse) dos campos já cobertos.",
+  "props": {
+   "modelValue": 10,
+   "textLabel": "Desconto"
+  }
+ },
+ {
+  "id": "edsinputmultiselectsuggest",
+  "titulo": "EdsInputMultiSelectSuggest",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/EdsInputMultiSelectSuggest.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Hover",
+   "Background/Surface",
+   "Content/OnFill",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Brand",
+   "Border/Default",
+   "Border/Focus",
+   "Border/Inverse"
+  ],
+  "nota": "Clique numa sugestão — ela some da lista e entra no campo selecionado, de verdade.",
+  "props": {
+   "name": "tags",
+   "textLabel": "Interesses",
+   "suggestionsLabel": "Sugestões",
+   "suggestions": [
+    "Integral",
+    "Bolsa",
+    "Transporte"
+   ],
+   "modelValue": [
+    "Integral"
+   ]
+  }
+ },
+ {
+  "id": "athsecuritypassword",
+  "titulo": "AthSecurityPassWord",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/password/AthSecurityPassWord.vue",
+  "tokens": [
+   "Content/Danger",
+   "Content/OnDangerSubtle"
+  ],
+  "nota": "Digite pra ver os requisitos mudarem de vermelho pra verde em tempo real.",
+  "largura": "meio",
+  "formaEsperada": "lista de requisitos de senha: texto pequeno num bloco alto é o desenho"
+ },
+ {
+  "id": "athinputmonthyearpicker",
+  "titulo": "AthInputMonthYearPicker",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/datepickers/AthInputMonthYearPicker.vue",
+  "tokens": [
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Primary",
+   "Content/Tertiary",
+   "Border/Default"
+  ],
+  "nota": "Passe o mouse — mesmo Border/Hover (contorno sob o mouse) dos outros campos de data."
+ },
+ {
+  "id": "athmulticheckbox",
+  "titulo": "AthMultiCheckbox",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/checkbox/AthMultiCheckbox.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Surface",
+   "Border/Default"
+  ],
+  "nota": "Clique — checkboxes reais.",
+  "props": {
+   "value": [
+    "a"
+   ],
+   "options": [
+    {
+     "name": "Manhã",
+     "value": "a"
+    },
+    {
+     "name": "Tarde",
+     "value": "b"
+    },
+    {
+     "name": "Noite",
+     "value": "c"
+    }
+   ]
+  }
+ },
+ {
+  "id": "athinputtextfake",
+  "titulo": "AthInputTextFake",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/fake/AthInputTextFake.vue",
+  "tokens": [
+   "Background/Hover",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Default"
+  ],
+  "nota": "Sem interação — é somente leitura.",
+  "props": {
+   "title": "Nome do aluno",
+   "text": "Ana Souza"
+  }
+ },
+ {
+  "id": "athinputrangeslider",
+  "titulo": "AthInputRangeSlider",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/AthInputRangeSlider.vue",
+  "tokens": [
+   "Background/BrandSubtle",
+   "Content/Brand",
+   "Border/Focus"
+  ],
+  "nota": "Arraste os 2 controles (mínimo e máximo) — inputs reais, cada um com o próprio valor.",
+  "largura": "meio"
+ },
+ {
+  "id": "athinputmulticheckbox",
+  "titulo": "AthInputMultiCheckbox",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/selects/AthInputMultiCheckbox.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/BrandSelected",
+   "Background/Surface",
+   "Content/Brand",
+   "Content/Primary",
+   "Content/Secondary",
+   "Content/Tertiary",
+   "Border/Default",
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo — mostra a tag de contagem já com itens selecionados.",
+  "props": {
+   "options": [
+    {
+     "name": "Manhã",
+     "value": "a"
+    },
+    {
+     "name": "Tarde",
+     "value": "b"
+    }
+   ],
+   "valueCheckBox": [
+    "a"
+   ]
+  }
+ },
+ {
+  "id": "athsignerslistinput",
+  "titulo": "AthSignersListInput",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/AthSignersListInput.vue",
+  "tokens": [
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Danger",
+   "Content/Primary",
+   "Border/Danger",
+   "Border/Default"
+  ],
+  "nota": "Passe o mouse nos campos e no botão — hover real.",
+  "props": {
+   "modelValue": [
+    {
+     "name": "Ana Souza",
+     "email": "ana@exemplo.com"
+    }
+   ]
+  }
+ },
+ {
+  "id": "athinputtextsearch",
+  "titulo": "AthInputTextSearch",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/texts/AthInputTextSearch.vue",
+  "tokens": [
+   "Content/Primary"
+  ],
+  "nota": "Passe o mouse — mesmo Border/Hover (contorno sob o mouse) dos outros campos.",
+  "props": {
+   "modelValue": "Ana",
+   "placeholder": "Buscar aluno",
+   "showIcon": true
+  }
+ },
+ {
+  "id": "athinputtexteditor",
+  "titulo": "AthInputTextEditor",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/texts/AthInputTextEditor.vue",
+  "tokens": [
+   "Background/Surface",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Focus",
+   "Border/Subtle"
+  ],
+  "nota": "Passe o mouse na moldura — mesmo Border/Hover (contorno sob o mouse); o miolo (toolbar Quill) é de outro módulo.",
+  "largura": "cheia",
+  "props": {
+   "textLabel": "Mensagem do lembrete",
+   "name": "mensagem",
+   "modelValue": "<p>Olá! A mensalidade de <strong>agosto</strong> vence em 10/08.</p>",
+   "placeholder": "Escreva a mensagem"
+  },
+  "formaEsperada": "editor de texto rico: área de escrita alta com pouco conteúdo é o desenho — a barra de ferramentas e o corpo vazio ocupam a altura de propósito"
+ },
+ {
+  "id": "athinputslider",
+  "titulo": "AthInputSlider",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/inputs/AthInputSlider.vue",
+  "tokens": [
+   "Background/Surface",
+   "Content/Brand",
+   "Content/Primary"
+  ],
+  "nota": "Arraste o controle — input real, com o valor acompanhando de verdade.",
+  "largura": "meio"
+ },
+ {
+  "id": "athselectfamily",
+  "titulo": "Família Ath*Select* (wrappers de dado fixo)",
+  "grupo": "Campos de formulário",
+  "arquivo": "@ebp/components/selects/AthInputSelectEnrollments.vue",
+  "tokens": [
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Primary",
+   "Content/Secondary",
+   "Content/Tertiary",
+   "Border/Default",
+   "Border/Focus"
+  ],
+  "nota": "Passe o mouse — mesmo comportamento do EdsInputSelect.",
+  "props": {
+   "modelValue": null,
+   "textLabel": "Matrícula"
+  }
+ },
+ {
+  "id": "athbreadcrumb",
+  "titulo": "AthBreadcrumb",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/breadcrumb/AthBreadcrumb.vue",
+  "tokens": [
+   "Content/Primary",
+   "Content/Tertiary"
+  ],
+  "nota": "Passe o mouse no link pra ver o hover real.",
+  "props": {
+   "items": [
+    {
+     "text": "Início",
+     "route": "/"
+    },
+    {
+     "text": "Matrículas",
+     "route": "/"
+    },
+    {
+     "text": "Ana Souza"
+    }
+   ]
+  }
+ },
+ {
+  "id": "athtab",
+  "titulo": "AthTab",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/tab/AthTab.vue",
+  "tokens": [],
+  "nota": "Sem comparação — é só o container de 1 aba dentro do AthTabs.",
+  "props": {
+   "name": "Dados",
+   "selected": true,
+   "icon": "student"
+  },
+  "slot": "Faturas",
+  "semCorPropria": "contêiner de uma aba; a cor vem do AthTabs em volta"
+ },
+ {
+  "id": "athtabs",
+  "titulo": "AthTabs",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/tab/AthTabs.vue",
+  "tokens": [
+   "Content/Brand",
+   "Content/Tertiary",
+   "Border/Brand",
+   "Border/Subtle"
+  ],
+  "nota": "Clique nas abas pra trocar a ativa de verdade.",
+  "props": {
+   "notification": 2
+  },
+  "slot": "Dados",
+  "filhos": [
+   {
+    "id": "athtab",
+    "props": {
+     "name": "Dados",
+     "step": "1",
+     "selected": true
+    },
+    "texto": "Conteúdo da aba Dados"
+   },
+   {
+    "id": "athtab",
+    "props": {
+     "name": "Faturas",
+     "step": "2"
+    },
+    "texto": ""
+   },
+   {
+    "id": "athtab",
+    "props": {
+     "name": "Contrato",
+     "step": "3"
+    },
+    "texto": ""
+   }
+  ]
+ },
+ {
+  "id": "athaccordion",
+  "titulo": "AthAccordion",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/accordion/AthAccordion.vue",
+  "tokens": [
+   "Background/BrandSelected",
+   "Background/Surface",
+   "Content/Primary",
+   "Border/Subtle"
+  ],
+  "nota": "Clique no cabeçalho pra abrir/fechar de verdade.",
+  "props": {
+   "id": "exemploAcordeao",
+   "opened": true,
+   "info": "3 pendências"
+  },
+  "slots": {
+   "header": "Dados do responsável",
+   "default": "Ana Souza · 000.000.000-00"
+  }
+ },
+ {
+  "id": "athwizard",
+  "titulo": "AthWizard",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/wizard/AthWizard.vue",
+  "tokens": [
+   "Background/Success",
+   "Background/Track",
+   "Content/Brand",
+   "Content/OnFill",
+   "Content/Success",
+   "Content/Tertiary",
+   "Border/Brand",
+   "Border/Subtle",
+   "Border/SuccessPressed"
+  ],
+  "nota": "Sem estado interativo aqui — é uma prévia dos 3 estados lado a lado.",
+  "props": {
+   "modelValue": 2,
+   "steps": [
+    {
+     "step": 1,
+     "label": "Dados do aluno"
+    },
+    {
+     "step": 2,
+     "label": "Responsável"
+    },
+    {
+     "step": 3,
+     "label": "Contrato"
+    }
+   ]
+  }
+ },
+ {
+  "id": "athpopover",
+  "titulo": "AthPopover",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/popover/AthPopover.vue",
+  "tokens": [
+   "Background/Surface",
+   "Content/OnFill",
+   "Content/Primary",
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo nesta prévia — mostra o balão já aberto.",
+  "slots": {
+   "default": "Passe aqui",
+   "body": "Detalhe da informação"
+  }
+ },
+ {
+  "id": "athpopoversimple",
+  "titulo": "AthPopoverSimple",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/popover/AthPopoverSimple.vue",
+  "tokens": [
+   "Background/Canvas",
+   "Content/Brand"
+  ],
+  "nota": "Clique pra abrir/fechar — é o mesmo dropdown real, com a mesma animação.",
+  "props": {
+   "label": "Ações"
+  },
+  "slots": {
+   "body": "Editar · Duplicar · Excluir"
+  }
+ },
+ {
+  "id": "athtabsnormal",
+  "titulo": "AthTabsNormal",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/tab/AthTabsNormal.vue",
+  "tokens": [
+   "Content/Brand",
+   "Content/Tertiary",
+   "Border/Brand",
+   "Border/Subtle"
+  ],
+  "nota": "Clique numa aba pra trocar a ativa.",
+  "props": {
+   "data": [
+    {
+     "name": "Dados",
+     "step": "1",
+     "isActive": true
+    },
+    {
+     "name": "Faturas",
+     "step": "2",
+     "isActive": false
+    }
+   ]
+  }
+ },
+ {
+  "id": "athdropbutton",
+  "titulo": "AthDropButton",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/buttons/AthDropButton.vue",
+  "tokens": [
+   "Background/Surface",
+   "Content/Brand",
+   "Border/Brand"
+  ],
+  "nota": "Clique pra abrir/fechar — dropdown real.",
+  "props": {
+   "text": "Mais ações",
+   "isButton": true
+  },
+  "slots": {
+   "default": "Exportar planilha"
+  }
+ },
+ {
+  "id": "timelinerepasse",
+  "titulo": "TimelineRepasse",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/timeline/TimelineRepasse.vue",
+  "tokens": [
+   "Background/Neutral",
+   "Background/Track",
+   "Content/OnFill",
+   "Content/Tertiary"
+  ],
+  "nota": "Sem estado interativo — mostra os 3 estágios lado a lado."
+ },
+ {
+  "id": "navselecttenant",
+  "titulo": "NavSelectTenant",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/navbar/NavSelectTenant.vue",
+  "tokens": [
+   "Background/BrandSelected",
+   "Content/Secondary"
+  ],
+  "nota": "Clique pra abrir — mesmo dropdown do AthPopoverSimple."
+ },
+ {
+  "id": "navnotifications",
+  "titulo": "NavNotifications",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/template/nav-bar/NavNotifications.vue",
+  "tokens": [
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Subtle"
+  ],
+  "nota": "Sem interação própria — o botão de sino já é real na aba EdsButtonIcon."
+ },
+ {
+  "id": "itemnotification",
+  "titulo": "ItemNotification",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/template/nav-bar/notifications/ItemNotification.vue",
+  "tokens": [
+   "Content/Secondary",
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo — mostra uma notificação de exemplo.",
+  "props": {
+   "item": {
+    "id": "1",
+    "title": "Matrícula concluída",
+    "description": "Gabriela Melo concluiu a matrícula.",
+    "notificationType": 0,
+    "backgroundJobStatus": 1,
+    "readTime": null,
+    "creationTime": "2026-08-02T10:00:00"
+   }
+  }
+ },
+ {
+  "id": "athtimelinevertical",
+  "titulo": "AthTimelineVertical",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/timeline/AthTimelineVertical.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Success",
+   "Background/Surface",
+   "Content/OnFill",
+   "Content/Primary",
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo — mostra os 8 status lado a lado.",
+  "props": {
+   "data": [
+    {
+     "eventDate": "2026-07-28T10:00:00",
+     "text": "Fatura emitida",
+     "details": [
+      "Enviada ao responsável"
+     ],
+     "status": "created"
+    },
+    {
+     "eventDate": "2026-07-30T14:20:00",
+     "text": "Pagamento confirmado",
+     "details": [
+      "Pix · R$ 1.250,00"
+     ],
+     "status": "success"
+    }
+   ]
+  }
+ },
+ {
+  "id": "athswipemonths",
+  "titulo": "AthSwipeMonths",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/filters/AthSwipeMonths.vue",
+  "tokens": [
+   "Background/Canvas",
+   "Background/Surface",
+   "Content/Primary",
+   "Content/Tertiary",
+   "Border/Faint",
+   "Border/Subtle"
+  ],
+  "nota": "Clique num mês pra selecionar, ou nas setas pra trocar o ano — os 3 reais.",
+  "largura": "cheia"
+ },
+ {
+  "id": "segmentcontrol",
+  "titulo": "SegmentControl",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/segmentControl/SegmentControl.vue",
+  "tokens": [
+   "Content/Brand",
+   "Content/Primary",
+   "Content/Tertiary",
+   "Border/Subtle"
+  ],
+  "nota": "Clique numa opção — radio real por trás, com a pílula acompanhando de verdade.",
+  "props": {
+   "id": "periodo",
+   "modelValue": "mes",
+   "options": [
+    {
+     "text": "Mês",
+     "value": "mes"
+    },
+    {
+     "text": "Trimestre",
+     "value": "tri"
+    },
+    {
+     "text": "Ano",
+     "value": "ano"
+    }
+   ]
+  }
+ },
+ {
+  "id": "athtabsicon",
+  "titulo": "AthTabsIcon",
+  "grupo": "Navegação",
+  "arquivo": "@ebp/components/tab/AthTabsIcon.vue",
+  "tokens": [
+   "Background/BrandSelected",
+   "Background/Surface",
+   "Content/Brand",
+   "Content/Primary",
+   "Border/Inverse"
+  ],
+  "nota": "Clique numa aba pra trocar a ativa.",
+  "props": {
+   "tabs": [
+    {
+     "name": "Lista",
+     "step": "1",
+     "icon": "list",
+     "isActive": true
+    },
+    {
+     "name": "Funil",
+     "step": "2",
+     "icon": "kanban",
+     "isActive": false
+    }
+   ]
+  }
+ },
+ {
+  "id": "athformtitle",
+  "titulo": "AthFormTitle",
+  "grupo": "Textos",
+  "arquivo": "@ebp/components/forms/AthFormTitle.vue",
+  "tokens": [
+   "Content/Brand",
+   "Content/Primary",
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo — é um título estático.",
+  "props": {
+   "title": "Dados do responsável",
+   "icon": "user"
+  }
+ },
+ {
+  "id": "athformheader",
+  "titulo": "AthFormHeader",
+  "grupo": "Textos",
+  "arquivo": "@ebp/components/forms/AthFormHeader.vue",
+  "tokens": [
+   "Content/Danger",
+   "Content/Primary",
+   "Content/Secondary"
+  ],
+  "nota": "Sem estado interativo — é um cabeçalho estático.",
+  "props": {
+   "title": "Matrícula 2026",
+   "subTitle": "Colégio Horizonte"
+  }
+ },
+ {
+  "id": "athtitle",
+  "titulo": "AthTitle",
+  "grupo": "Textos",
+  "arquivo": "@ebp/components/texts/AthTitle.vue",
+  "tokens": [
+   "Content/Secondary",
+   "Content/Tertiary"
+  ],
+  "nota": "Sem estado interativo — é texto estático.",
+  "props": {
+   "title": "Matrículas",
+   "subTitle": "Acompanhe o funil"
+  },
+  "slot": "Matrículas"
+ },
+ {
+  "id": "athcopytext",
+  "titulo": "AthCopyText",
+  "grupo": "Textos",
+  "arquivo": "@ebp/components/texts/AthCopyText.vue",
+  "tokens": [],
+  "nota": "Clique no texto pra copiar — o ícone muda pra \"copiado\" de verdade por 2s.",
+  "props": {
+   "id": "cod",
+   "inputText": "ABC-123"
+  },
+  "semCorPropria": "texto + botão de copiar, os dois herdando a cor do contexto"
+ },
+ {
+  "id": "athformtitlelist",
+  "titulo": "AthFormTitleList",
+  "grupo": "Textos",
+  "arquivo": "@ebp/components/forms/AthFormTitleList.vue",
+  "tokens": [
+   "Content/Tertiary"
+  ],
+  "nota": "Sem estado interativo — é o cabeçalho de um item de lista repetível (ex: descontos, e-mails).",
+  "props": {
+   "title": "Responsáveis"
+  }
+ },
+ {
+  "id": "athcopytextbox",
+  "titulo": "AthCopyTextBox",
+  "grupo": "Textos",
+  "arquivo": "@ebp/components/texts/AthCopyTextBox.vue",
+  "tokens": [
+   "Background/Surface",
+   "Content/Brand",
+   "Content/Primary",
+   "Border/Subtle"
+  ],
+  "nota": "Clique na caixa pra copiar — o ícone muda pra \"copiado\" por 2s.",
+  "props": {
+   "id": "cod2",
+   "inputText": "https://educbank.com.br/m/ABC-123"
+  }
+ },
+ {
+  "id": "athtextselecteditems",
+  "titulo": "AthTextSelectedItems",
+  "grupo": "Textos",
+  "arquivo": "@ebp/components/texts/AthTextSelectedItems.vue",
+  "tokens": [
+   "Content/Primary"
+  ],
+  "nota": "Sem interação — é só texto.",
+  "props": {
+   "items": [
+    {
+     "name": "Manhã"
+    },
+    {
+     "name": "Tarde"
+    }
+   ]
+  }
+ },
+ {
+  "id": "athribbon",
+  "titulo": "AthRibbon",
+  "grupo": "Textos",
+  "arquivo": "@ebp/components/ribbon/AthRibbon.vue",
+  "tokens": [
+   "Background/Inverse",
+   "Content/OnFill"
+  ],
+  "nota": "Sem interação — é uma faixa estática.",
+  "props": {
+   "textLabel": "Turma encerrada",
+   "class": "dark"
+  }
+ },
+ {
+  "id": "athmodal",
+  "titulo": "AthModal",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/modal/AthModal.vue",
+  "tokens": [
+   "Background/Surface",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Default"
+  ],
+  "nota": "",
+  "props": {
+   "type": "full",
+   "name": "demoAthModal"
+  },
+  "slot": "Conteúdo do modal",
+  "abrirEvento": "demoAthModal"
+ },
+ {
+  "id": "athpanelwarning",
+  "titulo": "AthPanelWarning",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/panels/AthPanelWarning.vue",
+  "tokens": [
+   "Background/Canvas",
+   "Content/Primary"
+  ],
+  "nota": "Passe o mouse no ✕ pra ver o hover real.",
+  "props": {
+   "message": "Confira os dados antes de continuar."
+  },
+  "slot": "Confira os dados antes de continuar."
+ },
+ {
+  "id": "athpaneldescription",
+  "titulo": "AthPanelDescription",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/panels/AthPanelDescription.vue",
+  "tokens": [
+   "Content/Primary",
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo — é um painel estático.",
+  "props": {
+   "title": "Resumo do plano"
+  },
+  "slot": "Mensalidade de R$ 1.250,00 em 12 parcelas."
+ },
+ {
+  "id": "athloading",
+  "titulo": "AthLoading",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/loader/AthLoading.vue",
+  "tokens": [
+   "Content/Brand"
+  ],
+  "nota": "Gira sozinho — é a única \"interação\" que esse componente tem.",
+  "props": {
+   "loading": true,
+   "show": true,
+   "isLoading": true
+  }
+ },
+ {
+  "id": "athmodalcenter",
+  "titulo": "AthModalCenter",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/modal/AthModalCenter.vue",
+  "tokens": [
+   "Background/Surface",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Default",
+   "Border/Subtle"
+  ],
+  "nota": "Passe o mouse no ✕ pra ver o hover real.",
+  "props": {},
+  "slot": "Essa ação não pode ser desfeita.",
+  "gatilhoProp": "show"
+ },
+ {
+  "id": "athpanelfinishedsuccess",
+  "titulo": "AthPanelFinishedSuccess",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/panels/AthPanelFinishedSuccess.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/BrandHover",
+   "Background/Surface",
+   "Content/Brand",
+   "Content/OnFill",
+   "Content/Primary",
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo — é uma tela de conclusão estática.",
+  "props": {
+   "msgSuccess": "Matrícula criada",
+   "msgDescription": "O responsável recebeu o contrato por e-mail.",
+   "msgBack": "Voltar para a lista",
+   "msgCreateNew": "Criar outra matrícula"
+  }
+ },
+ {
+  "id": "athmodalheader",
+  "titulo": "AthModalHeader",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/modal/AthModalHeader.vue",
+  "tokens": [
+   "Border/Subtle"
+  ],
+  "nota": "Sem interação — é só o cabeçalho de um modal.",
+  "props": {
+   "title": "Confirmar exclusão",
+   "name": "demoHeader"
+  },
+  "slot": "Confirmar exclusão"
+ },
+ {
+  "id": "athmodalinformation",
+  "titulo": "AthModalInformation",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/modal/AthModalInformation.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Surface",
+   "Content/OnFill",
+   "Content/Primary",
+   "Content/Secondary"
+  ],
+  "nota": "Passe o mouse no ✕ — hover real.",
+  "props": {
+   "title": "Sobre a matrícula",
+   "description": "Uma explicação curta sobre o que acontece nesta etapa."
+  },
+  "gatilhoProp": "modelValue"
+ },
+ {
+  "id": "athloadingbar",
+  "titulo": "AthLoadingBar",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/loader/AthLoadingBar.vue",
+  "tokens": [
+   "Background/BrandHover",
+   "Background/Canvas",
+   "Content/Primary"
+  ],
+  "nota": "Animação real — a barra se move sozinha, igual no produto.",
+  "props": {
+   "size": "lg"
+  },
+  "formaEsperada": "barra de carregamento animada, sem rótulo"
+ },
+ {
+  "id": "athpanelsheetsent",
+  "titulo": "AthPanelSheetSent",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/panels/AthPanelSheetSent.vue",
+  "tokens": [
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Primary"
+  ],
+  "nota": "Sem interação própria — o botão e a barra já são reais em suas abas."
+ },
+ {
+  "id": "ebtippy",
+  "titulo": "EbTippy",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/eb-tippy/EbTippy.vue",
+  "tokens": [],
+  "nota": "Passe o mouse pra ver o tooltip real.",
+  "props": {
+   "content": "Explicação do campo",
+   "placement": "right"
+  },
+  "slot": "Passe o mouse aqui",
+  "semCorPropria": "a diretiva de dica não pinta o gatilho; o balão é teleportado"
+ },
+ {
+  "id": "athpanelfilesupload",
+  "titulo": "AthPanelFilesUpload",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/inputs/uploads/AthPanelFilesUpload.vue",
+  "tokens": [
+   "Content/Brand",
+   "Content/Secondary",
+   "Content/Tertiary",
+   "Border/Subtle"
+  ],
+  "nota": "Passe o mouse na área de soltar — hover real.",
+  "props": {}
+ },
+ {
+  "id": "athguardianinfomodal",
+  "titulo": "AthGuardianInfoModal",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/infos/AthGuardianInfoModal.vue",
+  "tokens": [
+   "Background/BrandSelected",
+   "Background/Surface",
+   "Content/Brand",
+   "Content/Primary",
+   "Content/Secondary",
+   "Content/Tertiary",
+   "Border/Default",
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo — é conteúdo estático do modal.",
+  "abrirEvento": "openAthGuardianInfoModal",
+  "props": {
+   "guardianDefault": {
+    "name": "Ana Souza",
+    "document": "000.000.000-00",
+    "email": "ana@exemplo.com",
+    "phoneNumber": "11999990000",
+    "isPrincipal": true
+   }
+  }
+ },
+ {
+  "id": "edsalertgroup",
+  "titulo": "EdsAlertGroup",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/alerts/eds-alert-group/EdsAlertGroup.vue",
+  "tokens": [
+   "Background/Surface",
+   "Content/Brand",
+   "Content/Danger",
+   "Content/OnWarningSubtle",
+   "Content/Primary",
+   "Content/Secondary",
+   "Content/Success",
+   "Content/Tertiary",
+   "Border/Danger",
+   "Border/Default",
+   "Border/Focus",
+   "Border/Success",
+   "Border/Warning"
+  ],
+  "nota": "Sem interação — mostra o resumo colapsado.",
+  "props": {
+   "items": [
+    {
+     "id": 1,
+     "status": "error",
+     "title": "Contrato vencido",
+     "description": "O contrato expirou em 20/07.",
+     "dismissible": true
+    },
+    {
+     "id": 2,
+     "status": "warning",
+     "title": "Responsável sem telefone confirmado"
+    },
+    {
+     "id": 3,
+     "status": "success",
+     "title": "Pagamento de julho confirmado"
+    }
+   ],
+   "contextLabel": "Nesta matrícula",
+   "startCollapsed": false
+  }
+ },
+ {
+  "id": "changepassword",
+  "titulo": "ChangePassword",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/template/nav-bar/ChangePassword.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Surface",
+   "Content/Danger",
+   "Content/OnDangerSubtle",
+   "Content/OnFill",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Default",
+   "Border/Subtle"
+  ],
+  "nota": "Clique no ícone de olho pra ver mostrar/ocultar a senha — interação real.",
+  "props": {},
+  "abrirEvento": "openModalChangePassword"
+ },
+ {
+  "id": "athloader",
+  "titulo": "AthLoader",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/loader/AthLoader.vue",
+  "tokens": [
+   "Background/Canvas",
+   "Content/OnFill"
+  ],
+  "nota": "Animação real — a barrinha desliza sozinha, igual na tela de carregamento do produto.",
+  "props": {
+   "text": "Carregando as faturas",
+   "size": "md"
+  },
+  "largura": "cheia",
+  "formaEsperada": "sobreposição de tela cheia — o texto é branco sobre o véu escuro"
+ },
+ {
+  "id": "athprogressbar",
+  "titulo": "AthProgressBar",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/progress-bar/AthProgressBar.vue",
+  "tokens": [
+   "Background/BrandHover",
+   "Background/Track"
+  ],
+  "nota": "Animação real de preenchimento, igual no produto.",
+  "props": {
+   "completed": 60
+  },
+  "largura": "meio",
+  "formaEsperada": "barra de progresso: o valor é a LARGURA preenchida, não um texto"
+ },
+ {
+  "id": "modalmfavalidated",
+  "titulo": "ModalMFAValidated",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/template/nav-bar/ModalMFAValidated.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Canvas",
+   "Background/Surface",
+   "Content/Brand",
+   "Content/Info",
+   "Content/OnFill",
+   "Content/Primary",
+   "Content/Secondary",
+   "Content/Success",
+   "Content/Warning",
+   "Border/Brand",
+   "Border/Default",
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo — tela final de confirmação de MFA.",
+  "props": {},
+  "abrirEvento": "modalMFAValidated",
+  "eventosAntes": [
+   {
+    "nome": "openModalMFAValidated",
+    "dados": {
+     "message": "Guarde estes códigos de recuperação",
+     "codes": [
+      "824193",
+      "577104",
+      "390288",
+      "146502",
+      "731955",
+      "208467"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "athspreadsheetinspectionpanel",
+  "titulo": "AthSpreadsheetInspectionPanel",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/panels/AthSpreadsheetInspectionPanel.vue",
+  "tokens": [
+   "Background/BrandHover",
+   "Background/Canvas",
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Brand",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Brand"
+  ],
+  "nota": "Animação real da barra de progresso.",
+  "props": {
+   "items": []
+  }
+ },
+ {
+  "id": "athpanelfinisheddata",
+  "titulo": "AthPanelFinishedData",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/panels/AthPanelFinishedData.vue",
+  "tokens": [
+   "Background/BrandHover",
+   "Content/Brand",
+   "Content/OnFill",
+   "Content/Secondary",
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo — tela final de confirmação com dado em destaque.",
+  "props": {
+   "msgSuccess": "Dados enviados com sucesso",
+   "subtitle": "A escola vai revisar em até 2 dias úteis.",
+   "icon": "check-circle",
+   "msgButton": "Voltar para matrículas",
+   "firstInformation": "32 alunos",
+   "secondInformation": "3 turmas"
+  }
+ },
+ {
+  "id": "athalertbar",
+  "titulo": "AthAlertBar",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/panels/AthAlertBar.vue",
+  "tokens": [
+   "Background/Surface",
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo — mostra a etiqueta de status nas 4 variantes.",
+  "props": {
+   "type": "warning"
+  },
+  "slot": "Confira os dados antes de continuar."
+ },
+ {
+  "id": "securityaccount",
+  "titulo": "SecurityAccount",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/template/nav-bar/SecurityAccount.vue",
+  "tokens": [
+   "Background/BrandSelected",
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Brand",
+   "Content/Danger",
+   "Content/Info",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Default",
+   "Border/Faint",
+   "Border/Subtle"
+  ],
+  "nota": "Clique no ✕ — hover real de fechar.",
+  "props": {},
+  "abrirEvento": "openModalMyAccount",
+  "eventosAntes": [
+   {
+    "nome": "openMyAccountModalEvent"
+   }
+  ]
+ },
+ {
+  "id": "phoneverificationmodal",
+  "titulo": "PhoneVerificationModal",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/template/nav-bar/PhoneVerificationModal.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Surface",
+   "Content/Danger",
+   "Content/OnFill",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Default",
+   "Border/Subtle"
+  ],
+  "nota": "Passe o mouse no campo — Border/Hover (contorno sob o mouse) real.",
+  "props": {
+   "currentPhone": "11999990000"
+  },
+  "gatilhoProp": "show"
+ },
+ {
+  "id": "athspreadsheetimportsuccesspanel",
+  "titulo": "AthSpreadsheetImportSuccessPanel",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/panels/AthSpreadsheetImportSuccessPanel.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Primary"
+  ],
+  "nota": "Sem interação própria — o botão já é real na aba EdsButton."
+ },
+ {
+  "id": "athspreadsheeterrorpanel",
+  "titulo": "AthSpreadsheetErrorPanel",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/panels/AthSpreadsheetErrorPanel.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/BrandHover",
+   "Content/Brand",
+   "Content/OnFill",
+   "Content/Secondary"
+  ],
+  "nota": "Sem interação própria — os botões já são reais em suas abas."
+ },
+ {
+  "id": "athspreadsheetdownloadsuccesspanel",
+  "titulo": "AthSpreadsheetDownloadSuccessPanel",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/panels/AthSpreadsheetDownloadSuccessPanel.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Brand",
+   "Content/OnFill",
+   "Content/Primary",
+   "Content/Secondary"
+  ],
+  "nota": "Sem interação própria — o botão já é real na aba EdsButton."
+ },
+ {
+  "id": "athspreadsheetdownloadinprogresspanel",
+  "titulo": "AthSpreadsheetDownloadInProgressPanel",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/panels/AthSpreadsheetDownloadInProgressPanel.vue",
+  "tokens": [
+   "Background/BrandHover",
+   "Background/Canvas",
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Brand",
+   "Content/Primary",
+   "Content/Secondary"
+  ],
+  "nota": "Animação real da barra de progresso."
+ },
+ {
+  "id": "athskeletontext",
+  "titulo": "AthSkeletonText",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/skeletons/AthSkeletonText.vue",
+  "tokens": [
+   "Background/Hover",
+   "Content/Primary"
+  ],
+  "nota": "Animação real — o brilho desliza sozinho, igual no produto.",
+  "props": {},
+  "largura": "meio",
+  "formaEsperada": "esqueleto de carregamento — barra cinza sem conteúdo é a forma"
+ },
+ {
+  "id": "athprocessingloader",
+  "titulo": "AthProcessingLoader",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/loader/AthProcessingLoader.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Canvas",
+   "Background/Surface",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Subtle"
+  ],
+  "nota": "Animação real da barra de progresso.",
+  "props": {
+   "modelValue": true,
+   "text": "Processando o pagamento",
+   "secondText": "Isso pode levar alguns segundos"
+  }
+ },
+ {
+  "id": "athpanelfinishederror",
+  "titulo": "AthPanelFinishedError",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/panels/AthPanelFinishedError.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/BrandHover",
+   "Background/Surface",
+   "Content/OnDangerSubtle",
+   "Content/OnFill",
+   "Content/Primary",
+   "Border/Subtle"
+  ],
+  "nota": "Sem interação — é uma tela final de erro.",
+  "props": {
+   "message": "Não foi possível criar a matrícula",
+   "description": "Confira os dados do responsável e tente de novo.",
+   "textBack": "Voltar para a lista",
+   "textAction": "Tentar de novo"
+  }
+ },
+ {
+  "id": "athinfinitloader",
+  "titulo": "AthInfinitLoader",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/loader/AthInfinitLoader.vue",
+  "tokens": [
+   "Background/Hover",
+   "Content/Brand",
+   "Content/Primary"
+  ],
+  "nota": "Gira sozinho — mesmo spinner do AthLoading, dentro de uma lista com scroll.",
+  "props": {
+   "id": "listaExemplo",
+   "loading": true,
+   "heightBox": 96
+  }
+ },
+ {
+  "id": "athcountdowntimer",
+  "titulo": "AthCountDownTimer",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/timer/AthCountDownTimer.vue",
+  "tokens": [
+   "Background/Canvas",
+   "Content/Brand",
+   "Content/Tertiary"
+  ],
+  "nota": "Contagem real — o timer roda de verdade e muda de cor ao chegar a zero.",
+  "props": {
+   "seconds": 90
+  }
+ },
+ {
+  "id": "athskeletoninput",
+  "titulo": "AthSkeletonInput",
+  "grupo": "Feedback",
+  "arquivo": "@ebp/components/skeletons/AthSkeletonInput.vue",
+  "tokens": [
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Primary",
+   "Border/Subtle"
+  ],
+  "nota": "Animação real — mesmo brilho do AthSkeletonText.",
+  "props": {},
+  "formaEsperada": "esqueleto de campo — idem"
+ },
+ {
+  "id": "edstable",
+  "titulo": "EdsTable",
+  "grupo": "Dados",
+  "arquivo": "@ebp/components/tables/eds-table/EdsTable.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/BrandSelected",
+   "Background/Canvas",
+   "Background/Hover",
+   "Background/Surface",
+   "Content/Primary",
+   "Border/Brand",
+   "Border/Subtle"
+  ],
+  "nota": "Passe o mouse na linha ou marque o checkbox pra ver hover e seleção reais.",
+  "props": {
+   "columns": [
+    {
+     "title": "Aluno",
+     "field": "aluno"
+    },
+    {
+     "title": "Turma",
+     "field": "turma"
+    },
+    {
+     "title": "Situação",
+     "field": "situacao"
+    }
+   ],
+   "data": [
+    {
+     "id": 1,
+     "aluno": "Ana Souza",
+     "turma": "1º ano",
+     "situacao": "Ativa"
+    },
+    {
+     "id": 2,
+     "aluno": "Bruno Lima",
+     "turma": "2º ano",
+     "situacao": "Ativa"
+    },
+    {
+     "id": 3,
+     "aluno": "Carla Dias",
+     "turma": "3º ano",
+     "situacao": "Pendente"
+    }
+   ],
+   "showCheckedRows": true,
+   "showPagination": false,
+   "pagination": false
+  }
+ },
+ {
+  "id": "athfiltertablesimple",
+  "titulo": "AthFilterTableSimple",
+  "grupo": "Dados",
+  "arquivo": "@ebp/components/filters/AthFilterTableSimple.vue",
+  "tokens": [
+   "Background/Canvas",
+   "Content/Brand"
+  ],
+  "nota": "Clique pra abrir — mesmo dropdown do AthPopoverSimple.",
+  "props": {
+   "options": [
+    {
+     "value": "todos",
+     "label": "Todos"
+    },
+    {
+     "value": "pagas",
+     "label": "Pagas"
+    },
+    {
+     "value": "vencidas",
+     "label": "Vencidas"
+    }
+   ],
+   "modelValue": "todos"
+  }
+ },
+ {
+  "id": "athtag",
+  "titulo": "AthTag",
+  "grupo": "Dados",
+  "arquivo": "@ebp/components/tag/AthTag.vue",
+  "tokens": [
+   "Background/SuccessSubtle",
+   "Content/Success"
+  ],
+  "nota": "Sem estado interativo — é um rótulo estático, usado em faturas, negativação e dashboard.",
+  "props": {
+   "text": "Ativa",
+   "type": "success"
+  },
+  "slot": "Ativa"
+ },
+ {
+  "id": "athfilterselectschools",
+  "titulo": "AthFilterSelectSchools",
+  "grupo": "Dados",
+  "arquivo": "@ebp/components/filters/AthFilterSelectSchools.vue",
+  "tokens": [
+   "Background/Canvas",
+   "Content/Brand"
+  ],
+  "nota": "Clique pra abrir o dropdown de verdade."
+ },
+ {
+  "id": "athfilterreferencesdate",
+  "titulo": "AthFilterReferencesDate",
+  "grupo": "Dados",
+  "arquivo": "@ebp/components/filters/AthFilterReferencesDate.vue",
+  "tokens": [
+   "Background/Canvas",
+   "Background/Surface",
+   "Content/Brand"
+  ],
+  "nota": "Clique numa opção pra trocar a selecionada.",
+  "props": {
+   "modelValue": "2026-08-01",
+   "options": [
+    {
+     "value": "2026-08",
+     "label": "Agosto/2026"
+    },
+    {
+     "value": "2026-07",
+     "label": "Julho/2026"
+    }
+   ]
+  }
+ },
+ {
+  "id": "athpill",
+  "titulo": "AthPill",
+  "grupo": "Dados",
+  "arquivo": "@ebp/components/pills/AthPill.vue",
+  "tokens": [
+   "Content/Primary",
+   "Content/Success"
+  ],
+  "nota": "Sem estado interativo — é um rótulo estático de status de tabela.",
+  "props": {
+   "type": "success",
+   "text": "Ativa"
+  }
+ },
+ {
+  "id": "athpanelfilestabledownloaddelete",
+  "titulo": "AthPanelFilesTableDownloadDelete",
+  "grupo": "Dados",
+  "arquivo": "@ebp/components/tables/AthPanelFilesTableDownloadDelete.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Canvas",
+   "Background/Hover",
+   "Background/Surface",
+   "Content/OnFill",
+   "Content/Primary",
+   "Content/Secondary",
+   "Border/Strong",
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo — é célula de tabela.",
+  "props": {
+   "id": "contratos",
+   "dataTable": [
+    {
+     "id": "1",
+     "downloadName": "contrato-2026.pdf",
+     "originalName": "contrato-2026.pdf",
+     "uploadedAt": "2026-08-01T10:00:00",
+     "signatureInfo": null
+    },
+    {
+     "id": "2",
+     "downloadName": "aditivo-01.pdf",
+     "originalName": "aditivo-01.pdf",
+     "uploadedAt": "2026-07-20T10:00:00",
+     "signatureInfo": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "athtreejs",
+  "titulo": "AthTreeJs",
+  "grupo": "Dados",
+  "arquivo": "@ebp/components/tree/AthTreeJs.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Surface",
+   "Content/Primary",
+   "Content/Tertiary",
+   "Border/Default",
+   "Border/Subtle"
+  ],
+  "nota": "Passe o mouse sobre um item da lista.",
+  "props": {
+   "nodes": [
+    {
+     "id": 1,
+     "label": "Colégio Horizonte",
+     "checked": false,
+     "expanded": true,
+     "nodes": [
+      {
+       "id": 2,
+       "label": "1º ano",
+       "checked": true,
+       "expanded": false
+      },
+      {
+       "id": 3,
+       "label": "2º ano",
+       "checked": false,
+       "expanded": false
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "athtreejsmultisearch",
+  "titulo": "AthTreeJsMultiSearch",
+  "grupo": "Dados",
+  "arquivo": "@ebp/components/tree/AthTreeJsMultiSearch.vue",
+  "tokens": [
+   "Background/Brand",
+   "Background/Surface",
+   "Content/Primary",
+   "Content/Tertiary",
+   "Border/Default",
+   "Border/Subtle"
+  ],
+  "nota": "Passe o mouse sobre a linha — hover já correto.",
+  "props": {
+   "nodes": [
+    {
+     "id": 1,
+     "label": "Colégio Horizonte",
+     "checked": false,
+     "expanded": true,
+     "nodes": [
+      {
+       "id": 2,
+       "label": "1º ano",
+       "checked": true,
+       "expanded": false
+      },
+      {
+       "id": 3,
+       "label": "2º ano",
+       "checked": false,
+       "expanded": false
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "athbadge",
+  "titulo": "AthBadge",
+  "grupo": "Dados",
+  "arquivo": "@ebp/components/badge/AthBadge.vue",
+  "tokens": [
+   "Content/Primary"
+  ],
+  "nota": "Sem estado interativo — variante \"fill\" nos 5 tipos semânticos.",
+  "props": {
+   "text": "3"
+  }
+ },
+ {
+  "id": "athfilterselectschoolbycode",
+  "titulo": "AthFilterSelectSchoolByCode",
+  "grupo": "Dados",
+  "arquivo": "@ebp/components/filters/AthFilterSelectSchoolByCode.vue",
+  "tokens": [
+   "Background/Canvas",
+   "Content/Brand"
+  ],
+  "nota": "Clique pra abrir — mesmo dropdown do AthFilterSelectSchools."
+ },
+ {
+  "id": "athicon",
+  "titulo": "AthIcon",
+  "grupo": "Ícones",
+  "arquivo": "@ebp/components/icons/AthIcon.vue",
+  "tokens": [
+   "Content/Primary"
+  ],
+  "nota": "",
+  "props": {
+   "icon": "student",
+   "fontSize": "2.4"
+  }
+ },
+ {
+  "id": "athhr",
+  "titulo": "AthHr",
+  "grupo": "Layout",
+  "arquivo": "@ebp/components/hr/AthHr.vue",
+  "tokens": [
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo — é uma linha estática.",
+  "props": {},
+  "largura": "meio",
+  "formaEsperada": "é uma linha divisória (<hr>) — não tem conteúdo por definição"
+ },
+ {
+  "id": "athcard",
+  "titulo": "AthCard",
+  "grupo": "Layout",
+  "arquivo": "@ebp/components/cards/AthCard.vue",
+  "tokens": [
+   "Background/BrandPressed",
+   "Content/OnFill",
+   "Content/Primary",
+   "Border/Focus"
+  ],
+  "nota": "Passe o mouse e clique pra ver hover/seleção reais.",
+  "props": {
+   "title": "Faturas do mês",
+   "icon": "receipt",
+   "isActive": true
+  },
+  "slot": "Conteúdo do card"
+ },
+ {
+  "id": "athcardbuttonsimple",
+  "titulo": "AthCardButtonSimple",
+  "grupo": "Layout",
+  "arquivo": "@ebp/components/cards/AthCardButtonSimple.vue",
+  "tokens": [
+   "Background/BrandSubtle",
+   "Background/Surface",
+   "Content/Primary",
+   "Border/Subtle"
+  ],
+  "nota": "Clique pra selecionar — o fundo muda, a faixa lateral é só decorativa.",
+  "largura": "meio"
+ },
+ {
+  "id": "athcardradiobutton",
+  "titulo": "AthCardRadioButton",
+  "grupo": "Layout",
+  "arquivo": "@ebp/components/cards/AthCardRadioButton.vue",
+  "tokens": [
+   "Background/BrandSubtle",
+   "Background/Surface",
+   "Content/Primary",
+   "Border/Default",
+   "Border/Subtle"
+  ],
+  "nota": "Clique nos cards — são radios reais.",
+  "largura": "meio"
+ },
+ {
+  "id": "modalitemtwoparts",
+  "titulo": "ModalItemTwoParts",
+  "grupo": "Layout",
+  "arquivo": "@ebp/components/modal/ModalItemTwoParts.vue",
+  "tokens": [
+   "Border/Subtle"
+  ],
+  "nota": "Sem interação própria — o divisor já é real na aba AthHr.",
+  "slots": {
+   "left": "Dados do aluno",
+   "right": "Faturas do ano"
+  }
+ },
+ {
+  "id": "athcardoverviewdetails",
+  "titulo": "AthCardOverviewDetails",
+  "grupo": "Layout",
+  "arquivo": "@ebp/components/cards/AthCardOverviewDetails.vue",
+  "tokens": [
+   "Background/Canvas",
+   "Background/Info",
+   "Background/Surface",
+   "Content/Disabled",
+   "Content/OnFill",
+   "Border/Subtle"
+  ],
+  "nota": "Sem estado interativo — mostra as 6 variantes de cor lado a lado.",
+  "props": {
+   "textTitle": "Faturas emitidas",
+   "icon": "receipt",
+   "color": "info"
+  },
+  "slots": {
+   "left": "R$ 18.430,00",
+   "right": "32 faturas"
+  }
+ },
+ {
+  "id": "athcardwithbutton",
+  "titulo": "AthCardWithButton",
+  "grupo": "Layout",
+  "arquivo": "@ebp/components/cards/AthCardWithButton.vue",
+  "tokens": [
+   "Content/Primary"
+  ],
+  "nota": "Sem estado interativo — mostra o card com o ícone de confirmação.",
+  "props": {
+   "title": "Importar planilha",
+   "description": "Envie o arquivo com os alunos da turma."
+  }
+ }
+]

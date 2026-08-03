@@ -1,0 +1,1309 @@
+{
+ "achados": [
+  {
+   "id": "edsbutton",
+   "titulo": "EdsButton",
+   "grupo": "Botões",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#6b55d8",
+    "#f2f2f2"
+   ]
+  },
+  {
+   "id": "edsbuttonremove",
+   "titulo": "EdsButtonRemove",
+   "grupo": "Botões",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#e50000"
+   ]
+  },
+  {
+   "id": "edsbuttonicon",
+   "titulo": "EdsButtonIcon",
+   "grupo": "Botões",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "athinputtext",
+   "titulo": "AthInputText",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "edsinputselect",
+   "titulo": "EdsInputSelect",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athinputdatepicker",
+   "titulo": "AthInputDatepicker",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athinputmoney",
+   "titulo": "AthInputMoney",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athinputcheckbox",
+   "titulo": "AthInputCheckbox",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#6b55d8",
+    "#8c8c8c",
+    "#575e6a"
+   ]
+  },
+  {
+   "id": "switch",
+   "titulo": "Switch",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#6b55d8",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athinputdragdropfiles",
+   "titulo": "AthInputDragDropFiles",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#666666",
+    "#cccccc",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "navsearch",
+   "titulo": "NavSearch",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "athinputyearpicker",
+   "titulo": "AthInputYearpicker",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#f8f8f8",
+    "#575e6a"
+   ]
+  },
+  {
+   "id": "athinputrangepicker",
+   "titulo": "AthInputRangePicker",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#f8f8f8",
+    "#575e6a"
+   ]
+  },
+  {
+   "id": "athinputtextarea",
+   "titulo": "AthInputTextArea",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athinputpercentage",
+   "titulo": "AthInputPercentage",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athinputradio",
+   "titulo": "AthInputRadio",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athinputthemedefault",
+   "titulo": "AthInputThemeDefault",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athformaddress",
+   "titulo": "AthFormAddress",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#8c8c8c",
+    "#e50000"
+   ]
+  },
+  {
+   "id": "athinputdiscount",
+   "titulo": "AthInputDiscount",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "edsinputmultiselectsuggest",
+   "titulo": "EdsInputMultiSelectSuggest",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#8c8c8c",
+    "#6b55d8",
+    "#f2f2f2",
+    "#575e6a"
+   ]
+  },
+  {
+   "id": "athsecuritypassword",
+   "titulo": "AthSecurityPassWord",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#e50000"
+   ]
+  },
+  {
+   "id": "athinputmonthyearpicker",
+   "titulo": "AthInputMonthYearPicker",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athmulticheckbox",
+   "titulo": "AthMultiCheckbox",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athinputtextfake",
+   "titulo": "AthInputTextFake",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athinputrangeslider",
+   "titulo": "AthInputRangeSlider",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#6b55d8",
+    "#eae6ff"
+   ]
+  },
+  {
+   "id": "athinputmulticheckbox",
+   "titulo": "AthInputMultiCheckbox",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "athsignerslistinput",
+   "titulo": "AthSignersListInput",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#8c8c8c",
+    "#e50000"
+   ]
+  },
+  {
+   "id": "athinputtextsearch",
+   "titulo": "AthInputTextSearch",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athinputtexteditor",
+   "titulo": "AthInputTextEditor",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#575e6a",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "athinputslider",
+   "titulo": "AthInputSlider",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "athselectfamily",
+   "titulo": "Família Ath*Select* (wrappers de dado fixo)",
+   "grupo": "Campos de formulário",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#8c8c8c",
+    "#666666"
+   ]
+  },
+  {
+   "id": "athbreadcrumb",
+   "titulo": "AthBreadcrumb",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#666666"
+   ]
+  },
+  {
+   "id": "athtab",
+   "titulo": "AthTab",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athtabs",
+   "titulo": "AthTabs",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athaccordion",
+   "titulo": "AthAccordion",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#f3f1ff",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "athwizard",
+   "titulo": "AthWizard",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#2ecc71",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "athpopover",
+   "titulo": "AthPopover",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "athpopoversimple",
+   "titulo": "AthPopoverSimple",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#f8f8f8"
+   ]
+  },
+  {
+   "id": "athtabsnormal",
+   "titulo": "AthTabsNormal",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#666666"
+   ]
+  },
+  {
+   "id": "athdropbutton",
+   "titulo": "AthDropButton",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "timelinerepasse",
+   "titulo": "TimelineRepasse",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "navselecttenant",
+   "titulo": "NavSelectTenant",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#f3f1ff"
+   ]
+  },
+  {
+   "id": "navnotifications",
+   "titulo": "NavNotifications",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "itemnotification",
+   "titulo": "ItemNotification",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#575e6a",
+    "#f3f1ff"
+   ]
+  },
+  {
+   "id": "athtimelinevertical",
+   "titulo": "AthTimelineVertical",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athswipemonths",
+   "titulo": "AthSwipeMonths",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#f8f8f8",
+    "#cccccc",
+    "#666666"
+   ]
+  },
+  {
+   "id": "segmentcontrol",
+   "titulo": "SegmentControl",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "athtabsicon",
+   "titulo": "AthTabsIcon",
+   "grupo": "Navegação",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athformtitle",
+   "titulo": "AthFormTitle",
+   "grupo": "Textos",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athformheader",
+   "titulo": "AthFormHeader",
+   "grupo": "Textos",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#575e6a",
+    "#e50000"
+   ]
+  },
+  {
+   "id": "athtitle",
+   "titulo": "AthTitle",
+   "grupo": "Textos",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#575e6a"
+   ]
+  },
+  {
+   "id": "athcopytext",
+   "titulo": "AthCopyText",
+   "grupo": "Textos",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athformtitlelist",
+   "titulo": "AthFormTitleList",
+   "grupo": "Textos",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athcopytextbox",
+   "titulo": "AthCopyTextBox",
+   "grupo": "Textos",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "athtextselecteditems",
+   "titulo": "AthTextSelectedItems",
+   "grupo": "Textos",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athribbon",
+   "titulo": "AthRibbon",
+   "grupo": "Textos",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#575e6a"
+   ]
+  },
+  {
+   "id": "athmodal",
+   "titulo": "AthModal",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#eae6ff",
+    "#5644ad",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "athpanelwarning",
+   "titulo": "AthPanelWarning",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#f8f8f8"
+   ]
+  },
+  {
+   "id": "athpaneldescription",
+   "titulo": "AthPanelDescription",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athloading",
+   "titulo": "AthLoading",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athmodalcenter",
+   "titulo": "AthModalCenter",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#eae6ff",
+    "#5644ad",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "athpanelfinishedsuccess",
+   "titulo": "AthPanelFinishedSuccess",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "athmodalheader",
+   "titulo": "AthModalHeader",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athmodalinformation",
+   "titulo": "AthModalInformation",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#eae6ff",
+    "#5644ad",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "athloadingbar",
+   "titulo": "AthLoadingBar",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athpanelsheetsent",
+   "titulo": "AthPanelSheetSent",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "ebtippy",
+   "titulo": "EbTippy",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athpanelfilesupload",
+   "titulo": "AthPanelFilesUpload",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#cccccc",
+    "#575e6a",
+    "#666666",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "athguardianinfomodal",
+   "titulo": "AthGuardianInfoModal",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "edsalertgroup",
+   "titulo": "EdsAlertGroup",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#8c8c8c",
+    "#6b55d8",
+    "#e50000",
+    "#ae9300",
+    "#009933"
+   ]
+  },
+  {
+   "id": "changepassword",
+   "titulo": "ChangePassword",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#eae6ff",
+    "#5644ad",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "athloader",
+   "titulo": "AthLoader",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#f8f8f8"
+   ]
+  },
+  {
+   "id": "athprogressbar",
+   "titulo": "AthProgressBar",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "modalmfavalidated",
+   "titulo": "ModalMFAValidated",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#eae6ff",
+    "#5644ad",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "athspreadsheetinspectionpanel",
+   "titulo": "AthSpreadsheetInspectionPanel",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#575e6a",
+    "#6b55d8",
+    "#f8f8f8"
+   ]
+  },
+  {
+   "id": "athpanelfinisheddata",
+   "titulo": "AthPanelFinishedData",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#cccccc",
+    "#575e6a",
+    "#6b55d8",
+    "#f2f2f2"
+   ]
+  },
+  {
+   "id": "athalertbar",
+   "titulo": "AthAlertBar",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "securityaccount",
+   "titulo": "SecurityAccount",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#eae6ff",
+    "#5644ad",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "phoneverificationmodal",
+   "titulo": "PhoneVerificationModal",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#eae6ff",
+    "#5644ad",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "athspreadsheetimportsuccesspanel",
+   "titulo": "AthSpreadsheetImportSuccessPanel",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "athspreadsheeterrorpanel",
+   "titulo": "AthSpreadsheetErrorPanel",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#575e6a",
+    "#6b55d8",
+    "#f2f2f2"
+   ]
+  },
+  {
+   "id": "athspreadsheetdownloadsuccesspanel",
+   "titulo": "AthSpreadsheetDownloadSuccessPanel",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#575e6a",
+    "#6b55d8",
+    "#f2f2f2"
+   ]
+  },
+  {
+   "id": "athspreadsheetdownloadinprogresspanel",
+   "titulo": "AthSpreadsheetDownloadInProgressPanel",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#575e6a",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "athskeletontext",
+   "titulo": "AthSkeletonText",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#f2f2f2"
+   ]
+  },
+  {
+   "id": "athprocessingloader",
+   "titulo": "AthProcessingLoader",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athpanelfinishederror",
+   "titulo": "AthPanelFinishedError",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "athinfinitloader",
+   "titulo": "AthInfinitLoader",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athcountdowntimer",
+   "titulo": "AthCountDownTimer",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#f8f8f8",
+    "#666666"
+   ]
+  },
+  {
+   "id": "athskeletoninput",
+   "titulo": "AthSkeletonInput",
+   "grupo": "Feedback",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "edstable",
+   "titulo": "EdsTable",
+   "grupo": "Dados",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#cccccc",
+    "#f8f8f8"
+   ]
+  },
+  {
+   "id": "athfiltertablesimple",
+   "titulo": "AthFilterTableSimple",
+   "grupo": "Dados",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#f8f8f8"
+   ]
+  },
+  {
+   "id": "athtag",
+   "titulo": "AthTag",
+   "grupo": "Dados",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#eafaf1",
+    "#2ecc71"
+   ]
+  },
+  {
+   "id": "athfilterselectschools",
+   "titulo": "AthFilterSelectSchools",
+   "grupo": "Dados",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#f8f8f8"
+   ]
+  },
+  {
+   "id": "athfilterreferencesdate",
+   "titulo": "AthFilterReferencesDate",
+   "grupo": "Dados",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#f8f8f8"
+   ]
+  },
+  {
+   "id": "athpill",
+   "titulo": "AthPill",
+   "grupo": "Dados",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athpanelfilestabledownloaddelete",
+   "titulo": "AthPanelFilesTableDownloadDelete",
+   "grupo": "Dados",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#cccccc",
+    "#f8f8f8",
+    "#575e6a",
+    "#6b55d8"
+   ]
+  },
+  {
+   "id": "athtreejs",
+   "titulo": "AthTreeJs",
+   "grupo": "Dados",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#cccccc",
+    "#666666",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athtreejsmultisearch",
+   "titulo": "AthTreeJsMultiSearch",
+   "grupo": "Dados",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#cccccc",
+    "#666666",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athbadge",
+   "titulo": "AthBadge",
+   "grupo": "Dados",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athfilterselectschoolbycode",
+   "titulo": "AthFilterSelectSchoolByCode",
+   "grupo": "Dados",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#f8f8f8"
+   ]
+  },
+  {
+   "id": "athicon",
+   "titulo": "AthIcon",
+   "grupo": "Ícones",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athhr",
+   "titulo": "AthHr",
+   "grupo": "Layout",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#cccccc"
+   ]
+  },
+  {
+   "id": "athcard",
+   "titulo": "AthCard",
+   "grupo": "Layout",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#8c8c8c"
+   ]
+  },
+  {
+   "id": "athcardbuttonsimple",
+   "titulo": "AthCardButtonSimple",
+   "grupo": "Layout",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#cccccc",
+    "#eae6ff"
+   ]
+  },
+  {
+   "id": "athcardradiobutton",
+   "titulo": "AthCardRadioButton",
+   "grupo": "Layout",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5",
+    "#8c8c8c",
+    "#cccccc",
+    "#eae6ff"
+   ]
+  },
+  {
+   "id": "modalitemtwoparts",
+   "titulo": "ModalItemTwoParts",
+   "grupo": "Layout",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5"
+   ]
+  },
+  {
+   "id": "athcardoverviewdetails",
+   "titulo": "AthCardOverviewDetails",
+   "grupo": "Layout",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#e5e5e5",
+    "#cccccc",
+    "#f8f8f8",
+    "#3b83f4"
+   ]
+  },
+  {
+   "id": "athcardwithbutton",
+   "titulo": "AthCardWithButton",
+   "grupo": "Layout",
+   "fora": [],
+   "dentro": [
+    "#ffffff",
+    "#002a3a",
+    "#e5e5e5"
+   ]
+  }
+ ],
+ "lista": []
+}

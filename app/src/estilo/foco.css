@@ -1,0 +1,161 @@
+/* ANEL DE FOCO — as regras. O bloco 33 do `override-legado.css` tem as TAREFAS
+   de produto (`arquivo:linha` de cada ponto a corrigir).
+
+   ─── Por que os seletores são ancorados em `#app` ─────────────────────────
+   O CSS do SFC compilado é `.eds-button[data-v-…]:focus-visible` = 0,3,0. Subi a
+   especificidade do meu lado três vezes (0,2,0 → 0,3,0 → 0,4,0) e tentei injetar
+   a folha por último em runtime; nenhuma das tentativas aplicou — medido, o botão
+   seguia com `outline-offset: 0px`. Curiosamente, a MESMA regra passava a valer ao
+   reprocessar a folha (`s.textContent = s.textContent`), o que mostra que o
+   problema era de ORDEM DE AVALIAÇÃO, não do seletor.
+   `#app` resolve isso de forma definitiva: um ID dá 1,x,x, que nenhum seletor de
+   classe do SFC alcança — a regra vence independente de ordem, de timing e de
+   quando o componente foi carregado. Verificado inserindo a folha no INÍCIO do
+   head: aplicou.
+   Os teleportados (modal, dropdown) ficam fora do `#app`, e para eles o
+   `:not(#app)` já carrega peso de ID.
+
+   ─── A regra do sistema, em três partes ───────────────────────────────────
+   1 · vizinhança CLARA      → Border/Focus (#5644AD)
+   2 · vizinhança PREENCHIDA → Border/Inverse (#F2F2F2), 4,79:1 no roxo
+   3 · sempre com AFASTAMENTO — anel colado no fill se confunde com a borda
+
+   O HALO DUPLO atende 1 e 2 com uma regra só:
+       elemento | 0-3px traco CLARO (box-shadow) | 3px+ anel ESCURO (outline)
+   Sobre preenchimento, o traço claro separa o anel do fill e o anel cai no fundo
+   da página. Sobre fundo claro, o traço se funde com o fundo (não aparece) e vale
+   o anel escuro. A alternativa era enumerar as variantes preenchidas
+   (`.eds-button.primary`, `.success`, `.danger`, `.data-table-pagination__btn--active`…),
+   lista que envelhece a cada variante nova — e `.eds-button` tem variantes claras
+   onde o anel claro seria invisível: a MESMA classe precisa das duas respostas. */
+
+/* Regra geral: todo focável ganha anel com afastamento. */
+:where(:root[data-cores='novas']) #app .cheia__palco :focus-visible,
+:where(:root[data-cores='novas']) #app .palco :focus-visible,
+:where(:root[data-cores='novas']) body > div:not(#app) :focus-visible {
+  outline: 2px solid var(--border-focus) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 3px var(--border-inverse) !important;
+}
+
+/* ─── E O ANEL SAI DO CAMPO quando o WRAPPER já indica o foco ───────────────
+   Medido: em 4 de 5 campos apareciam DOIS anéis concêntricos — o do wrapper e o
+   do `<input>` de dentro. É o "focus interno estranho" que o Paulo viu em quase
+   todos os inputs.
+   Num campo composto a indicação de foco é do CONTÊINER: destaca-se a caixa
+   inteira, não o campo de texto por dentro. Estes dois wrappers já fazem isso —
+       AthInputThemeDefault.vue:86-90  →  .ath-base-input:focus-within
+       EdsInputSelect                  →  .eds-select__field
+   — então aqui o anel do campo é retirado, e sobra um só.
+   Por que a lista é explícita, e não um `:not(input)` geral: retirando de TODO
+   input, os campos cujo wrapper NÃO indica foco ficam sem indicação nenhuma —
+   medido no `AthInputMonthYearPicker`, que zerou. A distinção que importa é ter ou
+   não wrapper com indicação, e isso só se expressa nomeando os wrappers.
+   TAREFA (produto): unificar — ou o wrapper indica, ou o campo indica; hoje
+   depende do tema de input usado. */
+/* Só CAMPO de texto perde o anel — não tudo que está dentro do wrapper.
+   Medido: escrito como `:focus-visible` genérico, isto tirava o anel também do
+   `button.eds-select__pill-close` (o × de remover a etiqueta), que fica DENTRO do
+   wrapper e é um alvo próprio de teclado. Botão dentro de campo composto precisa
+   do anel dele; quem não precisa é o campo de texto, porque a caixa inteira já
+   está destacada. */
+/* Os mesmos seletores em DOIS lugares: dentro do `#app` e nos TELEPORTADOS.
+   Um modal pode ir para fora do `#app` (é o caso do `PhoneVerificationModal`), e
+   ancorar só em `#app` deixava o campo dele com os dois anéis — o do wrapper e o
+   meu — de volta. Foi o segundo print do Paulo com o mesmo sintoma, noutro lugar
+   do DOM. */
+:where(:root[data-cores='novas']) #app .nav-search input:focus-visible,
+:where(:root[data-cores='novas']) #app .search-input input:focus-visible,
+:where(:root[data-cores='novas']) #app .drop__container input:focus-visible,
+:where(:root[data-cores='novas']) body > div:not(#app) .nav-search input:focus-visible,
+:where(:root[data-cores='novas']) body > div:not(#app) .search-input input:focus-visible,
+:where(:root[data-cores='novas']) #app .ath-base-input input:focus-visible,
+:where(:root[data-cores='novas']) #app .ath-base-input textarea:focus-visible,
+:where(:root[data-cores='novas']) #app .eds-select__field input:focus-visible,
+:where(:root[data-cores='novas']) #app .eds-select__multi-wrapper input:focus-visible,
+:where(:root[data-cores='novas']) body > div:not(#app) .ath-base-input input:focus-visible,
+:where(:root[data-cores='novas']) body > div:not(#app) .ath-base-input textarea:focus-visible,
+:where(:root[data-cores='novas']) body > div:not(#app) .eds-select__field input:focus-visible,
+:where(:root[data-cores='novas']) body > div:not(#app) .eds-select__multi-wrapper input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Caixa de marcar: glow difuso no lugar de anel.
+   `AthInputCheckbox.vue:129-132` (e as cópias em `TreeRow.vue:272-275` e
+   `TabEnrollments.vue:274-277`) usam `outline: none` + `box-shadow: 0 0 4px 0
+   var(--ath-color-primary-700)`. Brilho difuso não tem borda definida, e o valor é
+   a MESMA cor do fundo do estado marcado — 1,00:1. */
+:where(:root[data-cores='novas']) #app input[type='checkbox']:focus-visible,
+:where(:root[data-cores='novas']) #app input[type='radio']:focus-visible,
+:where(:root[data-cores='novas']) #app input.form-check-input:focus-visible {
+  outline: 2px solid var(--border-focus) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 2px var(--border-inverse) !important;
+}
+
+/* ─── A parte que NÃO compete na cascata ────────────────────────────────────
+   Este bloco é o que de fato resolve o achado do Paulo, e por um caminho
+   diferente: em vez de disputar a propriedade `outline` com o SFC, ele
+   REDECLARA A VARIÁVEL que o SFC já consome.
+
+   `EdsButton.vue:138` escreve `outline: 3px solid var(--border-focus)`. Declarando
+   `--border-focus: var(--border-inverse)` dentro do botão preenchido, o anel dele
+   passa a ser claro — 4,79:1 contra o roxo, exatamente a regra 2 do sistema. E
+   variável declarada no próprio elemento vence a herdada sem depender de
+   especificidade, de ordem de folha ou de quando o componente carregou. É a mesma
+   técnica usada no tema do calendário (bloco 6 do override).
+
+   Medido: cor do anel #FFFFFF → #F2F2F2 no botão primário.
+
+   Só as variantes PREENCHIDAS entram aqui. As claras (secondary, tertiary) seguem
+   com o anel escuro, que é o certo sobre fundo claro — e é por isso que uma lista
+   por variante, aqui, é necessária: a distinção que importa é justamente entre
+   elas. */
+:where(:root[data-cores='novas']) #app .eds-button.primary,
+:where(:root[data-cores='novas']) #app .eds-button.success,
+:where(:root[data-cores='novas']) #app .eds-button.danger,
+:where(:root[data-cores='novas']) #app .eds-button-icon.primary,
+:where(:root[data-cores='novas']) #app .data-table-pagination__btn--active,
+:where(:root[data-cores='novas']) #app .eds-select__pill-close,
+/* Etiqueta de sugestão: preenchimento de marca, mesmo caso do pill. */
+:where(:root[data-cores='novas']) #app .eds-suggestion-tag,
+/* A árvore usa `.form-check-input` com fundo de marca sem o atributo `:checked`
+   (o estado vem de classe), então o seletor por estado não a alcançava. */
+:where(:root[data-cores='novas']) #app .tree-row .form-check-input,
+:where(:root[data-cores='novas']) #app [class*='tree'] .form-check-input,
+:where(:root[data-cores='novas']) #app .form-check-input:checked,
+/* VIZINHANÇA escura, não só elemento preenchido: o menu lateral tem fundo
+   Background/Inverse, e qualquer link focado lá dentro precisa de anel claro. Isto
+   substituiu o que o bloco 11 do override fazia — quando esta folha passou a ser
+   injetada por último, ela sobrescreveu aquele tratamento e o anel do menu voltou
+   a 2,03:1. Declarar a variável no ANCESTRAL resolve para tudo que estiver dentro,
+   presente e futuro, sem listar elemento por elemento. */
+:where(:root[data-cores='novas']) #app #sidebar,
+:where(:root[data-cores='novas']) #app .sidebar,
+:where(:root[data-cores='novas']) #app nav.active-sidebar,
+:where(:root[data-cores='novas']) #app .wrapper > nav,
+:where(:root[data-cores='novas']) #app input[type='checkbox']:checked,
+:where(:root[data-cores='novas']) #app input[type='radio']:checked {
+  --border-focus: var(--border-inverse);
+}
+
+/* ─── Wrappers que NÃO tinham indicação própria de foco ─────────────────────
+   Achado do Paulo (print da busca da Home) + varredura nas 23 superfícies com
+   input: em `.nav-search` (busca de lista, 8 telas), `.search-input` (busca da
+   Home) e `.drop__container` (área de upload), o anel caía no INPUT interno —
+   desenhado DENTRO da caixa do campo. Nesses três a caixa não tem `:focus-within`
+   no produto, então aqui ela ganha o anel e o input interno perde (regras acima).
+   O auditor `auditar-anel-interno.cjs` é quem mantém esta lista honesta.
+   TAREFA (produto): dar `:focus-within` aos três wrappers —
+   `NavSearch.vue` (.nav-search), busca da Home (.search-input) e
+   `AthInputDragDropFiles.vue` (.drop__container). */
+:where(:root[data-cores='novas']) #app .nav-search:focus-within,
+:where(:root[data-cores='novas']) #app .search-input:focus-within,
+:where(:root[data-cores='novas']) #app .drop__container:focus-within,
+:where(:root[data-cores='novas']) body > div:not(#app) .nav-search:focus-within,
+:where(:root[data-cores='novas']) body > div:not(#app) .search-input:focus-within {
+  outline: 2px solid var(--border-focus) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 2px var(--border-inverse) !important;
+}

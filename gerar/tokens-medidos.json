@@ -1,0 +1,584 @@
+{
+ "edsbutton": [
+  "Background/Brand",
+  "Background/Danger",
+  "Background/Hover",
+  "Background/Success",
+  "Background/SuccessHover",
+  "Background/Surface",
+  "Content/Disabled",
+  "Content/OnFill",
+  "Content/Secondary",
+  "Border/Success"
+ ],
+ "edsbuttonremove": [
+  "Background/Surface",
+  "Content/OnDangerSubtle",
+  "Border/Danger"
+ ],
+ "edsbuttonicon": [
+  "Background/Brand",
+  "Content/OnFill",
+  "Content/Tertiary"
+ ],
+ "athinputtext": [
+  "Background/Surface",
+  "Content/Primary",
+  "Border/Default"
+ ],
+ "edsinputselect": [
+  "Background/Surface",
+  "Content/Primary",
+  "Content/Tertiary",
+  "Border/Default"
+ ],
+ "athinputdatepicker": [
+  "Background/Surface",
+  "Content/Tertiary",
+  "Border/Default"
+ ],
+ "athinputmoney": [
+  "Background/Surface",
+  "Border/Default"
+ ],
+ "athinputcheckbox": [
+  "Content/Primary",
+  "Control/Accent"
+ ],
+ "switch": [
+  "Background/Brand",
+  "Background/Surface",
+  "Content/Secondary",
+  "Border/Brand",
+  "Border/Default",
+  "Border/Focus"
+ ],
+ "athinputdragdropfiles": [
+  "Content/Tertiary",
+  "Border/Default"
+ ],
+ "navsearch": [
+  "Background/Surface",
+  "Content/Primary",
+  "Border/Default"
+ ],
+ "athinputyearpicker": [
+  "Background/InfoSubtle",
+  "Background/SuccessSubtle",
+  "Background/Surface",
+  "Content/Primary",
+  "Content/Success",
+  "Border/Brand",
+  "Border/Default"
+ ],
+ "athinputrangepicker": [
+  "Background/Surface",
+  "Content/Primary",
+  "Border/Default"
+ ],
+ "athinputtextarea": [
+  "Background/Surface",
+  "Content/Primary",
+  "Content/Secondary",
+  "Border/Default"
+ ],
+ "athinputpercentage": [
+  "Content/Brand"
+ ],
+ "athinputradio": [
+  "Content/Primary",
+  "Control/Accent"
+ ],
+ "athinputthemedefault": [
+  "Background/Surface",
+  "Border/Danger"
+ ],
+ "athformaddress": [
+  "Background/Surface",
+  "Content/Primary",
+  "Content/Secondary",
+  "Border/Default"
+ ],
+ "athinputdiscount": [
+  "Background/Surface",
+  "Content/Primary",
+  "Border/Default"
+ ],
+ "edsinputmultiselectsuggest": [
+  "Background/Brand",
+  "Background/Surface",
+  "Content/Secondary",
+  "Border/Default"
+ ],
+ "athsecuritypassword": [
+  "Content/Primary",
+  "Content/Success"
+ ],
+ "athinputmonthyearpicker": [
+  "Background/Surface",
+  "Content/Primary",
+  "Border/Default"
+ ],
+ "athmulticheckbox": [
+  "Content/Primary",
+  "Control/Accent"
+ ],
+ "athinputtextfake": [
+  "Background/Surface",
+  "Content/Primary",
+  "Border/Default"
+ ],
+ "athinputrangeslider": [
+  "Background/Surface",
+  "Content/Secondary",
+  "Control/Accent"
+ ],
+ "athinputmulticheckbox": [
+  "Background/BrandSelected",
+  "Content/Brand"
+ ],
+ "athsignerslistinput": [
+  "Background/Surface",
+  "Content/OnDangerSubtle",
+  "Content/Primary",
+  "Border/Danger",
+  "Border/Default"
+ ],
+ "athinputtextsearch": [
+  "Background/Surface",
+  "Content/Primary",
+  "Content/Secondary",
+  "Border/Default"
+ ],
+ "athinputtexteditor": [
+  "Background/Surface",
+  "Content/Primary",
+  "Content/Secondary",
+  "Content/Tertiary",
+  "Border/Default"
+ ],
+ "athinputslider": [
+  "Background/Surface",
+  "Content/Tertiary",
+  "Control/Accent"
+ ],
+ "athselectfamily": [
+  "Background/Surface",
+  "Content/Primary",
+  "Content/Tertiary",
+  "Border/Default"
+ ],
+ "athbreadcrumb": [
+  "Content/Primary",
+  "Content/Tertiary",
+  "Border/Subtle"
+ ],
+ "athtab": [
+  "Content/Brand"
+ ],
+ "athtabs": [
+  "Content/Brand",
+  "Content/Tertiary"
+ ],
+ "athaccordion": [
+  "Background/BrandSelected",
+  "Background/Surface",
+  "Content/Primary",
+  "Content/Tertiary",
+  "Border/Moderate"
+ ],
+ "athwizard": [
+  "Background/Brand",
+  "Background/Success",
+  "Background/Surface",
+  "Content/Brand",
+  "Content/OnFill",
+  "Content/Success",
+  "Border/Brand",
+  "Border/Subtle",
+  "Border/SuccessPressed"
+ ],
+ "athpopover": [
+  "Background/Surface",
+  "Content/Primary",
+  "Border/Default"
+ ],
+ "athpopoversimple": [
+  "Background/Surface",
+  "Content/Brand",
+  "Content/Primary",
+  "Border/Subtle"
+ ],
+ "athtabsnormal": [
+  "Content/Brand",
+  "Content/Tertiary"
+ ],
+ "athdropbutton": [
+  "Background/Surface",
+  "Content/Brand",
+  "Border/Brand"
+ ],
+ "timelinerepasse": [
+  "Background/Canvas",
+  "Background/Success",
+  "Background/Surface",
+  "Content/InfoLarge",
+  "Content/Primary",
+  "Content/Secondary",
+  "Border/Default",
+  "Border/SuccessPressed"
+ ],
+ "navselecttenant": [
+  "Background/Surface",
+  "Content/Primary",
+  "Content/Secondary",
+  "Border/Subtle"
+ ],
+ "navnotifications": [
+  "Background/Brand",
+  "Background/Danger",
+  "Background/Surface",
+  "Content/OnFill"
+ ],
+ "itemnotification": [
+  "Background/BrandSelected",
+  "Content/Brand"
+ ],
+ "athtimelinevertical": [
+  "Background/Brand",
+  "Background/Inverse",
+  "Background/Success",
+  "Background/Surface",
+  "Background/Warning",
+  "Content/Danger",
+  "Content/InfoLarge",
+  "Content/Tertiary",
+  "Border/Danger"
+ ],
+ "athswipemonths": [
+  "Background/Canvas",
+  "Content/Brand",
+  "Content/Secondary",
+  "Content/Tertiary"
+ ],
+ "segmentcontrol": [
+  "Background/BrandSubtle",
+  "Content/Brand",
+  "Content/Tertiary",
+  "Border/Subtle"
+ ],
+ "athtabsicon": [
+  "Content/Brand",
+  "Content/Tertiary"
+ ],
+ "athformtitle": [
+  "Content/Brand",
+  "Content/Primary"
+ ],
+ "athformheader": [
+  "Content/Danger",
+  "Content/Primary",
+  "Content/Tertiary"
+ ],
+ "athtitle": [
+  "Content/Secondary",
+  "Content/Tertiary"
+ ],
+ "athcopytext": [
+  "Content/Brand",
+  "Content/Primary"
+ ],
+ "athformtitlelist": [
+  "Content/Primary",
+  "Content/Secondary"
+ ],
+ "athcopytextbox": [
+  "Background/Surface",
+  "Content/Brand",
+  "Content/Primary",
+  "Border/Default"
+ ],
+ "athtextselecteditems": [
+  "Content/Primary"
+ ],
+ "athribbon": [
+  "Background/Inverse",
+  "Background/Surface",
+  "Content/Secondary"
+ ],
+ "athmodal": [
+  "Background/Surface",
+  "Content/Primary",
+  "Content/Secondary",
+  "Content/Tertiary",
+  "Border/Default",
+  "Overlay/Scrim"
+ ],
+ "athpanelwarning": [
+  "Background/Hover",
+  "Content/Primary",
+  "Content/Secondary",
+  "Content/Success",
+  "Content/Warning"
+ ],
+ "athpaneldescription": [
+  "Content/Primary"
+ ],
+ "athloading": [
+  "Border/Brand"
+ ],
+ "athmodalcenter": [
+  "Background/Surface",
+  "Content/Primary",
+  "Content/Secondary",
+  "Content/Tertiary",
+  "Border/Subtle",
+  "Overlay/Scrim"
+ ],
+ "athpanelfinishedsuccess": [
+  "Content/Primary",
+  "Border/Success"
+ ],
+ "athmodalheader": [
+  "Content/Primary",
+  "Content/Tertiary"
+ ],
+ "athmodalinformation": [
+  "Background/Surface",
+  "Content/Secondary",
+  "Content/Tertiary",
+  "Overlay/Scrim"
+ ],
+ "athloadingbar": [
+  "Background/Canvas"
+ ],
+ "athpanelsheetsent": [
+  "Background/Brand",
+  "Content/OnFill",
+  "Content/Primary",
+  "Content/Success"
+ ],
+ "ebtippy": [
+  "Background/Inverse",
+  "Background/Surface",
+  "Content/InfoLarge",
+  "Content/Secondary"
+ ],
+ "athpanelfilesupload": [
+  "Content/Brand",
+  "Content/Primary",
+  "Content/Secondary",
+  "Border/Default"
+ ],
+ "athguardianinfomodal": [
+  "Content/InfoLarge",
+  "Content/Primary",
+  "Border/Default"
+ ],
+ "edsalertgroup": [
+  "Content/Primary",
+  "Content/Secondary"
+ ],
+ "changepassword": [
+  "Background/Surface",
+  "Content/Secondary",
+  "Border/Default"
+ ],
+ "athloader": [
+  "Background/Brand",
+  "Background/Canvas"
+ ],
+ "athprogressbar": [
+  "Background/Brand",
+  "Border/Subtle"
+ ],
+ "modalmfavalidated": [
+  "Content/Success",
+  "Content/Warning"
+ ],
+ "athspreadsheetinspectionpanel": [
+  "Background/Canvas",
+  "Content/Primary"
+ ],
+ "athpanelfinisheddata": [
+  "Content/Brand"
+ ],
+ "athalertbar": [
+  "Background/DangerSubtle",
+  "Background/SuccessSubtle",
+  "Content/OnDangerSubtle",
+  "Content/Success"
+ ],
+ "securityaccount": [
+  "Content/Primary",
+  "Content/Secondary",
+  "Content/Tertiary"
+ ],
+ "phoneverificationmodal": [
+  "Background/Surface",
+  "Content/Primary",
+  "Border/Default"
+ ],
+ "athspreadsheetimportsuccesspanel": [
+  "Background/Brand",
+  "Content/OnFill",
+  "Content/Secondary"
+ ],
+ "athspreadsheeterrorpanel": [
+  "Background/Brand",
+  "Content/OnFill",
+  "Content/Secondary"
+ ],
+ "athspreadsheetdownloadsuccesspanel": [
+  "Background/Brand",
+  "Content/OnFill",
+  "Content/Secondary"
+ ],
+ "athspreadsheetdownloadinprogresspanel": [
+  "Background/Canvas",
+  "Content/Primary"
+ ],
+ "athskeletontext": [
+  "Background/Hover"
+ ],
+ "athprocessingloader": [
+  "Background/Canvas",
+  "Background/Surface",
+  "Content/Brand",
+  "Content/Primary",
+  "Content/Secondary",
+  "Overlay/Scrim"
+ ],
+ "athpanelfinishederror": [
+  "Content/Danger",
+  "Content/Primary"
+ ],
+ "athinfinitloader": [
+  "Border/Brand"
+ ],
+ "athcountdowntimer": [
+  "Background/Canvas",
+  "Content/Brand",
+  "Content/Secondary"
+ ],
+ "athskeletoninput": [
+  "Background/Hover"
+ ],
+ "edstable": [
+  "Background/BrandSelected",
+  "Background/Canvas",
+  "Content/Primary",
+  "Border/Default",
+  "Control/Accent"
+ ],
+ "athfiltertablesimple": [
+  "Background/Surface",
+  "Content/Brand",
+  "Content/Primary",
+  "Content/Secondary",
+  "Border/Subtle"
+ ],
+ "athtag": [
+  "Background/DangerSubtle",
+  "Background/InfoSubtle",
+  "Background/RiskSubtle",
+  "Background/SuccessSubtle",
+  "Background/WarningSubtle",
+  "Content/Info",
+  "Content/OnDangerSubtle",
+  "Content/Success",
+  "Content/Warning",
+  "Border/Risk"
+ ],
+ "athfilterselectschools": [
+  "Background/Surface",
+  "Content/Brand",
+  "Content/Primary",
+  "Content/Secondary",
+  "Border/Subtle"
+ ],
+ "athfilterreferencesdate": [
+  "Background/Canvas",
+  "Content/Brand",
+  "Content/Primary",
+  "Content/Tertiary"
+ ],
+ "athpill": [
+  "Background/DangerSubtle",
+  "Background/SuccessSubtle",
+  "Content/OnDangerSubtle",
+  "Content/Success"
+ ],
+ "athpanelfilestabledownloaddelete": [
+  "Background/WarningSubtle",
+  "Content/Warning"
+ ],
+ "athtreejs": [
+  "Background/Hover",
+  "Content/Primary"
+ ],
+ "athtreejsmultisearch": [
+  "Background/Hover",
+  "Content/Primary"
+ ],
+ "athbadge": [
+  "Background/DangerSubtle",
+  "Background/InfoSubtle",
+  "Background/RiskSubtle",
+  "Background/SuccessSubtle",
+  "Background/WarningSubtle",
+  "Content/Info",
+  "Content/OnDangerSubtle",
+  "Content/Risk",
+  "Content/Success",
+  "Content/Warning"
+ ],
+ "athfilterselectschoolbycode": [
+  "Background/Surface",
+  "Content/Brand",
+  "Content/Primary",
+  "Content/Secondary",
+  "Border/Subtle"
+ ],
+ "athfiltercessionstatus": [
+  "Content/Secondary"
+ ],
+ "athicon": [
+  "Content/Brand",
+  "Content/Secondary",
+  "Content/Tertiary"
+ ],
+ "athhr": [
+  "Border/Default"
+ ],
+ "athcard": [
+  "Content/Brand",
+  "Content/Primary",
+  "Border/Default"
+ ],
+ "athcardbuttonsimple": [
+  "Background/BrandSubtle",
+  "Content/Primary",
+  "Content/Secondary",
+  "Border/Subtle"
+ ],
+ "athcardradiobutton": [
+  "Content/Primary",
+  "Control/Accent"
+ ],
+ "modalitemtwoparts": [
+  "Content/Primary",
+  "Border/Subtle"
+ ],
+ "athcardoverviewdetails": [
+  "Background/Risk",
+  "Background/Success",
+  "Background/Surface",
+  "Background/Warning",
+  "Content/InfoLarge",
+  "Content/Tertiary"
+ ],
+ "athcardwithbutton": [
+  "Content/Success"
+ ]
+}

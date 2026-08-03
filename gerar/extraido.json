@@ -1,0 +1,1741 @@
+[
+ {
+  "id": "edsbutton",
+  "grupo": "Botões",
+  "titulo": "EdsButton",
+  "situacao": "proposta",
+  "why": "Toda ação com consequência (excluir, aprovar) usa texto com no mínimo 4,5:1 ✓ de contraste sobre o preenchimento. O anel de foco usa o anel duplo (halo): um traço claro encostado no botão + um traço escuro encostado na página — sempre visível, em qualquer preenchimento, sem depender de qual cor o botão tem.",
+  "hint": "",
+  "subtitulo": "Padrão",
+  "legenda": "Danger: #b70000 (hover vira #890000) — 6,22:1 ✓Success: #007a29 (hover vira #005c1f) — 4,92:1 ✓Success outline: #005c1f — 7,62:1 ✓Foco (só nas variantes preenchidas): anel claro Brand/100 #e1ddf7 encostado no botão (4,1–5,3:1 ✓ contra qualquer preenchimento: roxo, vermelho ou verde) + anel escuro Border/Focus #5644ad por fora, encostado na página (7,4:1 ✓) — os dois já existem na escala, nenhuma cor novaSuccess outline e demais variantes de contorno: mantêm o anel único de sempre — o fundo já é branco, não precisa de halo",
+  "html": "<div class=\"row\"><span class=\"state-label\">Primary</span><button class=\"btn primary\">Confirmar</button></div><div class=\"row\"><span class=\"state-label\">Danger</span><button class=\"btn danger\">Excluir conta</button></div><div class=\"row\"><span class=\"state-label\">Success</span><button class=\"btn success\">Aprovar</button></div><div class=\"row\"><span class=\"state-label\">Success Outline</span><button class=\"btn success-outline\">Ver detalhes</button></div><div class=\"row\"><span class=\"state-label\">Foco</span><button class=\"btn primary demo-focus\">Confirmar</button></div><div class=\"row\"><span class=\"state-label\">Desabilitado</span><button class=\"btn primary\" disabled=\"\">Confirmar</button></div>",
+  "tokens": [
+   "Border/Focus"
+  ],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "edsbuttonremove",
+  "grupo": "Botões",
+  "titulo": "EdsButtonRemove",
+  "situacao": "herda",
+  "why": "É uma instância fixa do EdsButton na variante danger-outline — segue exatamente a especificação daquele componente: mesmo hover/active/foco reais, só a cor semântica muda.",
+  "hint": "Passe o mouse, clique ou dê Tab — interação real.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<button class=\"btn danger-outline\" style=\"gap:8px;\"><svg style=\"width:16px;height:16px;\"><use href=\"#i-trash\"></use></svg>Remover</button>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "edsbuttonicon",
+  "grupo": "Botões",
+  "titulo": "EdsButtonIcon",
+  "situacao": "proposta",
+  "why": "Botão quadrado com radius 8px — nunca círculo. Variante tertiary (transparente) some no fundo até o hover, igual ao botão de fechar de qualquer modal (já correta, ver referência ao lado). A variante primary (preenchida) tem um bug real de foco quebrado.",
+  "hint": "Passe o mouse e clique (ou dê Tab) — os dois botões reagem de verdade.",
+  "subtitulo": "Padrão",
+  "legenda": "Fix: referência trocada por Border/Focus — o mesmo anel duplo (halo) resolvido na aba EdsButton, já que a variante primary também é preenchidaTertiary não muda — já estava correto",
+  "html": "<div class=\"row\" style=\"gap:16px;\"><button class=\"btn-icon primary demo-focus\" aria-label=\"Ícone (primary)\"><svg style=\"width:18px;height:18px;\"><use href=\"#i-info\"></use></svg></button><button class=\"close-btn\" aria-label=\"Ícone (tertiary)\"><svg style=\"width:18px;height:18px;color:#666666;\"><use href=\"#i-info\"></use></svg></button></div>",
+  "tokens": [
+   "Border/Focus"
+  ],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputtext",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputText",
+  "situacao": "proposta",
+  "why": "Border/Default é o contorno padrão de todo campo de formulário — a pista visual de onde a pessoa pode digitar, por isso exige no mínimo 3:1 contra o fundo. Passe o mouse sem clicar: hoje nenhum campo do DS reage — só o fundo mudava (Background/Hover (fundo sob o mouse)), nunca a borda. Todo campo de texto/select/upload passa a escurecer a borda no hover (Border/Hover (contorno sob o mouse), reaproveitando um neutro já existente na escala) — o mesmo padrão dos campos do Google, distinto do anel de foco.",
+  "hint": "Passe o mouse sem clicar — a borda escurece um pouco antes mesmo de focar.",
+  "subtitulo": "Padrão",
+  "legenda": "Padrão: #8c8c8c — 3,36:1 ◐Hover (novo): #737373 — 4,74:1 ✓, reaproveita neutral-550 da escala primitivaErro: Border/Danger, Desabilitado: Border/Disabled — nenhum dos dois reage ao hoverRegra: erro + foco = anel na cor do erro, sempre — vale pra qualquer campo de formulário",
+  "html": "<div class=\"field\"><div class=\"field-head\"><label>Nome do responsável</label><div class=\"state-pills\" data-group=\"new\"><button class=\"state-pill\" data-state=\"default\" aria-pressed=\"true\">Padrão</button><button class=\"state-pill\" data-state=\"focus\" aria-pressed=\"false\">Foco</button><button class=\"state-pill\" data-state=\"error\" aria-pressed=\"false\">Erro</button><button class=\"state-pill\" data-state=\"disabled\" aria-pressed=\"false\">Desabilitado</button></div></div><div class=\"box state-default\" data-box=\"new\"><input type=\"text\" value=\"João da Silva\" data-field=\"new\"></div><span class=\"err\" data-err=\"new\" style=\"display:none;\">CPF inválido</span></div>",
+  "tokens": [
+   "Border/Danger",
+   "Border/Disabled"
+  ],
+  "tokensNoWhy": [
+   "Border/Default",
+   "Background/Hover",
+   "Border/Hover"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "edsinputselect",
+  "grupo": "Campos de formulário",
+  "titulo": "EdsInputSelect",
+  "situacao": "proposta",
+  "why": "Segue a mesma especificação do campo de texto: Border/Default (contorno padrão) no estado padrão, mesma regra de foco e de erro, e o mesmo hover de borda novo (Border/Hover (contorno sob o mouse)) — já coberto em detalhe na aba AthInputText.",
+  "hint": "Passe o mouse, clique (foco real) ou use as pastilhas pra erro/desabilitado.",
+  "subtitulo": "Padrão",
+  "legenda": "Padrão: #8c8c8c — 3,36:1 ◐Foco: Border/Focus · Erro: Border/Danger · Desabilitado: Border/Disabled",
+  "html": "<div class=\"field\"><div class=\"field-head\"><label>Escola</label><div class=\"state-pills\" data-group=\"sel-new\"><button class=\"state-pill\" data-state=\"default\" aria-pressed=\"true\">Padrão</button><button class=\"state-pill\" data-state=\"focus\" aria-pressed=\"false\">Foco</button><button class=\"state-pill\" data-state=\"error\" aria-pressed=\"false\">Erro</button><button class=\"state-pill\" data-state=\"disabled\" aria-pressed=\"false\">Desabilitado</button></div></div><div class=\"box select-box state-default\" data-box=\"sel-new\" tabindex=\"0\"><span data-field=\"sel-new\">Colégio Horizonte</span><svg style=\"width:16px;height:16px;color:#666666;flex-shrink:0;\"><use href=\"#i-caret-down\"></use></svg></div><span class=\"err\" data-err=\"sel-new\" style=\"display:none;\">Selecione uma escola</span></div>",
+  "tokens": [
+   "Border/Focus",
+   "Border/Danger",
+   "Border/Disabled"
+  ],
+  "tokensNoWhy": [
+   "Border/Default",
+   "Border/Hover"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputdatepicker",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputDatepicker",
+  "situacao": "proposta",
+  "why": "Segue a mesma especificação do campo de texto: Border/Default (contorno padrão) no contorno, ícone de calendário em Content/Tertiary (texto discreto).",
+  "hint": "Clique no campo pra ver o foco real (mesmo comportamento do AthInputText).",
+  "subtitulo": "Padrão",
+  "legenda": "Borda: #8c8c8c — 3,36:1 ◐ · passe o mouse pra ver escurecer (Border/Hover)Ícone sem mudança",
+  "html": "<div class=\"box state-default\" style=\"display:flex;align-items:center;justify-content:space-between;padding:12px 14px;\"><input type=\"text\" value=\"15/03/2026\" style=\"border:none;background:transparent;font:inherit;color:#1a1a1a;flex:1;\"><svg style=\"width:16px;height:16px;color:#7d8097;\"><use href=\"#i-school\"></use></svg></div>",
+  "tokens": [
+   "Border/Hover"
+  ],
+  "tokensNoWhy": [
+   "Border/Default",
+   "Content/Tertiary"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputmoney",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputMoney",
+  "situacao": "proposta",
+  "why": "Segue exatamente a mesma especificação do campo de texto padrão — nenhuma variação de cor própria, incluindo o hover de borda novo (Border/Hover (contorno sob o mouse)).",
+  "hint": "Passe o mouse (hover) e clique (foco) — os dois reais.",
+  "subtitulo": "Padrão",
+  "legenda": "Borda: #8c8c8c — 3,36:1 ◐Hover: #737373 — 4,74:1 ✓",
+  "html": "<div class=\"box state-default\" style=\"padding:12px 14px;\"><input type=\"text\" value=\"R$ 1.250,00\" style=\"border:none;background:transparent;font:inherit;color:#1a1a1a;width:100%;\"></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Border/Hover"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputcheckbox",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputCheckbox",
+  "situacao": "proposta",
+  "why": "Marcado e foco usam Control/Accent (controle de destaque) — não Content/Brand (texto da marca): aqui o roxo preenche o quadrado do checkbox (accent-color) e o anel de foco, nunca um texto. Mesmo valor de marca, papel de token diferente do usado em texto/ícone.",
+  "hint": "Clique ou dê Tab pra ver marcado/foco reais.",
+  "subtitulo": "Padrão",
+  "legenda": "Borda: Border/Default #8c8c8c — 3.17–3,36:1 ◐Marcado + foco: Control/Accent #6b55d8 — mesmo valor do roxo de marca, mas é token de controle, não de texto",
+  "html": "<label class=\"chk-mini\"><input type=\"checkbox\" class=\"chk-real\" data-chk=\"new\" style=\"--chk-b:#8c8c8c;--chk-a:#6b55d8;\"><span>Aceito os termos de matrícula</span></label>",
+  "tokens": [
+   "Border/Default",
+   "Control/Accent"
+  ],
+  "tokensNoWhy": [
+   "Control/Accent",
+   "Content/Brand"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "switch",
+  "grupo": "Campos de formulário",
+  "titulo": "Switch",
+  "situacao": "proposta",
+  "why": "Border/Default marca o contorno de um controle interativo — precisa ser percebido. Background/Brand (fundo da marca) é o único roxo de preenchimento de marca em toda a plataforma. Foco usa sempre Border/Focus (contorno do foco), contornando o controle.",
+  "hint": "",
+  "subtitulo": "Padrão",
+  "legenda": "Borda: #8c8c8c — 3.17–3,36:1 ◐Ligado: #6b55d8 — o mesmo roxo usado em botões/linksFoco: troca o pontinho por outline: 3px solid Border/Focus — o mesmo padrão de anel usado em botão e input. Não é só valor de token, precisa de 1 regra CSS nova em AthInputSwitch.vue",
+  "html": "<div class=\"row\"><span class=\"state-label\">Desligado</span><div class=\"sw\" role=\"switch\" aria-checked=\"false\" tabindex=\"0\" style=\"border-color:#8c8c8c;\"><div class=\"thumb\"></div></div></div><div class=\"row\"><span class=\"state-label\">Ligado</span><div class=\"sw\" role=\"switch\" aria-checked=\"true\" tabindex=\"0\" style=\"border-color:#6b55d8;background-color:#6b55d8;\"><div class=\"thumb\"></div></div></div><div class=\"row\"><span class=\"state-label\">Foco</span><div class=\"sw demo-focus-fixed\" role=\"switch\" aria-checked=\"false\" tabindex=\"0\" style=\"border-color:#8c8c8c;\"><div class=\"thumb\"></div></div></div><div class=\"row\"><span class=\"state-label\">Desabilitado</span><div class=\"sw\" role=\"switch\" aria-checked=\"false\" data-disabled=\"true\" aria-disabled=\"true\" style=\"border-color:#8c8c8c;\"><div class=\"thumb\"></div></div></div>",
+  "tokens": [
+   "Border/Focus"
+  ],
+  "tokensNoWhy": [
+   "Border/Default",
+   "Background/Brand",
+   "Border/Focus"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputdragdropfiles",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputDragDropFiles",
+  "situacao": "proposta",
+  "why": "A borda da área de soltar arquivos usa Border/Default (contorno padrão) (tracejada). O texto de instrução usa Content/Tertiary (texto discreto) — nunca um tom que reprove como texto corrido.",
+  "hint": "Passe o mouse pra ver o hover real (à esquerda ele desbota tudo — não só o fundo).",
+  "subtitulo": "Padrão",
+  "legenda": "Texto: #666666 — 5,74:1 ✓Hover: só o fundo muda (Background/Hover) — texto e ícone mantêm contraste total",
+  "html": "<div class=\"dz dz-new\" style=\"border-color:#8c8c8c;\"><svg style=\"width:18px;height:18px;color:#666666;\"><use href=\"#i-upload\"></use></svg><span style=\"color:#666666;\">Envie os documentos</span></div>",
+  "tokens": [
+   "Background/Hover"
+  ],
+  "tokensNoWhy": [
+   "Border/Default",
+   "Content/Tertiary"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "navsearch",
+  "grupo": "Campos de formulário",
+  "titulo": "NavSearch",
+  "situacao": "proposta",
+  "why": "O campo de busca da barra superior não tem nenhum indicador de foco — o CSS remove o contorno nativo e não coloca nada no lugar. É o único campo de texto do produto sem o anel de foco padrão.",
+  "hint": "Clique dentro do campo ou use Tab pra ver o foco real.",
+  "subtitulo": "Padrão",
+  "legenda": "Contorno: #8c8c8c — 3.17–3,36:1 ◐ · escurece no hover (Border/Hover)Foco: anel #5644ad, mesmo comportamento de qualquer outro campo",
+  "html": "<div class=\"box state-default\" style=\"display:flex;align-items:center;gap:8px;padding:10px 14px;\"><svg style=\"width:16px;height:16px;color:#002a3a;flex-shrink:0;\"><use href=\"#i-magnifying-glass\"></use></svg><input type=\"text\" placeholder=\"Buscar\" style=\"border:none;background:transparent;font:inherit;color:#002a3a;flex:1;outline:none;\"></div>",
+  "tokens": [
+   "Border/Hover"
+  ],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputyearpicker",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputYearpicker",
+  "situacao": "proposta",
+  "why": "O campo do calendário não tem anel de foco próprio — nenhum dos componentes de data do DS define um foco customizado, diferente de todo campo de texto simples. O selo \"Novo\" da temporada já usa a correção de texto do lote anterior.",
+  "hint": "Tab até o campo à esquerda pra ver que o foco vem só do navegador, sem o anel roxo do resto do produto.",
+  "subtitulo": "Padrão",
+  "legenda": "Passe o mouse e clique/Tab no ano à esquerda — hover e foco reais, mesmo token do resto dos camposDestaque de temporada já correto: borda Border/Brand #6b55d8, tag em Content/Success",
+  "html": "<div class=\"row\" style=\"gap:16px;\"><div class=\"box state-default\" style=\"display:inline-block;padding:8px 16px;border-radius:10px;text-align:center;font-family:'Satoshi',sans-serif;color:#1a1a1a;\" tabindex=\"0\">2026</div><div style=\"display:flex;align-items:center;gap:8px;padding:6px 10px;background:#e9f3fe;border:1px solid #6b55d8;border-radius:8px;font-family:'Satoshi',sans-serif;\">2027 <span class=\"ath-tag-mini\" style=\"background:#eafaf1;color:#007a29;\">Novo</span></div></div>",
+  "tokens": [
+   "Border/Brand",
+   "Content/Success"
+  ],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputrangepicker",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputRangePicker",
+  "situacao": "herda",
+  "why": "Mesmo padrão do AthInputYearpicker: usa a mesma biblioteca de calendário e o mesmo fundo decorativo, sem anel de foco customizado no campo. Componente final abaixo, já com o hover de borda novo.",
+  "hint": "Passe o mouse — mesmo Border/Hover (contorno sob o mouse) do resto dos campos.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"box state-default\" style=\"display:inline-flex;padding:8px 14px;font-family:'Satoshi',sans-serif;color:#1a1a1a;\">15/03/2026 – 22/03/2026</div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputtextarea",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputTextArea",
+  "situacao": "proposta",
+  "why": "O textarea remove o próprio foco de propósito — o anel de foco é responsabilidade do wrapper de tema (AthInputThemeDefault), via :focus-within. É o comportamento correto, a mesma lição já aplicada no AthInputText; só muda a cor da borda padrão.",
+  "hint": "Clique dentro do texto — o foco vem do contorno em volta, não do textarea.",
+  "subtitulo": "Padrão",
+  "legenda": "Borda: #8c8c8c — 3.17–3,36:1 ◐ · escurece no hover (Border/Hover)",
+  "html": "<div class=\"box state-default\" style=\"padding:0;\"><textarea style=\"width:100%;min-height:64px;border:none;background:transparent;padding:12px 14px;font:inherit;color:#2d3849;outline:none;resize:none;\">Aluno apresentou dificuldade na entrega do boleto.</textarea></div>",
+  "tokens": [
+   "Border/Hover"
+  ],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputpercentage",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputPercentage",
+  "situacao": "proposta",
+  "why": "A variante grande do rótulo (usada em telas de resumo) usa o roxo antigo — mas em 24px ela conta como \"texto grande\" da WCAG (limite 3:1, não 4,5:1 ✓), então passa em 3,58:1 ◐. É o mesmo hex que reprova no AthTabsNormal: aqui o tamanho da fonte compensa, não a cor.",
+  "hint": "Rótulo em destaque, usado acima de valores de porcentagem.",
+  "subtitulo": "Padrão",
+  "legenda": "Texto 24px: #6b55d8 — 5,36:1 ✓Muda por consistência de marca, não por acessibilidade — aqui já passava",
+  "html": "<div style=\"font-size:24px;font-weight:700;color:#6b55d8;border-bottom:1px solid #6b55d8;display:inline-block;padding-bottom:4px;font-family:'Satoshi',sans-serif;\">15,00%</div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputradio",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputRadio",
+  "situacao": "proposta",
+  "why": "O preenchimento do radio marcado é um roxo hardcoded (#ae9eff) — nem o roxo antigo, nem o novo, um 3º valor criado só pra esse componente. Contra o fundo branco mede 2,30:1 ✕, abaixo do mínimo de 3:1 pra um indicador de estado.",
+  "hint": "Clique nas opções — são radios reais.",
+  "subtitulo": "Padrão",
+  "legenda": "Marcado: #6b55d8 — 5,36:1 ✓Mesmo roxo já usado em botão, ícone e foco — 1 valor de marca, não 3",
+  "html": "<div class=\"radio-mini-group\"><label class=\"radio-mini\"><input type=\"radio\" name=\"r-new\" checked=\"\" style=\"accent-color:#6b55d8;\"><span>Boleto</span></label><label class=\"radio-mini\"><input type=\"radio\" name=\"r-new\" style=\"accent-color:#6b55d8;\"><span>Pix</span></label></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputthemedefault",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputThemeDefault",
+  "situacao": "proposta",
+  "why": "É o wrapper por trás de quase todo campo de texto do produto — a base onde vive a regra \"erro + foco\" (fix já usado na aba AthInputText). Sem essa regra, um campo com erro que recebe foco mostra a borda vermelha com um anel roxo por cima, 2 sinais competindo.",
+  "hint": "Clique dentro do campo com erro pra ver a diferença no anel de foco.",
+  "subtitulo": "Padrão",
+  "legenda": "O anel de foco herda a cor do erro — 1 sinal só, não 2 competindo",
+  "html": "<div class=\"box state-error\" style=\"border-color:#e50000;\"><input type=\"text\" value=\"000.000.000-00\" style=\"border:none;background:transparent;font:inherit;color:#1a1a1a;width:100%;padding:12px 14px;outline:none;\"></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athformaddress",
+  "grupo": "Campos de formulário",
+  "titulo": "AthFormAddress",
+  "situacao": "herda",
+  "why": "Sem CSS próprio — são 6 instâncias de AthInputText lado a lado (CEP, Estado, Cidade, Bairro, Endereço, Número, Complemento). Toda a correção já está na aba AthInputText. Componente final abaixo, com 2 dos 6 campos.",
+  "hint": "Passe o mouse — mesmo Border/Hover (contorno sob o mouse) do AthInputText.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"row\" style=\"gap:10px;\"><div style=\"flex:1;\"><label style=\"font-size:11px;color:#575e6a;font-family:'Satoshi',sans-serif;display:block;margin-bottom:4px;\">CEP</label><div class=\"box state-default\" style=\"padding:10px 12px;\"><span style=\"font-family:'Satoshi',sans-serif;color:#1a1a1a;font-size:13px;\">04.567-000</span></div></div><div style=\"flex:2;\"><label style=\"font-size:11px;color:#575e6a;font-family:'Satoshi',sans-serif;display:block;margin-bottom:4px;\">Cidade</label><div class=\"box state-default\" style=\"padding:10px 12px;\"><span style=\"font-family:'Satoshi',sans-serif;color:#1a1a1a;font-size:13px;\">São Paulo</span></div></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputdiscount",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputDiscount",
+  "situacao": "herda",
+  "why": "Sem CSS próprio — é EdsInputSelect (o seletor % / R$) + AthInputPercentage ou AthInputMoney, alternando conforme a escolha. As 3 correções já estão em abas próprias. Componente final abaixo.",
+  "hint": "Passe o mouse — mesmo Border/Hover (contorno sob o mouse) dos campos já cobertos.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"row\" style=\"gap:8px;align-items:flex-end;\"><div class=\"box state-default\" style=\"padding:10px 12px;width:56px;justify-content:center;\"><span style=\"font-family:'Satoshi',sans-serif;color:#1a1a1a;font-size:13px;\">%</span></div><div class=\"box state-default\" style=\"padding:10px 12px;flex:1;\"><span style=\"font-family:'Satoshi',sans-serif;color:#1a1a1a;font-size:13px;\">15,00%</span></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "edsinputmultiselectsuggest",
+  "grupo": "Campos de formulário",
+  "titulo": "EdsInputMultiSelectSuggest",
+  "situacao": "atencao",
+  "why": "Já construído 100% em cima do sistema novo de tokens — Background/Brand (fundo da marca), Background/Brand-Hover, Background/Brand-Pressed, Content/OnFill (texto sobre preenchimento) e Border/Focus (contorno do foco) no próprio :focus-visible. Nenhum hex cru, nenhum roxo antigo. Um exemplo do que o resto do produto deveria ser.",
+  "hint": "Clique numa sugestão — ela some da lista e entra no campo selecionado, de verdade.",
+  "subtitulo": "",
+  "legenda": "Sugestão: Background/Brand + Content/OnFill — já correto, nada pra mudar",
+  "html": "<div class=\"mss-mini\"><div class=\"mss-mini__field\" data-mss=\"1\"></div><div class=\"row\" style=\"gap:8px;flex-wrap:wrap;margin-top:8px;\" data-mss-suggestions=\"1\"><span class=\"ath-tag-mini mss-mini__tag\" style=\"background:#6b55d8;color:#fff;cursor:pointer;\">+ mensalidade</span><span class=\"ath-tag-mini mss-mini__tag\" style=\"background:#6b55d8;color:#fff;cursor:pointer;\">+ matrícula</span><span class=\"ath-tag-mini mss-mini__tag\" style=\"background:#6b55d8;color:#fff;cursor:pointer;\">+ anuidade</span></div></div>",
+  "tokens": [
+   "Background/Brand",
+   "Content/OnFill",
+   "Border/Focus"
+  ],
+  "tokensNoWhy": [
+   "Background/Brand",
+   "Content/OnFill",
+   "Border/Focus"
+  ],
+  "classesCol": ""
+ },
+ {
+  "id": "athsecuritypassword",
+  "grupo": "Campos de formulário",
+  "titulo": "AthSecurityPassWord",
+  "situacao": "proposta",
+  "why": "O ícone verde de \"requisito cumprido\" usa Content/Success (texto de sucesso) (#2ecc71) — reprova como ícone (2,10:1 ✕), a mesma falha já vista no AthWizard e no AthCopyText. O vermelho de \"requisito pendente\" já está correto (4,85:1 ✓).",
+  "hint": "Digite pra ver os requisitos mudarem de vermelho pra verde em tempo real.",
+  "subtitulo": "Padrão",
+  "legenda": "Cumprido: #007a29 — 4,92:1 ✓",
+  "html": "<div style=\"display:flex;align-items:center;gap:6px;font-family:'Satoshi',sans-serif;color:#1a1a1a;font-size:13px;\"><svg style=\"width:18px;height:18px;color:#007a29;\"><use href=\"#i-check\"></use></svg>Mínimo de 6 caracteres</div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Success"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputmonthyearpicker",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputMonthYearPicker",
+  "situacao": "herda",
+  "why": "Mesma família do AthInputYearpicker e do AthInputRangePicker: mesma biblioteca de calendário, mesmo fundo decorativo, sem anel de foco customizado. Componente final abaixo.",
+  "hint": "Passe o mouse — mesmo Border/Hover (contorno sob o mouse) dos outros campos de data.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"box state-default\" style=\"display:inline-flex;padding:8px 14px;font-family:'Satoshi',sans-serif;color:#1a1a1a;\">Mar/2026</div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athmulticheckbox",
+  "grupo": "Campos de formulário",
+  "titulo": "AthMultiCheckbox",
+  "situacao": "herda",
+  "why": "Sem cor própria — é uma grade de AthInputCheckbox, já coberto em aba própria (achado do \"roxo errado\" no estado marcado). Componente final abaixo.",
+  "hint": "Clique — checkboxes reais.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"row\" style=\"gap:16px;flex-wrap:wrap;\"><label class=\"chk-mini\"><input type=\"checkbox\" class=\"chk-real\" style=\"--chk-b:#8c8c8c;--chk-a:#6b55d8;\" checked=\"\"><span>Vencidas</span></label><label class=\"chk-mini\"><input type=\"checkbox\" class=\"chk-real\" style=\"--chk-b:#8c8c8c;--chk-a:#6b55d8;\"><span>Pagas</span></label></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputtextfake",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputTextFake",
+  "situacao": "herda",
+  "why": "Sem cor própria — é o wrapper AthInputThemeDefault com um texto fixo dentro, sem interação. Toda correção já está na aba do próprio wrapper. Componente final abaixo.",
+  "hint": "Sem interação — é somente leitura.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"box state-default\" style=\"padding:10px 12px;\"><span style=\"font-family:'Satoshi',sans-serif;color:#1a1a1a;font-size:13px;\">Colégio Horizonte</span></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputrangeslider",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputRangeSlider",
+  "situacao": "proposta",
+  "why": "O preenchimento entre os dois controles usa #00865a — um verde que passa contraste (4,61:1 ✓) mas não é o Content/Success (texto de sucesso) oficial (#2ecc71) nem sua variante forte: é um 6º valor de cor solto, sem relação com nenhum token do sistema. O trilho e o polegar usam Border/Faint (contorno quase invisível) e o roxo antigo, respectivamente. Achado à parte, de código: existe uma regra CSS morta com a cor nomeada \"yellowgreen\" (Firefox), claramente um resquício de teste que nunca deveria ter ido pra produção.",
+  "hint": "Arraste os 2 controles (mínimo e máximo) — inputs reais, cada um com o próprio valor.",
+  "subtitulo": "Padrão",
+  "legenda": "Preenchimento: #007a29 — mesmo token de sucesso usado em todo o produtoPolegar: #6b55d8",
+  "html": "<div class=\"dual-range-mini\" style=\"width:100%;max-width:220px;\"><label style=\"font-size:11px;color:#575e6a;font-family:'Satoshi',sans-serif;display:flex;justify-content:space-between;\">Mínimo <span class=\"dual-range-mini__value\" data-role=\"min\">R$ 500</span></label><input type=\"range\" min=\"0\" max=\"10000\" value=\"500\" step=\"100\" class=\"native-range-mini dual-range-mini__input\" data-role=\"min\" style=\"width:100%;accent-color:#6b55d8;\"><label style=\"font-size:11px;color:#575e6a;font-family:'Satoshi',sans-serif;display:flex;justify-content:space-between;margin-top:8px;\">Máximo <span class=\"dual-range-mini__value\" data-role=\"max\">R$ 8.000</span></label><input type=\"range\" min=\"0\" max=\"10000\" value=\"8000\" step=\"100\" class=\"native-range-mini dual-range-mini__input\" data-role=\"max\" style=\"width:100%;accent-color:#6b55d8;\"></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Success",
+   "Border/Faint"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputmulticheckbox",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputMultiCheckbox",
+  "situacao": "proposta",
+  "why": "A tag \"N selecionados\" usa o roxo antigo como texto (14px) sobre um fundo bem clarinho — 3,21:1 ◐, abaixo do mínimo de 4,5:1 ✓ de texto.",
+  "hint": "Sem estado interativo — mostra a tag de contagem já com itens selecionados.",
+  "subtitulo": "Padrão",
+  "legenda": "Texto: #6b55d8 — 4,35:1 ◐",
+  "html": "<span class=\"ath-tag-mini\" style=\"background:#f3f1ff;color:#6b55d8;\">3 selecionados</span>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athsignerslistinput",
+  "grupo": "Campos de formulário",
+  "titulo": "AthSignersListInput",
+  "situacao": "herda",
+  "why": "Sem cor própria — é uma lista de AthInputText + EdsButton (remover/adicionar), ambos já cobertos. Componente final abaixo.",
+  "hint": "Passe o mouse nos campos e no botão — hover real.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"row\" style=\"gap:8px;align-items:flex-end;\"><div class=\"box state-default\" style=\"padding:10px 12px;flex:1;\"><span style=\"font-family:'Satoshi',sans-serif;color:#1a1a1a;font-size:13px;\">Ana Souza</span></div><button class=\"btn danger-outline\"><svg style=\"width:14px;height:14px;\"><use href=\"#i-trash\"></use></svg></button></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputtextsearch",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputTextSearch",
+  "situacao": "herda",
+  "why": "Sem cor própria — usa o tema AthInputThemeLabelTop + AthLoading + AthIcon, sem nenhum hex direto no próprio componente. Componente final abaixo.",
+  "hint": "Passe o mouse — mesmo Border/Hover (contorno sob o mouse) dos outros campos.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"box state-default\" style=\"display:flex;align-items:center;gap:8px;padding:10px 12px;\"><svg style=\"width:16px;height:16px;color:#575e6a;\"><use href=\"#i-magnifying-glass\"></use></svg><span style=\"font-family:'Satoshi',sans-serif;color:#575e6a;font-size:13px;\">Buscar aluno...</span></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputtexteditor",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputTextEditor",
+  "situacao": "naoauditado",
+  "why": "Encapsula o editor de texto rico Quill.js — a cor da toolbar e do corpo do editor vem de um CSS externo (quill.snow.css) mais um SCSS próprio do módulo de notificações (não auditado nesta rodada, é escopo de outro módulo). Sinalizado como risco não confirmado, não como achado fechado — mesma cautela já usada pro EdsInputSelect (M47). Casca externa (moldura) mostrada abaixo, com os tokens que o DS controla.",
+  "hint": "Passe o mouse na moldura — mesmo Border/Hover (contorno sob o mouse); o miolo (toolbar Quill) é de outro módulo.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"box state-default\" style=\"flex-direction:column;align-items:stretch;padding:0;\"><div style=\"display:flex;gap:10px;padding:8px 12px;border-bottom:1px solid #cccccc;color:#575e6a;font-family:'Satoshi',sans-serif;font-size:12px;font-weight:700;\"><span>B</span><span style=\"font-style:italic;\">I</span><span style=\"text-decoration:underline;\">U</span></div><div style=\"padding:10px 12px;color:#a6a6a6;font-family:'Satoshi',sans-serif;font-size:13px;\">Digite o corpo da mensagem...</div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinputslider",
+  "grupo": "Campos de formulário",
+  "titulo": "AthInputSlider",
+  "situacao": "proposta",
+  "why": "O trilho usa Content/OnFill (texto sobre preenchimento) (#f2f2f2) — um token de TEXTO (pensado pra escrever em cima de fundo escuro) usado aqui como cor de fundo decorativa. Funciona visualmente por acidente (o valor por trás é um cinza claro neutro), mas é o papel errado de token. O polegar usa o roxo antigo, hardcoded.",
+  "hint": "Arraste o controle — input real, com o valor acompanhando de verdade.",
+  "subtitulo": "Padrão",
+  "legenda": "Trilho: token de fundo decorativo, papel certo desta vezPolegar: #6b55d8",
+  "html": "<div style=\"width:100%;max-width:220px;\"><input type=\"range\" min=\"0\" max=\"100\" value=\"60\" class=\"native-range-mini\" style=\"width:100%;accent-color:#6b55d8;\"><div style=\"display:flex;justify-content:space-between;font-size:11px;color:#7d8097;font-family:'Satoshi',sans-serif;margin-top:6px;\"><span>0%</span><span class=\"native-range-mini__value\">60%</span><span>100%</span></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/OnFill"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athselectfamily",
+  "grupo": "Campos de formulário",
+  "titulo": "Família Ath*Select* (wrappers de dado fixo)",
+  "situacao": "ok",
+  "why": "Já correto: o próprio índice do DS confirma 100% de herança do EdsInputSelect (sistema novo) — 80 ocorrências de tokens semânticos (Content/Background/Border/Eds) contra 0 ocorrências do sistema legado. É o grupo de componentes mais \"limpo\" de toda a auditoria. Componente final abaixo (representativo do grupo).",
+  "hint": "Passe o mouse — mesmo comportamento do EdsInputSelect.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"box select-box state-default\" style=\"padding:10px 12px;\" tabindex=\"0\"><span style=\"font-family:'Satoshi',sans-serif;color:#1a1a1a;font-size:13px;\">Ensino Fundamental</span><svg style=\"width:16px;height:16px;color:#666666;\"><use href=\"#i-caret-down\"></use></svg></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Background",
+   "Border/Eds"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athbreadcrumb",
+  "grupo": "Navegação",
+  "titulo": "AthBreadcrumb",
+  "situacao": "proposta",
+  "why": "Link inativo usa Content/Tertiary (texto discreto); ao passar o mouse, vira Content/Brand (texto da marca) — os dois únicos tons válidos para texto de navegação interativo.",
+  "hint": "Passe o mouse no link pra ver o hover real.",
+  "subtitulo": "Padrão",
+  "legenda": "Link: Content/Tertiary #666666 — 5,74:1 ✓Hover: Content/Brand #6b55d8 — 5,36:1 ✓Ícone: Content/Tertiary, com a variável referenciada corretamente",
+  "html": "<div class=\"bc-mini\"><span class=\"bc-link new\">Matrículas</span><svg style=\"width:14px;height:14px;color:#cccccc;\"><use href=\"#i-caret-right\"></use></svg><span class=\"bc-link new\">Turmas</span><svg style=\"width:14px;height:14px;color:#cccccc;\"><use href=\"#i-caret-right\"></use></svg><b>3º Ano A</b></div>",
+  "tokens": [
+   "Content/Tertiary",
+   "Content/Brand"
+  ],
+  "tokensNoWhy": [
+   "Content/Tertiary",
+   "Content/Brand"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athtab",
+  "grupo": "Navegação",
+  "titulo": "AthTab",
+  "situacao": "herda",
+  "why": "Sem CSS próprio — todo o visual da aba vive no AthTabs (componente pai). Componente final abaixo, já com os tokens corretos.",
+  "hint": "Sem comparação — é só o container de 1 aba dentro do AthTabs.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"tabs-mini\" style=\"--tab-border:#8c8c8c;--tab-inactive:#666666;--tab-active:#6b55d8;\"><button class=\"tabs-mini__item is-active\" data-tab-item=\"\">Dados</button></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athtabs",
+  "grupo": "Navegação",
+  "titulo": "AthTabs",
+  "situacao": "proposta",
+  "why": "Aba inativa usa Content/Tertiary (texto discreto); aba ativa usa Content/Brand (texto da marca) — os mesmos dois tons de texto interativo do breadcrumb.",
+  "hint": "Clique nas abas pra trocar a ativa de verdade.",
+  "subtitulo": "Padrão",
+  "legenda": "Inativa: #666666 — 5,74:1 ✓Ativa: #6b55d8 — 5,36:1 ✓, os dois passam",
+  "html": "<div class=\"tabs-mini\" data-tabs=\"new\" style=\"--tab-border:#8c8c8c;--tab-inactive:#666666;--tab-active:#6b55d8;\"><button class=\"tabs-mini__item is-active\" data-tab-item=\"\">Dados</button><button class=\"tabs-mini__item\" data-tab-item=\"\">Documentos</button><button class=\"tabs-mini__item\" data-tab-item=\"\">Financeiro</button></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Tertiary",
+   "Content/Brand"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athaccordion",
+  "grupo": "Navegação",
+  "titulo": "AthAccordion",
+  "situacao": "proposta",
+  "why": "Border/Moderate é o contorno de um contêiner clicável — organiza um bloco de conteúdo, sem a ênfase total de um campo de preenchimento (esse usa Border/Default (contorno padrão)).",
+  "hint": "Clique no cabeçalho pra abrir/fechar de verdade.",
+  "subtitulo": "Padrão",
+  "legenda": "Borda: #999999 — 2.56–2,85:1 ✕ nos 3 fundos reais (branco, canvas, cabeçalho pastel)Mais leve que o Border/Default (3.36) de campo/tabela — usado só em contêineres clicáveis que organizam conteúdo",
+  "html": "<div class=\"acc-mini\" style=\"border-color:#999999;\"><button class=\"acc-mini__head\" data-acc=\"acc-new\" aria-expanded=\"true\" style=\"background:#f3f1ff;border-color:#999999;\"><svg class=\"acc-caret\" style=\"width:16px;height:16px;\"><use href=\"#i-caret-down\"></use></svg><span>Documentos exigidos</span></button><div class=\"acc-mini__body\" data-acc-body=\"acc-new\" style=\"border-color:#999999;\">RG, CPF e comprovante de residência do responsável.</div></div>",
+  "tokens": [
+   "Border/Default"
+  ],
+  "tokensNoWhy": [
+   "Border/Moderate",
+   "Border/Default"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athwizard",
+  "grupo": "Navegação",
+  "titulo": "AthWizard",
+  "situacao": "proposta",
+  "why": "Etapa ativa usa 3 papéis do mesmo roxo, cada um com seu próprio token: Content/Brand (texto da marca) no rótulo (texto), Border/Brand (contorno da marca) no contorno do círculo (borda) e Background/Brand (fundo da marca) no pontinho central (fundo) — não é 1 token só fazendo tudo. Etapa concluída usa Background/Success (fundo de sucesso) com ícone branco em cima — precisa do mesmo mínimo de 4,5:1 ✓ de qualquer texto/ícone inverso.",
+  "hint": "Sem estado interativo aqui — é uma prévia dos 3 estados lado a lado.",
+  "subtitulo": "Padrão",
+  "legenda": "Ativa: #6b55d8 — mesmo roxo em todo lugarConcluída: #007a29 — 4,92:1 ✓, ícone branco passaEtapa futura (desabilitada): isenta, mantém cinza",
+  "html": "<div class=\"wiz\"><div class=\"wiz-step\"><div class=\"wiz-step__circle\" style=\"background:#007a29;border-color:#007a29;\"><svg style=\"width:14px;height:14px;color:#f2f2f2;\"><use href=\"#i-check\"></use></svg></div><span style=\"color:#007a29;\">Dados</span></div><div class=\"wiz-line\" style=\"background:#cccccc;\"></div><div class=\"wiz-step\"><div class=\"wiz-step__circle\" style=\"border-color:#6b55d8;background:#fff;\"><span style=\"width:8px;height:8px;border-radius:50%;background:#6b55d8;display:block;\"></span></div><span style=\"color:#6b55d8;font-weight:600;\">Endereço</span></div><div class=\"wiz-line\" style=\"background:#cccccc;\"></div><div class=\"wiz-step\"><div class=\"wiz-step__circle\" style=\"border-color:#cccccc;background:transparent;\"></div><span style=\"color:#cccccc;\">Confirmação</span></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Brand",
+   "Border/Brand",
+   "Background/Brand",
+   "Background/Success"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athpopover",
+  "grupo": "Navegação",
+  "titulo": "AthPopover",
+  "situacao": "proposta",
+  "why": "Contorno do balão sempre Border/Default (contorno padrão) — o mesmo contorno estrutural de qualquer card ou painel flutuante.",
+  "hint": "Sem estado interativo nesta prévia — mostra o balão já aberto.",
+  "subtitulo": "Padrão",
+  "legenda": "Contorno: #8c8c8c — 3.17–3,36:1 ◐",
+  "html": "<div style=\"background:#fff;border:1px solid #8c8c8c;border-radius:8px;padding:12px 14px;box-shadow:0 7px 10px #00000029;font-family:'Satoshi',sans-serif;font-size:12.5px;color:#1a1a1a;max-width:200px;\">Envie até 5 arquivos de uma vez.</div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Border/Default"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athpopoversimple",
+  "grupo": "Navegação",
+  "titulo": "AthPopoverSimple",
+  "situacao": "proposta",
+  "why": "A seta usa o roxo antigo (Content/Brand (texto da marca)-antigo #8a76eb) em vez do roxo de marca unificado. Como ícone isolado ela ainda passa o mínimo de 3:1 — o problema não é reprovar contraste, é ter 2 roxos de \"marca\" diferentes convivendo no produto.",
+  "hint": "Clique pra abrir/fechar — é o mesmo dropdown real, com a mesma animação.",
+  "subtitulo": "Padrão",
+  "legenda": "Seta: #6b55d8 — 5,36:1 ✓, mesmo roxo do resto do produto",
+  "html": "<div class=\"pop-mini\"><div class=\"pop-mini__trigger\" aria-expanded=\"false\" tabindex=\"0\" role=\"button\"><span>Filtrar</span><svg class=\"pop-mini__caret\" style=\"width:16px;height:16px;color:#6b55d8;\"><use href=\"#i-caret-down\"></use></svg></div><div class=\"pop-mini__body\"><div class=\"pop-mini__item\">Todas as escolas</div><div class=\"pop-mini__item\">Escola Vila Nova</div></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Brand"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athtabsnormal",
+  "grupo": "Navegação",
+  "titulo": "AthTabsNormal",
+  "situacao": "proposta",
+  "why": "A aba ativa (ícone, texto e borda inferior) usa o roxo antigo. Como texto de 16px — mesmo em negrito, abaixo do limite de \"texto grande\" da WCAG — precisa de 4,5:1 ✓ e só tem 3,58:1 ◐. É a mesma cor que já reprova como texto no breadcrumb e no AthTabs: 3 componentes distintos, a mesma falha.",
+  "hint": "Clique numa aba pra trocar a ativa.",
+  "subtitulo": "Padrão",
+  "legenda": "Aba ativa: #6b55d8 — 5,36:1 ✓",
+  "html": "<div class=\"tn-tabs\"><div class=\"tn-tab is-active\" data-color=\"#6b55d8\" tabindex=\"0\" role=\"tab\" aria-selected=\"true\" style=\"color:#6b55d8;border-bottom-color:#6b55d8;\"><svg style=\"width:18px;height:18px;\"><use href=\"#i-school\"></use></svg><span>Turmas</span></div><div class=\"tn-tab\" data-color=\"#6b55d8\" tabindex=\"0\" role=\"tab\" aria-selected=\"false\"><svg style=\"width:18px;height:18px;\"><use href=\"#i-flag\"></use></svg><span>Negativação</span></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athdropbutton",
+  "grupo": "Navegação",
+  "titulo": "AthDropButton",
+  "situacao": "proposta",
+  "why": "A seta e o texto usam o roxo antigo. Como ícone isolado passa (3,58:1 ◐); como texto do botão outline (variante \"is-button\", 14px) reprova — precisa de 4,5:1 ✓.",
+  "hint": "Clique pra abrir/fechar — dropdown real.",
+  "subtitulo": "Padrão",
+  "legenda": "Texto do botão outline: #6b55d8 — 5,36:1 ✓",
+  "html": "<div class=\"pop-mini\"><div class=\"pop-mini__trigger\" aria-expanded=\"false\" tabindex=\"0\" role=\"button\" style=\"border:2px solid #6b55d8;color:#6b55d8;border-radius:12px;\"><span>Opções</span><svg class=\"pop-mini__caret\" style=\"width:16px;height:16px;color:#6b55d8;\"><use href=\"#i-caret-down\"></use></svg></div><div class=\"pop-mini__body\"><div class=\"pop-mini__item\">Editar</div><div class=\"pop-mini__item\">Excluir</div></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "timelinerepasse",
+  "grupo": "Navegação",
+  "titulo": "TimelineRepasse",
+  "situacao": "proposta",
+  "why": "3 estados, 3 resultados diferentes pro mesmo ícone branco: \"pendente\" usa um cinza tão claro (#e3e4e9) que o ícone quase some — 1,27:1 ✕, o pior nível de ícone já medido no estudo, e o rótulo do passo usa a MESMA cor como texto, também quase invisível. \"Concluído\" (verde de sucesso legado) reprova por pouco, 2,10:1 ✕. \"Em andamento\" (azul de info) já passa, 3,66:1 ◐ — o único dos 3 que funciona hoje.",
+  "hint": "Sem estado interativo — mostra os 3 estágios lado a lado.",
+  "subtitulo": "Padrão",
+  "legenda": "Pendente: ícone escuro sobre fundo claro, em vez de branco sobre cinza claro — 6,15:1 ✓Concluído: #007a29 — 4,92:1 ✓Em análise não muda — já estava correto",
+  "html": "<div class=\"row\" style=\"gap:18px;\"><div style=\"display:flex;flex-direction:column;align-items:center;gap:8px;width:90px;\"><div style=\"width:33px;height:33px;border-radius:50%;background:#f8f8f8;border:1px solid #8c8c8c;display:flex;align-items:center;justify-content:center;\"><svg style=\"width:16px;height:16px;color:#575e6a;\"><use href=\"#i-calendar\"></use></svg></div><span style=\"font-size:11px;text-align:center;color:#575e6a;font-family:'Satoshi',sans-serif;\">Agendado</span></div><div style=\"display:flex;flex-direction:column;align-items:center;gap:8px;width:90px;\"><div style=\"width:33px;height:33px;border-radius:50%;background:#007a29;border:1px solid #007a29;display:flex;align-items:center;justify-content:center;\"><svg style=\"width:16px;height:16px;color:#fff;\"><use href=\"#i-check\"></use></svg></div><span style=\"font-size:11px;text-align:center;color:#002a3a;font-family:'Satoshi',sans-serif;\">Concluído</span></div><div style=\"display:flex;flex-direction:column;align-items:center;gap:8px;width:90px;\"><div style=\"width:33px;height:33px;border-radius:50%;background:#3b83f4;border:1px solid #3b83f4;display:flex;align-items:center;justify-content:center;\"><svg style=\"width:16px;height:16px;color:#fff;\"><use href=\"#i-info\"></use></svg></div><span style=\"font-size:11px;text-align:center;color:#002a3a;font-family:'Satoshi',sans-serif;\">Em análise</span></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "navselecttenant",
+  "grupo": "Navegação",
+  "titulo": "NavSelectTenant",
+  "situacao": "herda",
+  "why": "Mesma composição do AthPopoverSimple (NavSearch + dropdown), já coberta. A seta aqui usa Content/Secondary (texto de apoio) (#2d3849) em vez do roxo — inconsistente com o padrão do resto dos dropdowns, mas passa contraste tranquilamente (11,84:1 ✓). Componente final abaixo.",
+  "hint": "Clique pra abrir — mesmo dropdown do AthPopoverSimple.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"pop-mini\"><div class=\"pop-mini__trigger\" aria-expanded=\"false\" tabindex=\"0\" role=\"button\"><span>Global</span><svg class=\"pop-mini__caret\" style=\"width:16px;height:16px;color:#2d3849;\"><use href=\"#i-caret-down\"></use></svg></div><div class=\"pop-mini__body\"><div class=\"pop-mini__item\">Global</div><div class=\"pop-mini__item\">Educbank SP</div></div></div>",
+  "tokens": [
+   "Content/Secondary"
+  ],
+  "tokensNoWhy": [
+   "Content/Secondary"
+  ],
+  "classesCol": ""
+ },
+ {
+  "id": "navnotifications",
+  "grupo": "Navegação",
+  "titulo": "NavNotifications",
+  "situacao": "herda",
+  "why": "Sem cor própria — é AthDropButton + AthInfinitLoader + ItemNotification, todos cobertos (o próximo, ItemNotification, é a aba seguinte). Componente final abaixo.",
+  "hint": "Sem interação própria — o botão de sino já é real na aba EdsButtonIcon.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div style=\"position:relative;\"><button class=\"btn-icon primary\" aria-label=\"Notificações\"><svg style=\"width:18px;height:18px;\"><use href=\"#i-info\"></use></svg></button><span style=\"position:absolute;top:-4px;right:-4px;background:#b70000;color:#fff;font-size:10px;font-weight:700;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Satoshi',sans-serif;\">3</span></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "itemnotification",
+  "grupo": "Navegação",
+  "titulo": "ItemNotification",
+  "situacao": "proposta",
+  "why": "A etiqueta de categoria (\"Matrículas\", \"Faturas\"...) repete EXATAMENTE o mesmo par de cores já reprovado no AthInputMultiCheckbox (#8a76eb sobre #f3f1ff, 3,21:1 ◐) — o mesmo bug, copiado e colado num componente diferente.",
+  "hint": "Sem estado interativo — mostra uma notificação de exemplo.",
+  "subtitulo": "Padrão",
+  "legenda": "Texto: #6b55d8 — 4,35:1 ◐",
+  "html": "<span class=\"ath-tag-mini\" style=\"background:#f3f1ff;color:#6b55d8;\">Matrículas</span>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athtimelinevertical",
+  "grupo": "Navegação",
+  "titulo": "AthTimelineVertical",
+  "situacao": "proposta",
+  "why": "8 status diferentes, cada um com um ponto colorido + ícone branco. 3 deles reprovam o mínimo de ícone (3:1) — \"alerta\" (cor base do warning, 1,59:1 ✕) e os 2 que usam sucesso (\"concluído\"/\"agendado\", 2,10:1 ✕ cada). Os outros 5 (criado, gerado, atualizado, erro, cancelado, comentário) já passam — é a 3ª vez que a mesma dupla de falhas (warning base + success) aparece numa timeline do produto.",
+  "hint": "Sem estado interativo — mostra os 8 status lado a lado.",
+  "subtitulo": "Padrão",
+  "legenda": "Todos os 8 pontos acima de 3:1 agora, com o mesmo par Strong já usado no resto do produto",
+  "html": "<div class=\"row\" style=\"flex-wrap:wrap;gap:8px;\"><div style=\"width:32px;height:32px;border-radius:50%;background:#6b55d8;display:flex;align-items:center;justify-content:center;flex-shrink:0;\"><svg style=\"width:14px;height:14px;color:#fff;\"><use href=\"#i-check\"></use></svg></div><div style=\"width:32px;height:32px;border-radius:50%;background:#3b83f4;display:flex;align-items:center;justify-content:center;flex-shrink:0;\"><svg style=\"width:14px;height:14px;color:#fff;\"><use href=\"#i-check\"></use></svg></div><div style=\"width:32px;height:32px;border-radius:50%;background:#665200;display:flex;align-items:center;justify-content:center;flex-shrink:0;\"><svg style=\"width:14px;height:14px;color:#fff;\"><use href=\"#i-check\"></use></svg></div><div style=\"width:32px;height:32px;border-radius:50%;background:#007a29;display:flex;align-items:center;justify-content:center;flex-shrink:0;\"><svg style=\"width:14px;height:14px;color:#fff;\"><use href=\"#i-check\"></use></svg></div><div style=\"width:32px;height:32px;border-radius:50%;background:#002a3a;display:flex;align-items:center;justify-content:center;flex-shrink:0;\"><svg style=\"width:14px;height:14px;color:#fff;\"><use href=\"#i-check\"></use></svg></div><div style=\"width:32px;height:32px;border-radius:50%;background:#e50000;display:flex;align-items:center;justify-content:center;flex-shrink:0;\"><svg style=\"width:14px;height:14px;color:#fff;\"><use href=\"#i-check\"></use></svg></div><div style=\"width:32px;height:32px;border-radius:50%;background:#7d8097;display:flex;align-items:center;justify-content:center;flex-shrink:0;\"><svg style=\"width:14px;height:14px;color:#fff;\"><use href=\"#i-check\"></use></svg></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athswipemonths",
+  "grupo": "Navegação",
+  "titulo": "AthSwipeMonths",
+  "situacao": "proposta",
+  "why": "O mês selecionado usa o roxo antigo como texto comum (14px) — precisa de 4,5:1 ✓ e só tem 3,58:1 ◐. A borda inferior (mesma cor) passa tranquilamente, porque borda só precisa de 3:1.",
+  "hint": "Clique num mês pra selecionar, ou nas setas pra trocar o ano — os 3 reais.",
+  "subtitulo": "Padrão",
+  "legenda": "Mês selecionado: #6b55d8 — 5,36:1 ✓",
+  "html": "<div class=\"row\" style=\"gap:6px;align-items:center;\"><button class=\"close-btn swipe-year-btn\" data-swipe-year=\"new\" aria-label=\"Ano anterior\"><svg style=\"width:14px;height:14px;color:#575e6a;\"><use href=\"#i-caret-right\"></use></svg></button><div class=\"row swipe-months\" style=\"gap:0;\" data-swipe=\"new\"><div class=\"swipe-month\" data-color=\"#6b55d8\" style=\"border-bottom:2px solid #6b55d8;color:#6b55d8;\">Jan</div><div class=\"swipe-month\" data-color=\"#6b55d8\" style=\"border-bottom:1px solid #f8f8f8;color:#7d8097;\">Fev</div><div class=\"swipe-month\" data-color=\"#6b55d8\" style=\"border-bottom:1px solid #f8f8f8;color:#7d8097;\">Mar</div></div><button class=\"close-btn swipe-year-btn\" data-swipe-year=\"new\" aria-label=\"Próximo ano\"><svg style=\"width:14px;height:14px;color:#575e6a;transform:scaleX(-1);\"><use href=\"#i-caret-right\"></use></svg></button><span class=\"swipe-year-label\" data-swipe-year-label=\"new\" style=\"font-family:'Satoshi',sans-serif;font-size:12px;color:#575e6a;margin-left:4px;\">2026</span></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "segmentcontrol",
+  "grupo": "Navegação",
+  "titulo": "SegmentControl",
+  "situacao": "proposta",
+  "why": "A aba selecionada usa #cf6700 (laranja/marrom) e a pílula de fundo usa #fff9f5 (creme) — 2 valores que não existem em NENHUM outro lugar do sistema, nem na marca, nem nos semânticos. Como texto normal, #cf6700 mede 3,75:1 ◐ (sobre branco) e 3,60:1 ◐ (sobre o próprio creme) — abaixo do mínimo de 4,5:1 ✓ nos dois casos.",
+  "hint": "Clique numa opção — radio real por trás, com a pílula acompanhando de verdade.",
+  "subtitulo": "Padrão",
+  "legenda": "Selecionado: #6b55d8 — 5,05:1 ✓, mesmo roxo de marca do resto do produto",
+  "html": "<div class=\"seg-mini\" data-active-color=\"#6b55d8\"><label class=\"seg-mini__opt is-active\" style=\"color:#6b55d8;\"><input type=\"radio\" name=\"seg-new\" checked=\"\">Crédito</label><label class=\"seg-mini__opt\"><input type=\"radio\" name=\"seg-new\">Débito</label><label class=\"seg-mini__opt\"><input type=\"radio\" name=\"seg-new\">Pix</label><div class=\"seg-mini__pill\" style=\"background:#eae6ff;\"></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athtabsicon",
+  "grupo": "Navegação",
+  "titulo": "AthTabsIcon",
+  "situacao": "proposta",
+  "why": "O fundo do container é #f3f1ff hardcoded (mesmo valor de Background/BrandSubtle (fundo da marca claro), só que escrito cru em vez de referenciar o token) e a aba ativa usa o roxo antigo como texto — 3,58:1 ◐, abaixo do mínimo de 4,5:1 ✓.",
+  "hint": "Clique numa aba pra trocar a ativa.",
+  "subtitulo": "Padrão",
+  "legenda": "Aba ativa: #6b55d8 — 5,36:1 ✓",
+  "html": "<div class=\"tn-tabs\"><div class=\"tn-tab is-active\" data-color=\"#6b55d8\" tabindex=\"0\" role=\"tab\" aria-selected=\"true\" style=\"color:#6b55d8;border-bottom-color:#6b55d8;\"><svg style=\"width:18px;height:18px;\"><use href=\"#i-school\"></use></svg><span>Turmas</span></div><div class=\"tn-tab\" data-color=\"#6b55d8\" tabindex=\"0\" role=\"tab\" aria-selected=\"false\"><svg style=\"width:18px;height:18px;\"><use href=\"#i-flag\"></use></svg><span>Negativação</span></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Background/BrandSubtle"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athformtitle",
+  "grupo": "Textos",
+  "titulo": "AthFormTitle",
+  "situacao": "proposta",
+  "why": "Divisor abaixo do título usa Border/Default (contorno padrão) — o mesmo contorno estrutural de qualquer separador de seção. Ícone de destaque usa Content/Brand (texto da marca), o único roxo de marca do sistema.",
+  "hint": "Sem estado interativo — é um título estático.",
+  "subtitulo": "Padrão",
+  "legenda": "Divisor: #8c8c8c — 3.17–3,36:1 ◐Ícone: #6b55d8 — mesmo roxo em todo lugar",
+  "html": "<div class=\"ft-mini\" style=\"border-color:#8c8c8c;\"><div class=\"ft-mini__head\"><svg style=\"width:18px;height:18px;color:#6b55d8;\"><use href=\"#i-school\"></use></svg><span>Dados da matrícula</span></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Border/Default",
+   "Content/Brand"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athformheader",
+  "grupo": "Textos",
+  "titulo": "AthFormHeader",
+  "situacao": "proposta",
+  "why": "Campo obrigatório usa Content/Danger (texto de erro) — o mesmo vermelho de erro em qualquer lugar do sistema, nunca uma cor solta de biblioteca externa.",
+  "hint": "Sem estado interativo — é um cabeçalho estático.",
+  "subtitulo": "Padrão",
+  "legenda": "Asterisco: Content/Danger #e50000 — 4,85:1 ✓",
+  "html": "<div class=\"fh-mini\"><div class=\"fh-mini__title\">Dados do responsável</div><div class=\"fh-mini__sub\">Os campos com (<span style=\"color:#e50000;\">*</span>) são obrigatórios</div></div>",
+  "tokens": [
+   "Content/Danger"
+  ],
+  "tokensNoWhy": [
+   "Content/Danger"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athtitle",
+  "grupo": "Textos",
+  "titulo": "AthTitle",
+  "situacao": "proposta",
+  "why": "Subtítulo usa Content/Tertiary (texto discreto) — o piso mínimo de contraste (4,5:1 ✓) vale pra qualquer texto corrido, por menor ou mais discreto que pareça.",
+  "hint": "Sem estado interativo — é texto estático.",
+  "subtitulo": "Padrão",
+  "legenda": "Subtítulo: #666666 — 5,74:1 ✓, passaTítulo segue idêntico",
+  "html": "<div class=\"title-mini\"><div class=\"title-mini__sub\" style=\"color:#666666;\">dados cadastrais</div><div class=\"title-mini__title\">Escola Horizonte Azul</div></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Tertiary"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athcopytext",
+  "grupo": "Textos",
+  "titulo": "AthCopyText",
+  "situacao": "proposta",
+  "why": "O ícone de \"copiado\" (check-circle) usa Content/Success (texto de sucesso) — mas em 16px ele reprova o mínimo de ícone (3:1): mede 2,10:1 ✕. O ícone de copiar antes do clique usa o roxo antigo — esse passa como ícone (3,58:1 ◐).",
+  "hint": "Clique no texto pra copiar — o ícone muda pra \"copiado\" de verdade por 2s.",
+  "subtitulo": "Padrão",
+  "legenda": "Ícone \"copiado\": #007a29 — 4,92:1 ✓Ícone \"copiar\": #6b55d8, mesmo roxo do resto",
+  "html": "<div class=\"copy-mini\" data-copy=\"new\"><span>12345678900</span><svg class=\"copy-mini__icon-copy\" style=\"width:16px;height:16px;color:#6b55d8;\"><use href=\"#i-check\"></use></svg><svg class=\"copy-mini__icon-done\" style=\"width:16px;height:16px;color:#007a29;display:none;\"><use href=\"#i-check-circle\"></use></svg></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Success"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athformtitlelist",
+  "grupo": "Textos",
+  "titulo": "AthFormTitleList",
+  "situacao": "proposta",
+  "why": "O número do item (\"#1\", \"#2\"...) usa Content/Secondary (texto de apoio) (#bec0cd) como TEXTO — precisa de 4,5:1 ✓ e só tem 1,81:1 ✕, quase ilegível. Diferente da seta do modal anterior, aqui não é decoração: é a numeração real do item.",
+  "hint": "Sem estado interativo — é o cabeçalho de um item de lista repetível (ex: descontos, e-mails).",
+  "subtitulo": "Padrão",
+  "legenda": "Numeração: #575e6a — 6,53:1 ✓",
+  "html": "<div style=\"display:flex;align-items:baseline;gap:6px;font-family:'Satoshi',sans-serif;\"><span style=\"font-weight:600;color:#002a3a;\">Desconto</span><span style=\"color:#575e6a;font-weight:600;\">#1</span></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Secondary"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athcopytextbox",
+  "grupo": "Textos",
+  "titulo": "AthCopyTextBox",
+  "situacao": "proposta",
+  "why": "Diferente do AthCopyText (texto solto), aqui o conteúdo vive dentro de uma caixa com borda visível — Border/Default (contorno padrão) antigo (#e3e4e9, 1,27:1 ✕). Os ícones repetem o mesmo achado do AthCopyText: \"copiar\" passa como ícone, \"copiado\" (Content/Success (texto de sucesso)) reprova.",
+  "hint": "Clique na caixa pra copiar — o ícone muda pra \"copiado\" por 2s.",
+  "subtitulo": "Padrão",
+  "legenda": "Borda: #8c8c8c — 3,17:1 ◐",
+  "html": "<div class=\"copy-mini\" data-copy=\"ctb-new\" style=\"justify-content:space-between;padding:10px 14px;border:1px solid #8c8c8c;border-radius:8px;background:#fff;max-width:220px;\"><span>ABC123</span><svg class=\"copy-mini__icon-copy\" style=\"width:18px;height:18px;color:#6b55d8;\"><use href=\"#i-check\"></use></svg><svg class=\"copy-mini__icon-done\" style=\"width:18px;height:18px;color:#007a29;display:none;\"><use href=\"#i-check-circle\"></use></svg></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Border/Default",
+   "Content/Success"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athtextselecteditems",
+  "grupo": "Textos",
+  "titulo": "AthTextSelectedItems",
+  "situacao": "ok",
+  "why": "Já correto: Content/Primary (texto principal) (#002a3a) sobre branco — 15,08:1 ✓. Nada a mudar. Componente final abaixo.",
+  "hint": "Sem interação — é só texto.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<span class=\"table-actions-description-mini\" style=\"font-family:'Satoshi',sans-serif;font-weight:700;color:#002a3a;font-size:13px;\">3 de 20 itens selecionados</span>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Primary"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athribbon",
+  "grupo": "Textos",
+  "titulo": "AthRibbon",
+  "situacao": "ok",
+  "why": "Já correto nas 2 variantes — mas com um ajuste de nomenclatura: \"dark\" usa Background/Inverse (fundo claro, para fundo escuro) como FUNDO com texto branco em cima (15,08:1 ✓) — não Content/Primary (texto principal), mesmo sendo o mesmo hex; token de fundo, não de texto. \"outline\" usa Content/Secondary (texto de apoio) de verdade — aí sim como texto e borda (11,84:1 ✓). Componente final abaixo.",
+  "hint": "Sem interação — é uma faixa estática.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"row\" style=\"gap:12px;flex-wrap:wrap;\"><div style=\"background:#002a3a;color:#fff;font-family:'Satoshi',sans-serif;font-weight:700;font-size:13px;padding:8px 16px;text-align:center;border-radius:4px;\">Turma encerrada</div><div style=\"background:#fff;color:#575e6a;border:1px solid #575e6a;font-family:'Satoshi',sans-serif;font-weight:700;font-size:13px;padding:8px 16px;text-align:center;border-radius:4px;\">Rascunho</div></div>",
+  "tokens": [
+   "Background/Inverse",
+   "Content/Primary",
+   "Content/Secondary"
+  ],
+  "tokensNoWhy": [
+   "Background/Inverse",
+   "Content/Primary",
+   "Content/Secondary"
+  ],
+  "classesCol": ""
+ },
+ {
+  "id": "athmodal",
+  "grupo": "Feedback",
+  "titulo": "AthModal",
+  "situacao": "proposta",
+  "why": "Overlay/Scrim (rgba(0,0,0,.5)) é o único tom de escurecimento por trás de qualquer modal, em toda a plataforma.",
+  "hint": "",
+  "subtitulo": "Padrão",
+  "legenda": "Overlay: Overlay/Scrim rgba(0,0,0,.5) — token único em todo o produtoDivisor: #8c8c8c — separa melhor do conteúdo",
+  "html": "<div class=\"stage\" style=\"background:rgba(0,0,0,.5);\"><div class=\"modal-mini\"><div class=\"modal-mini__header\"><b>Confirmar exclusão</b><button class=\"close-btn\" aria-label=\"Fechar\"><svg style=\"width:14px;height:14px;color:#2d3849;\"><use href=\"#i-x\"></use></svg></button></div><div class=\"divider\" style=\"background:#8c8c8c;\"></div><div class=\"modal-mini__body\">Essa ação não pode ser desfeita.</div></div></div>",
+  "tokens": [
+   "Overlay/Scrim"
+  ],
+  "tokensNoWhy": [
+   "Overlay/Scrim"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athpanelwarning",
+  "grupo": "Feedback",
+  "titulo": "AthPanelWarning",
+  "situacao": "proposta",
+  "why": "Background/Canvas é o único cinza de fundo de painel na plataforma. Ícones de status seguem sempre a variante \"Strong\" — mínimo de 3:1, mesmo sozinhos.",
+  "hint": "Passe o mouse no ✕ pra ver o hover real.",
+  "subtitulo": "Padrão",
+  "legenda": "Ícone aviso: #665200 — 7,24:1 ✓, passaÍcone sucesso: #007a29 — 4,92:1 ✓, passa",
+  "html": "<div class=\"warn-mini\" style=\"background:#f2f2f2;\"><div class=\"warn-mini__row\"><svg style=\"width:20px;height:20px;color:#665200;\"><use href=\"#i-warning-circle\"></use></svg><span>Pendências na matrícula</span><button class=\"close-btn\" aria-label=\"Fechar\"><svg style=\"width:14px;height:14px;color:#2d3849;\"><use href=\"#i-x\"></use></svg></button></div><div class=\"warn-mini__row\"><svg style=\"width:20px;height:20px;color:#007a29;\"><use href=\"#i-check-circle\"></use></svg><span>Documentos aprovados</span></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Background/Canvas"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athpaneldescription",
+  "grupo": "Feedback",
+  "titulo": "AthPanelDescription",
+  "situacao": "proposta",
+  "why": "O título separa uma seção da outra — é estrutural, usa Border/Default (contorno padrão). As linhas de conteúdo abaixo dele só organizam itens dentro da MESMA seção — são decorativas, usam Border/Subtle (contorno claro), o mesmo papel do divisor de linha da tabela (EdsTable). Hierarquia visual: 1 traço mais forte no topo, traços mais discretos entre os itens.",
+  "hint": "Sem estado interativo — é um painel estático.",
+  "subtitulo": "Padrão",
+  "legenda": "Título: Border/Default #8c8c8c — 3.17–3,36:1 ◐ (estrutural)Divisor entre itens: Border/Subtle #cccccc — mais suave, mesmo papel do divisor de linha da tabela",
+  "html": "<div class=\"pd-mini\"><div class=\"pd-mini__title\" style=\"border-color:#8c8c8c;\">Informações do responsável</div><div class=\"pd-mini__item\" style=\"border-color:#cccccc;\">Nome — João da Silva</div><div class=\"pd-mini__item last\">CPF — 123.456.789-00</div></div>",
+  "tokens": [
+   "Border/Default",
+   "Border/Subtle"
+  ],
+  "tokensNoWhy": [
+   "Border/Default",
+   "Border/Subtle"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athloading",
+  "grupo": "Feedback",
+  "titulo": "AthLoading",
+  "situacao": "proposta",
+  "why": "O spinner usa Border/Brand (contorno da marca), não Content/Brand (texto da marca) — a cor pinta o traço do círculo (border-color de um anel giratório), não um texto. Mesmo roxo de marca, papel de token diferente.",
+  "hint": "Gira sozinho — é a única \"interação\" que esse componente tem.",
+  "subtitulo": "Padrão",
+  "legenda": "Cor: #6b55d8 — mesmo roxo em todo lugar",
+  "html": "<div class=\"row\"><div class=\"spinner\" style=\"border-color:#6b55d8; border-top-color:transparent;\"></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Border/Brand",
+   "Content/Brand"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athmodalcenter",
+  "grupo": "Feedback",
+  "titulo": "AthModalCenter",
+  "situacao": "proposta",
+  "why": "Overlay/Scrim é o único tom de escurecimento por trás de qualquer modal — inclusive este, centralizado. O divisor entre cabeçalho/corpo/rodapé é decorativo — separa seções do MESMO cartão flutuante, não estruturas diferentes — por isso usa Border/Subtle (contorno claro), mais discreto, e não Border/Default (contorno padrão).",
+  "hint": "Passe o mouse no ✕ pra ver o hover real.",
+  "subtitulo": "Padrão",
+  "legenda": "Overlay: Overlay/Scrim rgba(0,0,0,.5) — token único em todo o produtoDivisores: Border/Subtle #cccccc — mais leve, mesmo papel do divisor de linha da tabela e do item do AthPanelDescriptionBotão de fechar: vira um EdsButtonIcon real — quadrado, radius 8px, hover real",
+  "html": "<div class=\"stage\" style=\"background:rgba(51,51,51,.5);padding:24px;\"><div class=\"modal-mini\" style=\"max-width:220px;position:relative;padding-top:10px;\"><button class=\"close-btn\" aria-label=\"Fechar\" style=\"position:absolute;top:8px;right:8px;\"><svg style=\"width:14px;height:14px;color:#2d3849;\"><use href=\"#i-x\"></use></svg></button><div style=\"padding:16px 16px 0;font-family:'Satoshi',sans-serif;font-size:13px;font-weight:600;color:#1a1a1a;border-bottom:1px solid #cccccc;padding-bottom:12px;\">Confirmar envio</div><div style=\"padding:12px 16px;font-family:'Satoshi',sans-serif;font-size:12.5px;color:#666666;border-top:1px solid #cccccc;\">Os dados serão enviados ao responsável.</div></div></div>",
+  "tokens": [
+   "Overlay/Scrim",
+   "Border/Subtle"
+  ],
+  "tokensNoWhy": [
+   "Overlay/Scrim",
+   "Border/Subtle",
+   "Border/Default"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athpanelfinishedsuccess",
+  "grupo": "Feedback",
+  "titulo": "AthPanelFinishedSuccess",
+  "situacao": "proposta",
+  "why": "Um ícone de sucesso usa Content/Success (texto de sucesso) — nunca o roxo de marca, mesmo sendo o roxo o destaque visual mais comum do sistema.",
+  "hint": "Sem estado interativo — é uma tela de conclusão estática.",
+  "subtitulo": "Padrão",
+  "legenda": "Ícone: #009933 — o papel certo pra \"concluído com sucesso\"",
+  "html": "<div style=\"text-align:center;padding:8px 0;font-family:'Satoshi',sans-serif;\"><svg style=\"width:40px;height:40px;color:#009933;\"><use href=\"#i-check\"></use></svg><div style=\"font-size:14px;font-weight:600;color:#1a1a1a;margin-top:10px;\">Matrícula concluída</div></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Success"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athmodalheader",
+  "grupo": "Feedback",
+  "titulo": "AthModalHeader",
+  "situacao": "ok",
+  "why": "Só tem uma borda inferior estrutural — Border/Default (contorno padrão), já unificado. Componente final abaixo.",
+  "hint": "Sem interação — é só o cabeçalho de um modal.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div style=\"display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #8c8c8c;padding-bottom:10px;font-family:'Satoshi',sans-serif;font-size:14px;font-weight:600;color:#1a1a1a;\">Editar aluno<svg style=\"width:16px;height:16px;color:#666666;\"><use href=\"#i-x\"></use></svg></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Border/Default"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athmodalinformation",
+  "grupo": "Feedback",
+  "titulo": "AthModalInformation",
+  "situacao": "atencao",
+  "why": "O fundo escurecido atrás do modal usa rgba(51,51,51,.5) direto no CSS, no lugar do token Overlay — a 2ª ocorrência desse mesmo bypass (a 1ª foi no AthModal). O X de fechar usa Content/Secondary (texto de apoio), correto. Componente final abaixo, já com Overlay/Scrim (escurecido do modal).",
+  "hint": "Passe o mouse no ✕ — hover real.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"stage\" style=\"background:rgba(0,0,0,.5);padding:20px;\"><div class=\"modal-mini\" style=\"max-width:220px;position:relative;padding-top:10px;\"><button class=\"close-btn\" aria-label=\"Fechar\" style=\"position:absolute;top:8px;right:8px;\"><svg style=\"width:14px;height:14px;color:#2d3849;\"><use href=\"#i-x\"></use></svg></button><div class=\"modal-mini__body\" style=\"padding-top:20px;\">Seus dados foram atualizados com sucesso.</div></div></div>",
+  "tokens": [
+   "Content/Secondary",
+   "Overlay/Scrim"
+  ],
+  "tokensNoWhy": [
+   "Content/Secondary",
+   "Overlay/Scrim"
+  ],
+  "classesCol": ""
+ },
+ {
+  "id": "athloadingbar",
+  "grupo": "Feedback",
+  "titulo": "AthLoadingBar",
+  "situacao": "proposta",
+  "why": "A barra de progresso usa --ath-color-primary-500 (#ae9eff) — o mesmo valor do hex hardcoded encontrado no AthInputRadio, aqui já vindo do token. Contra o próprio trilho (#f8f8f8) mede 2,16:1 ✕, abaixo do mínimo de 3:1 pra um elemento gráfico com significado.",
+  "hint": "Animação real — a barra se move sozinha, igual no produto.",
+  "subtitulo": "Padrão",
+  "legenda": "Preenchimento: #6b55d8 — 5,05:1 ✓",
+  "html": "<div class=\"loadingbar-mini\" style=\"background:#f8f8f8;\"><div class=\"loadingbar-mini__fill\" style=\"background:#6b55d8;\"></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athpanelsheetsent",
+  "grupo": "Feedback",
+  "titulo": "AthPanelSheetSent",
+  "situacao": "herda",
+  "why": "Sem cor própria — é ilustração (imagem) + AthLoadingBar + EdsButton, os dois já cobertos em abas próprias. Componente final abaixo.",
+  "hint": "Sem interação própria — o botão e a barra já são reais em suas abas.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<svg style=\"width:32px;height:32px;color:#007a29;\"><use href=\"#i-check-circle\"></use></svg><div style=\"font-family:'Satoshi',sans-serif;font-size:14px;font-weight:600;color:#1a1a1a;margin-top:8px;\">Planilha enviada com sucesso</div><button class=\"btn primary\" style=\"margin-top:12px;\">Baixar planilha</button>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "ebtippy",
+  "grupo": "Feedback",
+  "titulo": "EbTippy",
+  "situacao": "ok",
+  "why": "Já correto: fundo Background/Inverse (fundo claro, para fundo escuro) (#002a3a) com texto branco — 15,08:1 ✓, muito acima do mínimo. Repare: é o mesmo valor hexadecimal do Content/Primary (texto principal), mas aqui o papel é outro — é um FUNDO escuro carregando texto claro em cima, não o próprio texto. Por isso é um token à parte (Background/Inverse), não uma reaplicação do Content/Primary.",
+  "hint": "Passe o mouse pra ver o tooltip real.",
+  "subtitulo": "",
+  "legenda": "Fundo: #002a3a + texto branco — 15,08:1 ✓",
+  "html": "<div class=\"row\" style=\"gap:16px;align-items:center;\"><div style=\"position:relative;display:inline-block;\"><svg style=\"width:22px;height:22px;color:#3b83f4;\"><use href=\"#i-info\"></use></svg><div style=\"position:absolute;top:-46px;left:50%;transform:translateX(-50%);background:#002a3a;color:#fff;padding:6px 10px;border-radius:6px;font-size:12px;white-space:nowrap;font-family:'Satoshi',sans-serif;\">Conteúdo do tooltip</div></div></div>",
+  "tokens": [
+   "Background/Inverse",
+   "Content/Primary"
+  ],
+  "tokensNoWhy": [
+   "Background/Inverse",
+   "Content/Primary"
+  ],
+  "classesCol": ""
+ },
+ {
+  "id": "athpanelfilesupload",
+  "grupo": "Feedback",
+  "titulo": "AthPanelFilesUpload",
+  "situacao": "herda",
+  "why": "Sem cor própria — é AthFormTitle + AthInputSwitch + AthInputDragDropFiles + EdsButton, todos já cobertos em abas próprias. Componente final abaixo.",
+  "hint": "Passe o mouse na área de soltar — hover real.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div style=\"font-family:'Satoshi',sans-serif;font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:10px;display:flex;align-items:center;gap:8px;\"><svg style=\"width:16px;height:16px;color:#6b55d8;\"><use href=\"#i-info\"></use></svg>Documentos do contrato</div><div class=\"dz dz-new\" style=\"border-color:#8c8c8c;color:#575e6a;\"><svg style=\"width:18px;height:18px;\"><use href=\"#i-upload\"></use></svg><span>Envie os documentos</span></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athguardianinfomodal",
+  "grupo": "Feedback",
+  "titulo": "AthGuardianInfoModal",
+  "situacao": "proposta",
+  "why": "A seta divisória entre nome e CPF usa Content/Secondary (texto de apoio) (#bec0cd) — 1,81:1 ✕, abaixo do mínimo de ícone. O ícone de \"contato verificado\" (escudo) usa Text/Info (#3b83f4) — esse já passa, 3,66:1 ◐.",
+  "hint": "Sem estado interativo — é conteúdo estático do modal.",
+  "subtitulo": "Padrão",
+  "legenda": "Seta divisória: #8c8c8c — 3,17:1 ◐Ícone de verificado já correto, sem mudança",
+  "html": "<div class=\"row\" style=\"gap:6px;align-items:center;\"><span style=\"font-family:'Satoshi',sans-serif;color:#002a3a;\">Ana Souza</span><svg style=\"width:20px;height:20px;color:#8c8c8c;\"><use href=\"#i-caret-right\"></use></svg><span style=\"font-family:'Satoshi',sans-serif;color:#002a3a;\">000.000.000-00</span><svg style=\"width:18px;height:18px;color:#3b83f4;margin-left:8px;\"><use href=\"#i-check-circle\"></use></svg></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Secondary"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "edsalertgroup",
+  "grupo": "Feedback",
+  "titulo": "EdsAlertGroup",
+  "situacao": "atencao",
+  "why": "A borda \"brilhante\" do painel mistura Content/Brand (texto da marca) (sistema novo) com o roxo/vermelho legado no mesmo gradiente — os 2 sistemas de token coexistindo no mesmo componente, de propósito (regra 5 do hub: misturar é fiel quando cada trecho pertence a um sistema diferente). Nada a corrigir aqui — é o comportamento esperado. Componente final abaixo.",
+  "hint": "Sem interação — mostra o resumo colapsado.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div style=\"font-family:'Satoshi',sans-serif;font-size:13px;font-weight:600;color:#1a1a1a;\">3 avisos neste repasse</div><div style=\"font-family:'Satoshi',sans-serif;font-size:12px;color:#575e6a;margin-top:4px;\">1 crítico · 2 de atenção</div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Brand"
+  ],
+  "classesCol": "col proposed tight"
+ },
+ {
+  "id": "changepassword",
+  "grupo": "Feedback",
+  "titulo": "ChangePassword",
+  "situacao": "proposta",
+  "why": "O ícone de mostrar/ocultar senha usa var(--icon-color-input) — uma variável que não existe em NENHUM arquivo de tema do produto (achado em 7 arquivos diferentes, incluindo login e redefinição de senha). O navegador cai no valor herdado, então a cor do ícone nunca foi realmente definida. A caixa de erro também usa 3 hex de fallback (#fed7d7/#c53030/#fc8181) que não batem com o vermelho real do produto (#fdeeee/#e50000) — um 3º vermelho que só apareceria se o token principal falhasse.",
+  "hint": "Clique no ícone de olho pra ver mostrar/ocultar a senha — interação real.",
+  "subtitulo": "Padrão",
+  "legenda": "Ícone: #575e6a — 6,53:1 ✓, valor real, não herdado",
+  "html": "<div class=\"box state-default\" style=\"display:flex;align-items:center;justify-content:space-between;padding:12px 14px;\"><input type=\"password\" value=\"••••••••\" style=\"border:none;background:transparent;font:inherit;color:#1a1a1a;flex:1;\"><svg style=\"width:18px;height:18px;color:#575e6a;\"><use href=\"#i-check\"></use></svg></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athloader",
+  "grupo": "Feedback",
+  "titulo": "AthLoader",
+  "situacao": "proposta",
+  "why": "O loader de tela cheia usa um 4º roxo diferente (#baacff, exclusivo deste componente) — 1,90:1 ✕ contra o próprio trilho, mais um valor fora da paleta de marca unificada.",
+  "hint": "Animação real — a barrinha desliza sozinha, igual na tela de carregamento do produto.",
+  "subtitulo": "Padrão",
+  "legenda": "Barra: #6b55d8 — mesmo roxo de marca em todo lugar",
+  "html": "<div class=\"loadingbar-mini\" style=\"background:#f8f8f8;width:140px;height:6px;\"><div style=\"position:absolute;height:100%;width:50px;background:#6b55d8;animation:moveloaderminidemo 1.8s ease infinite;border-radius:8px;\"></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athprogressbar",
+  "grupo": "Feedback",
+  "titulo": "AthProgressBar",
+  "situacao": "proposta",
+  "why": "O preenchimento padrão usa --ath-color-primary-500 (#ae9eff, o mesmo hex do AthLoadingBar e do AthInputRadio) contra o trilho padrão (#e3e4e9) — 1,81:1 ✕, bem abaixo do mínimo de 3:1 pra um elemento gráfico com significado.",
+  "hint": "Animação real de preenchimento, igual no produto.",
+  "subtitulo": "Padrão",
+  "legenda": "Preenchimento: #6b55d8 — 4,00:1 ◐",
+  "html": "<div class=\"loadingbar-mini\" style=\"background:#e3e4e9;\"><div class=\"loadingbar-mini__fill\" style=\"background:#6b55d8;animation:none;width:65%;\"></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "modalmfavalidated",
+  "grupo": "Feedback",
+  "titulo": "ModalMFAValidated",
+  "situacao": "proposta",
+  "why": "O ícone gigante de sucesso usa Content/Success (texto de sucesso) (2,10:1 ✕, mesma falha recorrente) — tamanho grande não isenta ícone da exigência de 3:1, só texto tem esse alívio. O ícone de alerta do painel de aviso usa a cor \"base\" do warning (#efca44, não a \"-dark\"), o pior nível de warning já medido: 1,59:1 ✕.",
+  "hint": "Sem estado interativo — tela final de confirmação de MFA.",
+  "subtitulo": "Padrão",
+  "legenda": "Sucesso: #007a29 — 4,92:1 ✓Alerta: #665200 — dentro do padrão",
+  "html": "<div class=\"row\" style=\"gap:20px;align-items:center;\"><svg style=\"width:48px;height:48px;color:#007a29;\"><use href=\"#i-check-circle\"></use></svg><svg style=\"width:32px;height:32px;color:#665200;\"><use href=\"#i-warning-circle\"></use></svg></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Success"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athspreadsheetinspectionpanel",
+  "grupo": "Feedback",
+  "titulo": "AthSpreadsheetInspectionPanel",
+  "situacao": "herda",
+  "why": "Já correto: usa Content/Brand (texto da marca) (sistema novo) pro destaque de texto e ícone, mais AthLoadingBar (achado próprio, já coberto). Nada de hex cru aqui. Componente final abaixo.",
+  "hint": "Animação real da barra de progresso.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div style=\"font-family:'Satoshi',sans-serif;font-size:14px;font-weight:600;color:#1a1a1a;\">Analisando planilha...</div><div class=\"loadingbar-mini\" style=\"background:#f8f8f8;margin-top:12px;\"><div class=\"loadingbar-mini__fill\" style=\"background:#6b55d8;\"></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Brand"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athpanelfinisheddata",
+  "grupo": "Feedback",
+  "titulo": "AthPanelFinishedData",
+  "situacao": "proposta",
+  "why": "O ícone de destaque (64px) usa o roxo antigo — como ícone ele passa o mínimo (3,58:1 ◐), mas ainda é o valor errado de marca. O painel de dados em destaque usa Border/Default (contorno padrão) (já unificado) e Content/Secondary (texto de apoio)-Strong (#575e6a, 6,53:1 ✓, já correto).",
+  "hint": "Sem estado interativo — tela final de confirmação com dado em destaque.",
+  "subtitulo": "Padrão",
+  "legenda": "Ícone: #6b55d8 — 5,36:1 ✓",
+  "html": "<svg style=\"width:48px;height:48px;color:#6b55d8;\"><use href=\"#i-check-circle\"></use></svg>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Border/Default",
+   "Content/Secondary"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athalertbar",
+  "grupo": "Feedback",
+  "titulo": "AthAlertBar",
+  "situacao": "proposta",
+  "why": "A etiqueta de status reproduz — pela 5ª vez em código diferente — a mesma fórmula quebrada do AthTag/AthBadge/_table.scss (fundo \"light\" + texto na cor base). Já não é mais um achado isolado por componente: é um padrão que se repete cada vez que alguém precisa de uma badge de status, em qualquer parte do código.",
+  "hint": "Sem estado interativo — mostra a etiqueta de status nas 4 variantes.",
+  "subtitulo": "Padrão",
+  "legenda": "Mesma regra \"Strong\" já aplicada nos outros 4 componentes com o mesmo problema",
+  "html": "<div class=\"row\" style=\"flex-wrap:wrap;gap:8px;\"><span class=\"ath-tag-mini\" style=\"background:#ffcbc0;color:#b70000;\">Repasse não liberado</span><span class=\"ath-tag-mini\" style=\"background:#eafaf1;color:#007a29;\">Liberado</span></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "securityaccount",
+  "grupo": "Feedback",
+  "titulo": "SecurityAccount",
+  "situacao": "herda",
+  "why": "Sem cor própria de destaque — compõe AthModal, AthAccordion, AthInputText, AthPanelWarning e os 2 modais de MFA, todos já cobertos. O único hex direto é o mesmo `.text-danger` do Bootstrap já documentado no AthFormHeader (3ª cor de vermelho do sistema). Componente final abaixo.",
+  "hint": "Clique no ✕ — hover real de fechar.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div style=\"display:flex;align-items:center;justify-content:space-between;font-family:'Satoshi',sans-serif;\"><div><div style=\"font-size:11px;color:#575e6a;\">Segurança</div><div style=\"font-size:15px;font-weight:600;color:#1a1a1a;\">Autenticação em 2 etapas</div></div><button class=\"close-btn\" aria-label=\"Fechar\"><svg style=\"width:14px;height:14px;color:#666666;\"><use href=\"#i-x\"></use></svg></button></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "phoneverificationmodal",
+  "grupo": "Feedback",
+  "titulo": "PhoneVerificationModal",
+  "situacao": "atencao",
+  "why": "O fundo escurecido atrás do modal usa rgba(0,0,0,.6) direto no CSS — a 3ª ocorrência do bypass de overlay (depois do AthModal e do AthModalInformation), e com um valor DIFERENTE dos outros dois (que usam rgba(51,51,51,.5)). 3 componentes, 2 tons de preto diferentes pro mesmo propósito. Componente final abaixo.",
+  "hint": "Passe o mouse no campo — Border/Hover (contorno sob o mouse) real.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"box state-default\" style=\"padding:10px 12px;\"><span style=\"font-family:'Satoshi',sans-serif;color:#1a1a1a;font-size:13px;\">(11) 98765-4321</span></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athspreadsheetimportsuccesspanel",
+  "grupo": "Feedback",
+  "titulo": "AthSpreadsheetImportSuccessPanel",
+  "situacao": "herda",
+  "why": "Sem cor própria além de Content/Secondary (texto de apoio) (#575e6a — 6,53:1 ✓, correto) no título e EdsButton (já coberto). Mesma família visual do AthPanelSheetSent. Componente final abaixo.",
+  "hint": "Sem interação própria — o botão já é real na aba EdsButton.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div style=\"font-family:'Satoshi',sans-serif;font-size:14px;font-weight:600;color:#575e6a;\">Planilha preparada com sucesso</div><button class=\"btn primary\" style=\"margin-top:12px;\">Baixar planilha</button>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Secondary"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athspreadsheeterrorpanel",
+  "grupo": "Feedback",
+  "titulo": "AthSpreadsheetErrorPanel",
+  "situacao": "herda",
+  "why": "Mesma família visual do AthSpreadsheetImportSuccessPanel e do AthPanelSheetSent — mesmo título em Content/Secondary (texto de apoio), mesmos botões já cobertos. Nada de cor pra corrigir. Componente final abaixo.",
+  "hint": "Sem interação própria — os botões já são reais em suas abas.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div style=\"font-family:'Satoshi',sans-serif;font-size:14px;font-weight:600;color:#575e6a;\">Erro detectado na planilha</div><button class=\"btn primary\" style=\"margin-top:12px;\">Baixar planilha inspecionada</button>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Secondary"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athspreadsheetdownloadsuccesspanel",
+  "grupo": "Feedback",
+  "titulo": "AthSpreadsheetDownloadSuccessPanel",
+  "situacao": "herda",
+  "why": "Mesma família visual do AthSpreadsheetImportSuccessPanel — mesmo título em Content/Secondary (texto de apoio) (#575e6a, correto), mesmos botões já cobertos. Nada de cor pra corrigir. Componente final abaixo.",
+  "hint": "Sem interação própria — o botão já é real na aba EdsButton.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div style=\"font-family:'Satoshi',sans-serif;font-size:14px;font-weight:600;color:#575e6a;\">Planilha preparada com sucesso</div><button class=\"btn primary\" style=\"margin-top:12px;\">Baixar planilha</button>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Secondary"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athspreadsheetdownloadinprogresspanel",
+  "grupo": "Feedback",
+  "titulo": "AthSpreadsheetDownloadInProgressPanel",
+  "situacao": "herda",
+  "why": "Mesma família do AthPanelSheetSent/AthSpreadsheetInspectionPanel — mesmo sino em roxo antigo (passa como ícone, 3,58:1 ◐) e AthLoadingBar (já coberto). Componente final abaixo.",
+  "hint": "Animação real da barra de progresso.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div style=\"font-family:'Satoshi',sans-serif;font-size:14px;font-weight:600;color:#1a1a1a;\">Baixando planilha...</div><div class=\"loadingbar-mini\" style=\"background:#f8f8f8;margin-top:12px;\"><div class=\"loadingbar-mini__fill\" style=\"background:#6b55d8;\"></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athskeletontext",
+  "grupo": "Feedback",
+  "titulo": "AthSkeletonText",
+  "situacao": "proposta",
+  "why": "O cinza do skeleton (#e2e2e2) é um valor isolado — não é nem Background/Hover (fundo sob o mouse) (#f2f2f2) nem Background/Canvas (fundo da página) (#f8f8f8), os 2 cinzas decorativos já usados no resto do produto. Não é falha de contraste (não tem texto em cima), é mais um cinza \"quase igual\" flutuando solto.",
+  "hint": "Animação real — o brilho desliza sozinho, igual no produto.",
+  "subtitulo": "Padrão",
+  "legenda": "Base: #f2f2f2 — mesmo cinza decorativo do resto do produto",
+  "html": "<div style=\"height:16px;width:100%;max-width:220px;background:#f2f2f2;border-radius:4px;position:relative;overflow:hidden;\"><div style=\"position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);animation:skeletonshimmerdemo .8s infinite;\"></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Background/Hover",
+   "Background/Canvas"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athprocessingloader",
+  "grupo": "Feedback",
+  "titulo": "AthProcessingLoader",
+  "situacao": "atencao",
+  "why": "O fundo escurecido usa rgba(0,0,0,.5) — um 4º valor de overlay diferente (depois de rgba(51,51,51,.5) no AthModal/AthModalInformation e rgba(0,0,0,.6) no PhoneVerificationModal). 4 componentes, 3 valores de preto diferentes pro mesmo propósito visual. O ícone e a barra de progresso usam o roxo antigo — passam contraste (3.37–3,58:1 ◐), mas seguem fora da marca unificada. Componente final abaixo.",
+  "hint": "Animação real da barra de progresso.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"stage\" style=\"background:rgba(0,0,0,.5);padding:20px;\"><div class=\"modal-mini\" style=\"max-width:220px;padding:20px;text-align:center;\"><svg style=\"width:32px;height:32px;color:#6b55d8;\"><use href=\"#i-info\"></use></svg><div style=\"font-family:'Satoshi',sans-serif;font-size:13px;font-weight:600;color:#1a1a1a;margin-top:10px;\">Processando pagamento</div><div class=\"loadingbar-mini\" style=\"background:#f8f8f8;margin-top:10px;\"><div class=\"loadingbar-mini__fill\" style=\"background:#6b55d8;\"></div></div></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": ""
+ },
+ {
+  "id": "athpanelfinishederror",
+  "grupo": "Feedback",
+  "titulo": "AthPanelFinishedError",
+  "situacao": "ok",
+  "why": "Já correto: ícone grande (64px) em Content/Danger (texto de erro) (#e50000) — 4,85:1 ✓, bem acima do mínimo. Nada a mudar. Componente final abaixo.",
+  "hint": "Sem interação — é uma tela final de erro.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<svg style=\"width:40px;height:40px;color:#e50000;\"><use href=\"#i-x-circle\"></use></svg><div style=\"font-family:'Satoshi',sans-serif;font-size:14px;font-weight:600;color:#1a1a1a;margin-top:8px;\">Não foi possível concluir a matrícula</div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Danger"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athinfinitloader",
+  "grupo": "Feedback",
+  "titulo": "AthInfinitLoader",
+  "situacao": "herda",
+  "why": "Sem cor própria de destaque — usa AthLoading (spinner) sobre Background/Canvas (fundo da página), ambos já corretos. Nada a mudar. Componente final abaixo.",
+  "hint": "Gira sozinho — mesmo spinner do AthLoading, dentro de uma lista com scroll.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"spinner\" style=\"border-color:#6b55d8;border-top-color:transparent;\"></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Background/Canvas"
+  ],
+  "classesCol": "col proposed canvas"
+ },
+ {
+  "id": "athcountdowntimer",
+  "grupo": "Feedback",
+  "titulo": "AthCountDownTimer",
+  "situacao": "proposta",
+  "why": "O texto padrão do timer usa Content/Secondary (texto de apoio) base (#7d8097) — 3,88:1 ◐, abaixo do mínimo de texto (4,5:1 ✓); passa despercebido porque no produto ele quase sempre aparece só nos últimos segundos, já na cor de perigo (que passa tranquilamente, 4,85:1 ✓).",
+  "hint": "Contagem real — o timer roda de verdade e muda de cor ao chegar a zero.",
+  "subtitulo": "Padrão",
+  "legenda": "Texto: #575e6a — 6,53:1 ✓",
+  "html": "<div style=\"display:flex;align-items:center;gap:8px;padding:8px 12px;background:#f8f8f8;border-radius:16px;width:fit-content;\"><svg style=\"width:20px;height:20px;color:#6b55d8;\"><use href=\"#i-info\"></use></svg><span style=\"font-family:'Satoshi',sans-serif;color:#575e6a;font-weight:600;\">04:32</span></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Secondary"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athskeletoninput",
+  "grupo": "Feedback",
+  "titulo": "AthSkeletonInput",
+  "situacao": "atencao",
+  "why": "Mesmo cinza isolado (#e2e2e2) já encontrado no AthSkeletonText — os 2 únicos componentes de skeleton do produto usam o mesmo valor solto, fora dos 2 cinzas decorativos oficiais. Mesma correção nos dois lugares ao mesmo tempo. Componente final abaixo.",
+  "hint": "Animação real — mesmo brilho do AthSkeletonText.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div style=\"height:12px;width:60%;background:#f2f2f2;border-radius:4px;position:relative;overflow:hidden;\"><div style=\"position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);animation:skeletonshimmerdemo .8s infinite;\"></div></div><div style=\"height:16px;width:100%;background:#f2f2f2;border-radius:4px;position:relative;overflow:hidden;\"><div style=\"position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);animation:skeletonshimmerdemo .8s infinite;\"></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed snug"
+ },
+ {
+  "id": "edstable",
+  "grupo": "Dados",
+  "titulo": "EdsTable",
+  "situacao": "proposta",
+  "why": "Moldura e cabeçalho usam Border/Default (contorno padrão) — o contorno estrutural da tabela. O divisor entre linhas usa Border/Subtle (contorno claro), o mesmo papel do outline-variant do Material Design 3 para separadores decorativos: visível, mas discreto.",
+  "hint": "Passe o mouse na linha ou marque o checkbox pra ver hover e seleção reais.",
+  "subtitulo": "Padrão",
+  "legenda": "Moldura + cabeçalho: Border/Default #8c8c8c — 3.02 a 3,36:1 ◐ (estrutural)Divisor de linha: Border/Subtle #cccccc — 1.44 a 1,61:1 ✕ (decorativo)Checkbox marcado: Control/Accent #6b55d8 — preenche o quadrado (accent-color), não é texto",
+  "html": "<table class=\"mini\" style=\"border:1px solid #8c8c8c;\"><thead><tr style=\"border-bottom:1px solid #8c8c8c;\"><th></th><th>Aluno</th><th>Status</th></tr></thead><tbody><tr style=\"border-bottom:1px solid #cccccc;\"><td><input type=\"checkbox\" class=\"chk tbl-check\" style=\"--chk-border:#8c8c8c;--chk-accent:#6b55d8;\"></td><td>Ana Souza</td><td>Ativa</td></tr><tr class=\"selected\" style=\"border-bottom:1px solid #cccccc;\"><td><input type=\"checkbox\" class=\"chk tbl-check\" style=\"--chk-border:#8c8c8c;--chk-accent:#6b55d8;\" checked=\"\"></td><td>Bruno Lima</td><td>Ativa</td></tr></tbody></table>",
+  "tokens": [
+   "Border/Default",
+   "Border/Subtle",
+   "Control/Accent"
+  ],
+  "tokensNoWhy": [
+   "Border/Default",
+   "Border/Subtle"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athfiltertablesimple",
+  "grupo": "Dados",
+  "titulo": "AthFilterTableSimple",
+  "situacao": "herda",
+  "why": "Sem CSS próprio — a estrutura e a cor vêm do AthPopoverSimple, que ele usa como base. Componente final abaixo.",
+  "hint": "Clique pra abrir — mesmo dropdown do AthPopoverSimple.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"pop-mini\"><div class=\"pop-mini__trigger\" aria-expanded=\"false\" tabindex=\"0\" role=\"button\"><span>Filtrar</span><svg class=\"pop-mini__caret\" style=\"width:16px;height:16px;color:#6b55d8;\"><use href=\"#i-caret-down\"></use></svg></div><div class=\"pop-mini__body\"><div class=\"pop-mini__item\">Ativas</div><div class=\"pop-mini__item\">Vencidas</div></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": ""
+ },
+ {
+  "id": "athtag",
+  "grupo": "Dados",
+  "titulo": "AthTag",
+  "situacao": "proposta",
+  "why": "Todo badge de status usa a variante \"Strong\" do texto sobre o próprio fundo claro — nunca a cor base, mesmo sendo o fundo \"subtle\" por natureza.",
+  "hint": "Sem estado interativo — é um rótulo estático, usado em faturas, negativação e dashboard.",
+  "subtitulo": "Padrão",
+  "legenda": "Mesmo fundo pastel em todos os 5 — só o texto muda, zero choque visualPaga: #007a29 sobre #eafaf1 — 5,10:1 ✓Regra: fundo \"subtle\" nunca casa com a cor base, sempre com a \"Strong\"",
+  "html": "<div class=\"row\" style=\"flex-wrap:wrap;gap:8px;\"><span class=\"ath-tag-mini\" style=\"background:#ffcbc0;color:#b70000;\">Paga</span><span class=\"ath-tag-mini\" style=\"background:#ffd29e;color:#de7b05;\">Paga</span><span class=\"ath-tag-mini\" style=\"background:#eafaf1;color:#007a29;\">Paga</span><span class=\"ath-tag-mini\" style=\"background:#e9f3fe;color:#2944cc;\">Paga</span><span class=\"ath-tag-mini\" style=\"background:#f6e697;color:#6f5d00;\">Paga</span></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athfilterselectschools",
+  "grupo": "Dados",
+  "titulo": "AthFilterSelectSchools",
+  "situacao": "herda",
+  "why": "Sem CSS próprio — é a composição de AthPopoverSimple (o dropdown) + NavSearch (a busca dentro dele) + EdsButton (o \"carregar mais\"). As 3 correções já aparecem nas abas de cada um desses componentes. Componente final abaixo.",
+  "hint": "Clique pra abrir o dropdown de verdade.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"pop-mini\"><div class=\"pop-mini__trigger\" aria-expanded=\"false\" tabindex=\"0\" role=\"button\"><span>Colégio Horizonte</span><svg class=\"pop-mini__caret\" style=\"width:16px;height:16px;color:#6b55d8;\"><use href=\"#i-caret-down\"></use></svg></div><div class=\"pop-mini__body\"><div class=\"pop-mini__item\">Todas as escolas</div><div class=\"pop-mini__item\">Colégio Horizonte</div></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": ""
+ },
+ {
+  "id": "athfilterreferencesdate",
+  "grupo": "Dados",
+  "titulo": "AthFilterReferencesDate",
+  "situacao": "proposta",
+  "why": "A opção selecionada no menu usa o roxo antigo como texto comum (14px) — precisa de 4,5:1 ✓ e só tem 3,58:1 ◐. Mesma cor do AthInputPercentage, mas aqui sem o alívio do \"texto grande\": reprova.",
+  "hint": "Clique numa opção pra trocar a selecionada.",
+  "subtitulo": "Padrão",
+  "legenda": "Opção selecionada: #6b55d8 — 5,36:1 ✓",
+  "html": "<div class=\"frd-list\"><div class=\"frd-opt is-active\" data-color=\"#6b55d8\" tabindex=\"0\" role=\"option\" aria-selected=\"true\" style=\"color:#6b55d8;\"><svg style=\"width:14px;height:14px;color:#6b55d8;\"><use href=\"#i-calendar\"></use></svg><span>Vencimento</span></div><div class=\"frd-opt\" data-color=\"#6b55d8\" tabindex=\"0\" role=\"option\" aria-selected=\"false\"><svg style=\"width:14px;height:14px;color:#7d8097;\"><use href=\"#i-calendar\"></use></svg><span>Pagamento</span></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athpill",
+  "grupo": "Dados",
+  "titulo": "AthPill",
+  "situacao": "proposta",
+  "why": "Usa a mesma fórmula de cor do AthTag — fundo \"light\" + texto na cor base — só que vindo de um CSS global (_table.scss) compartilhado por mais de 40 nomes de status diferentes (pago, matriculado, quitado, aprovado...) em tabelas por todo o produto. O alcance do fix aqui é maior do que 1 componente: é 1 arquivo, dezenas de telas.",
+  "hint": "Sem estado interativo — é um rótulo estático de status de tabela.",
+  "subtitulo": "Padrão",
+  "legenda": "Pago: #007a29 — 5,10:1 ✓Vencido: #b70000 — 6,19:1 ✓Mesma regra do AthTag, aplicada agora na origem compartilhada",
+  "html": "<div class=\"row\" style=\"flex-wrap:wrap;gap:8px;\"><span class=\"ath-tag-mini\" style=\"background:#eafaf1;color:#007a29;\">Pago</span><span class=\"ath-tag-mini\" style=\"background:#ffcbc0;color:#b70000;\">Vencido</span></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athpanelfilestabledownloaddelete",
+  "grupo": "Dados",
+  "titulo": "AthPanelFilesTableDownloadDelete",
+  "situacao": "proposta",
+  "why": "O botão \"Baixar\" já está correto (Content/Brand (texto da marca) #6b55d8, 5,36:1 ✓) — nada pra mudar ali. O badge de status do contrato (\"Enviado\"), porém, vem do mesmo CSS global (_table.scss) do achado do AthPill — 3ª aparição da mesma fórmula quebrada, aqui no pior nível já medido: 2,28:1 ✕.",
+  "hint": "Sem estado interativo — é célula de tabela.",
+  "subtitulo": "Padrão",
+  "legenda": "Enviado: #665200 — dentro do padrão, mesma regra do AthTag/AthPill",
+  "html": "<span class=\"ath-tag-mini\" style=\"background:#f6e697;color:#6f5d00;\">Enviado</span>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Brand"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athtreejs",
+  "grupo": "Dados",
+  "titulo": "AthTreeJs",
+  "situacao": "proposta",
+  "why": "Sem cor própria de destaque — usa NavSearch (já coberto). O hover da linha da árvore, porém, tem um hex hardcoded como valor padrão (#e0e0e0) diferente do cinza de hover oficial do produto (Background/Hover (fundo sob o mouse) #f2f2f2) — não é uma falha de contraste, é um cinza \"quase igual, mas não é\" o mesmo em todo lugar.",
+  "hint": "Passe o mouse sobre um item da lista.",
+  "subtitulo": "Padrão",
+  "legenda": "Hover: #f2f2f2 — mesmo hover de qualquer lista do produto",
+  "html": "<div class=\"row\" style=\"gap:8px;flex-wrap:wrap;\"><div class=\"frd-opt\" style=\"background:#f2f2f2;\">Turmas</div><div class=\"frd-opt\">Matrículas</div></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Background/Hover"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athtreejsmultisearch",
+  "grupo": "Dados",
+  "titulo": "AthTreeJsMultiSearch",
+  "situacao": "herda",
+  "why": "Mesma composição do AthTreeJs (NavSearch + TreeNew) — mesmo achado do hover hardcoded #e0e0e0, já coberto na aba AthTreeJs. Componente final abaixo.",
+  "hint": "Passe o mouse sobre a linha — hover já correto.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"row\" style=\"gap:8px;flex-wrap:wrap;\"><div class=\"frd-opt\" style=\"background:#f2f2f2;\">Turmas</div><div class=\"frd-opt\">Matrículas</div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athbadge",
+  "grupo": "Dados",
+  "titulo": "AthBadge",
+  "situacao": "proposta",
+  "why": "A variante \"fill\" reproduz, de forma independente, a mesma fórmula quebrada já vista no AthTag e no AthPill (fundo \"light\" + texto na cor base) — dessa vez não é um arquivo global, é o PRÓPRIO componente reinventando o mesmo erro. É a 4ª vez que essa fórmula aparece em 3 lugares diferentes do código: não é 1 bug, é 1 padrão sistêmico.",
+  "hint": "Sem estado interativo — variante \"fill\" nos 5 tipos semânticos.",
+  "subtitulo": "Padrão",
+  "legenda": "As 5 variantes passam de 4,5:1 ✓ com a mesma regra \"Strong\" já aplicada no AthTag/AthPill",
+  "html": "<div class=\"row\" style=\"flex-wrap:wrap;gap:8px;\"><span class=\"ath-tag-mini\" style=\"background:#eafaf1;color:#007a29;\">Sucesso</span><span class=\"ath-tag-mini\" style=\"background:#f6e697;color:#6f5d00;\">Alerta</span><span class=\"ath-tag-mini\" style=\"background:#ffd29e;color:#6b2300;\">Risco</span><span class=\"ath-tag-mini\" style=\"background:#ffcbc0;color:#b70000;\">Erro</span><span class=\"ath-tag-mini\" style=\"background:#e9f3fe;color:#2944cc;\">Info</span></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athfilterselectschoolbycode",
+  "grupo": "Dados",
+  "titulo": "AthFilterSelectSchoolByCode",
+  "situacao": "herda",
+  "why": "Composição idêntica ao AthFilterSelectSchools (AthPopoverSimple + NavSearch + EdsButton) — só muda o campo usado pra sincronizar (código em vez de ID). Mesmos achados, já cobertos. Componente final abaixo.",
+  "hint": "Clique pra abrir — mesmo dropdown do AthFilterSelectSchools.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"pop-mini\"><div class=\"pop-mini__trigger\" aria-expanded=\"false\" tabindex=\"0\" role=\"button\"><span>Colégio Horizonte</span><svg class=\"pop-mini__caret\" style=\"width:16px;height:16px;color:#6b55d8;\"><use href=\"#i-caret-down\"></use></svg></div><div class=\"pop-mini__body\"><div class=\"pop-mini__item\">Todas as escolas</div><div class=\"pop-mini__item\">Colégio Horizonte</div></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": ""
+ },
+ {
+  "id": "athfiltercessionstatus",
+  "grupo": "Dados",
+  "titulo": "AthFilterCessionStatus",
+  "situacao": "semcodigo",
+  "why": "O arquivo existe no índice do DS Agentic Stack, mas está vazio (0 bytes) — nenhum código, nenhuma cor, nenhum template. Não é um achado de cor: é um componente catalogado sem implementação, provavelmente removido ou nunca finalizado. Vale uma limpeza no índice em vez de uma correção de token. Exceção honesta: não há componente final pra mostrar, porque não existe nenhuma linha de código implementada — mostrar algo aqui seria inventar.",
+  "hint": "Sem prévia — não há nada implementado neste arquivo pra comparar.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": ""
+ },
+ {
+  "id": "athicon",
+  "grupo": "Ícones",
+  "titulo": "AthIcon",
+  "situacao": "proposta",
+  "why": "O ícone herda a cor de quem o usa — por isso existe apenas 1 roxo de marca válido (Content/Brand (texto da marca)) em toda a plataforma, nunca uma variação local.",
+  "hint": "",
+  "subtitulo": "Padrão",
+  "legenda": "Content/Brand: #6b55d8 — 5,36:1 ✓ — único roxo de marca em toda a plataformaNeutro/desabilitado: Content/Tertiary — mesmo valor em qualquer contexto",
+  "html": "<div class=\"row\"><span class=\"state-label\">Marca</span><svg style=\"width:26px;height:26px;color:#6b55d8;\"><use href=\"#i-school\"></use></svg></div><div class=\"row\"><span class=\"state-label\">Ação (unificado)</span><svg style=\"width:26px;height:26px;color:#6b55d8;\"><use href=\"#i-magnifying-glass\"></use></svg></div><div class=\"row\"><span class=\"state-label\">Neutro/desabilitado</span><svg style=\"width:26px;height:26px;color:#7d8097;\"><use href=\"#i-prohibit\"></use></svg></div>",
+  "tokens": [
+   "Content/Brand",
+   "Content/Tertiary"
+  ],
+  "tokensNoWhy": [
+   "Content/Brand"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athhr",
+  "grupo": "Layout",
+  "titulo": "AthHr",
+  "situacao": "proposta",
+  "why": "Divisor horizontal ou vertical — sempre Border/Default (contorno padrão), o mesmo contorno estrutural de qualquer separador do sistema.",
+  "hint": "Sem estado interativo — é uma linha estática.",
+  "subtitulo": "Padrão",
+  "legenda": "Linha: #8c8c8c — 3.17–3,36:1 ◐",
+  "html": "<div style=\"height:1px;background:#8c8c8c;width:100%;\"></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Border/Default"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athcard",
+  "grupo": "Layout",
+  "titulo": "AthCard",
+  "situacao": "proposta",
+  "why": "O ícone de destaque usa Content/Brand (texto da marca). Hover e seleção usam Background/Brand (fundo da marca)-Hover e Pressed — e a borda deixa de existir nesses 2 estados, porque nenhuma borda neutra sobrevive em cima de um preenchimento saturado (a mesma lição do anel de foco do botão).",
+  "hint": "Passe o mouse e clique pra ver hover/seleção reais.",
+  "subtitulo": "Padrão",
+  "legenda": "Ícone: #6b55d8Hover/Seleção: vira Background/Brand-Hover #5644ad e Background/Brand-Pressed #403382 — a borda é removida nesses 2 estados (a elevação já vem do box-shadow), em vez de tentar achar uma cor de borda que nunca vai contrastar",
+  "html": "<div class=\"row\"><div class=\"card-mini proposed-card\" tabindex=\"0\" role=\"button\"><svg style=\"width:22px;height:22px;color:#6b55d8;\"><use href=\"#i-info\"></use></svg><span>Matrícula</span></div></div>",
+  "tokens": [
+   "Background/Brand"
+  ],
+  "tokensNoWhy": [
+   "Content/Brand",
+   "Background/Brand"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athcardbuttonsimple",
+  "grupo": "Layout",
+  "titulo": "AthCardButtonSimple",
+  "situacao": "proposta",
+  "why": "Quem sinaliza \"selecionado\" é a troca de fundo (branco → Background/Canvas (fundo da página)), não a faixa lateral — ela é decorativa por natureza. Ícone e texto já usam tokens neutros com contraste correto; nada muda aqui além do valor do fundo \"claro\" unificado.",
+  "hint": "Clique pra selecionar — o fundo muda, a faixa lateral é só decorativa.",
+  "subtitulo": "Padrão",
+  "legenda": "Ícone: #575e6a — 6,53:1 ✓Faixa lateral: #eae6ff — decorativa, não carrega significado sozinha",
+  "html": "<div class=\"card-mini cbs-mini\" id=\"cbs-new-1\" tabindex=\"0\" role=\"button\" style=\"width:180px;height:auto;flex-direction:row;justify-content:flex-start;padding:12px 14px;gap:10px;border:1px solid #e3e4e9;\"><div style=\"width:4px;align-self:stretch;background:#eae6ff;border-radius:4px;flex-shrink:0;\"></div><svg style=\"width:22px;height:22px;color:#575e6a;flex-shrink:0;\"><use href=\"#i-school\"></use></svg><div style=\"text-align:left;\"><div style=\"font-weight:600;color:#002a3a;\">Ensino Fundamental</div><div style=\"font-weight:600;color:#002a3a;\">320</div></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Background/Canvas"
+  ],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athcardradiobutton",
+  "grupo": "Layout",
+  "titulo": "AthCardRadioButton",
+  "situacao": "proposta",
+  "why": "O radio e a borda do card, quando marcados, usam o roxo antigo. Como elemento pequeno (indicador de estado, ~15px) precisa de 3:1 e passa (3,58:1 ◐) — não reprova, mas é mais uma aparição do roxo que não é nem o antigo-oficial nem o novo padrão de marca.",
+  "hint": "Clique nos cards — são radios reais.",
+  "subtitulo": "Padrão",
+  "legenda": "Marcado: #6b55d8 — mesmo roxo já usado em botão, ícone e foco",
+  "html": "<div class=\"radio-mini-group\" style=\"flex-direction:column;align-items:flex-start;gap:8px;\"><label class=\"radio-mini\"><input type=\"radio\" name=\"crb-new\" checked=\"\" style=\"accent-color:#6b55d8;\"><span>Ensino Fundamental — 320 alunos</span></label><label class=\"radio-mini\"><input type=\"radio\" name=\"crb-new\" style=\"accent-color:#6b55d8;\"><span>Ensino Médio — 180 alunos</span></label></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "modalitemtwoparts",
+  "grupo": "Layout",
+  "titulo": "ModalItemTwoParts",
+  "situacao": "herda",
+  "why": "O divisor entre as duas colunas é um AthHr, já coberto na própria aba. Sem outra cor própria neste componente. Componente final abaixo.",
+  "hint": "Sem interação própria — o divisor já é real na aba AthHr.",
+  "subtitulo": "",
+  "legenda": "",
+  "html": "<div class=\"row\" style=\"gap:16px;align-items:stretch;\"><div style=\"flex:1;font-family:'Satoshi',sans-serif;font-size:13px;color:#1a1a1a;\">Dados do responsável</div><div style=\"width:1px;background:#cccccc;\"></div><div style=\"flex:1;font-family:'Satoshi',sans-serif;font-size:13px;color:#1a1a1a;\">Dados de pagamento</div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athcardoverviewdetails",
+  "grupo": "Layout",
+  "titulo": "AthCardOverviewDetails",
+  "situacao": "proposta",
+  "why": "O círculo de status branco-sobre-cor tem 6 variantes — 2 delas reprovam o mínimo de ícone (3:1): \"warning\" (1,59:1 ✕) e \"risco\" (2,85:1 ✕). \"Sucesso\" também reprova (2,10:1 ✕, achado recorrente). \"Info\", \"grey\" e \"default\" (roxo antigo) já passam.",
+  "hint": "Sem estado interativo — mostra as 6 variantes de cor lado a lado.",
+  "subtitulo": "Padrão",
+  "legenda": "Sucesso/Alerta/Risco passam a usar o mesmo tom \"Strong\" já aplicado no Tag/Badge/Pill — todas as 6 variantes acima de 3:1 agora",
+  "html": "<div class=\"row\" style=\"flex-wrap:wrap;gap:10px;\"><div style=\"width:56px;height:56px;border-radius:50%;background:#007a29;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 8px rgba(0,0,0,.03);\"><svg style=\"width:22px;height:22px;color:#fff;\"><use href=\"#i-info\"></use></svg></div><div style=\"width:56px;height:56px;border-radius:50%;background:#665200;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 8px rgba(0,0,0,.03);\"><svg style=\"width:22px;height:22px;color:#fff;\"><use href=\"#i-info\"></use></svg></div><div style=\"width:56px;height:56px;border-radius:50%;background:#7a4b00;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 8px rgba(0,0,0,.03);\"><svg style=\"width:22px;height:22px;color:#fff;\"><use href=\"#i-info\"></use></svg></div><div style=\"width:56px;height:56px;border-radius:50%;background:#3b83f4;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 8px rgba(0,0,0,.03);\"><svg style=\"width:22px;height:22px;color:#fff;\"><use href=\"#i-info\"></use></svg></div><div style=\"width:56px;height:56px;border-radius:50%;background:#7d8097;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 8px rgba(0,0,0,.03);\"><svg style=\"width:22px;height:22px;color:#fff;\"><use href=\"#i-info\"></use></svg></div></div>",
+  "tokens": [],
+  "tokensNoWhy": [],
+  "classesCol": "col proposed"
+ },
+ {
+  "id": "athcardwithbutton",
+  "grupo": "Layout",
+  "titulo": "AthCardWithButton",
+  "situacao": "proposta",
+  "why": "O ícone de \"já realizado\" usa Content/Success (texto de sucesso) (#2ecc71) — reprova o mínimo de ícone (2,10:1 ✕), a mesma falha recorrente vista em 6+ componentes ao longo desta auditoria.",
+  "hint": "Sem estado interativo — mostra o card com o ícone de confirmação.",
+  "subtitulo": "Padrão",
+  "legenda": "Ícone: #007a29 — 4,92:1 ✓",
+  "html": "<svg style=\"width:24px;height:24px;color:#007a29;\"><use href=\"#i-check-circle\"></use></svg>",
+  "tokens": [],
+  "tokensNoWhy": [
+   "Content/Success"
+  ],
+  "classesCol": "col proposed"
+ }
+]

@@ -1,0 +1,1044 @@
+{
+ "paleta": [
+  {
+   "grupo": "Marca / Interativo",
+   "nome": "Background/Brand",
+   "hex": "#6B55D8",
+   "nota": "Preenchimento de marca — botão primário, chip selecionado, trilho ativo. Conteúdo em cima usa Content/OnFill",
+   "dark": "#B0A9FF",
+   "cssVar": "--background-brand",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Marca / Interativo",
+   "nome": "Content/Brand",
+   "hex": "#6B55D8",
+   "nota": "Texto, ícone e link de marca sobre fundo claro NEUTRO (branco ou canvas) — 5,36:1 ✓. Sobre fundo claro DE MARCA use Content/OnBrandSubtle",
+   "dark": "#9F93FF",
+   "cssVar": "--content-brand",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Marca / Interativo",
+   "nome": "Background/BrandHover",
+   "hex": "#5644AD",
+   "nota": "Preenchimento de marca sob o mouse",
+   "dark": "#C2BFFF",
+   "cssVar": "--background-brand-hover",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Marca / Interativo",
+   "nome": "Content/OnBrandSubtle",
+   "hex": "#5644AD",
+   "nota": "Texto e ícone de marca sobre Background/BrandSubtle e Border/FocusInner — 6,11:1 ✓. É o degrau que faltava: o Content/Brand reprova ali (4,41:1 ◐)",
+   "dark": "#9F93FF",
+   "cssVar": "--content-on-brand-subtle",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Marca / Interativo",
+   "nome": "Background/BrandPressed",
+   "hex": "#403382",
+   "nota": "Preenchimento de marca no clique",
+   "dark": "#D4D2FF",
+   "cssVar": "--background-brand-pressed",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Marca / Interativo",
+   "nome": "Background/BrandSubtle",
+   "hex": "#EAE6FF",
+   "nota": "Contêiner claro de marca — chip, faixa, trilho, badge roxo",
+   "dark": "#301F6F",
+   "cssVar": "--background-brand-subtle",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Marca / Interativo",
+   "nome": "Background/BrandSelected",
+   "hex": "#F3F1FF",
+   "nota": "Fundo de item ou linha selecionada",
+   "dark": "#252244",
+   "cssVar": "--background-selected",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Controle",
+   "nome": "Control/Accent",
+   "hex": "#6B55D8",
+   "nota": "accent-color nativo de checkbox, radio e switch — preenche o quadrado, nunca é texto. Mesmo valor do Background/Brand, categoria de papel diferente",
+   "dark": "#B0A9FF",
+   "cssVar": "--control-accent",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Conteúdo",
+   "nome": "Content/Primary",
+   "hex": "#002A3A",
+   "nota": "Título e texto principal sobre fundo claro — 15,08:1 ✓",
+   "dark": "#DAE2E6",
+   "cssVar": "--content-primary",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Conteúdo",
+   "nome": "Content/Secondary",
+   "hex": "#575E6A",
+   "nota": "Subtítulo e texto de apoio — 6,53:1 ✓. Também é o piso sobre pastel de marca, onde o Tertiary reprova (4,34:1 ◐)",
+   "dark": "#A6AFB3",
+   "cssVar": "--content-secondary",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Conteúdo",
+   "nome": "Content/Tertiary",
+   "hex": "#666666",
+   "nota": "Texto discreto, instrução, placeholder — 5,74:1 ✓",
+   "dark": "#99A1A5",
+   "cssVar": "--content-tertiary",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Conteúdo",
+   "nome": "Content/OnFill",
+   "hex": "#FFFFFF",
+   "nota": "Conteúdo sobre preenchimento sólido — o nome diz o papel. É o ÚNICO claro válido sobre os 6 preenchimentos da plataforma (5,36 a 11,26:1 ✓) e sobre Background/Inverse (15,08:1 ✓). É por isso que não existe OnBrand, OnSuccess, OnDanger separado: um valor cobre todos. Mesmo valor do Background/Surface, categoria de papel diferente: aqui a cor é TINTA, não fundo",
+   "dark": "#12181C",
+   "cssVar": "--content-on-fill",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Conteúdo",
+   "nome": "Content/Disabled",
+   "hex": "#B2B2B2",
+   "nota": "Conteúdo desabilitado — isento do mínimo de contraste",
+   "dark": "#54595C",
+   "cssVar": "--content-disabled",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Default",
+   "hex": "#8C8C8C",
+   "nota": "Contorno estrutural — campo, card, moldura de tabela. Equivale ao outline do Material Design 3",
+   "dark": "#7A8286",
+   "cssVar": "--border-default",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Moderate",
+   "hex": "#999999",
+   "nota": "Contorno intermediário — contêiner clicável que organiza conteúdo (accordion)",
+   "dark": "#798286",
+   "cssVar": "--border-moderate",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Subtle",
+   "hex": "#CCCCCC",
+   "nota": "Divisor decorativo — linha de tabela, item de painel, cabeçalho de modal. Equivale ao outline-variant do M3",
+   "dark": "#434A4E",
+   "cssVar": "--border-subtle",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Faint",
+   "hex": "#D9D9D9",
+   "nota": "Divisor mais discreto que o Subtle — separação mínima dentro de um mesmo bloco",
+   "dark": "#333B3E",
+   "cssVar": "--border-faint",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Hover",
+   "hex": "#737373",
+   "nota": "Campo sob o mouse, antes de focar — 4,74:1 ✓. Nenhum campo do DS tinha essa reação antes",
+   "dark": "#848C91",
+   "cssVar": "--border-hover",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Strong",
+   "hex": "#575E6A",
+   "nota": "TOKEN NOVO (2026-08-02) — contorno escuro de elemento pequeno sobre fundo claro: o chip de usuário da top bar. Fecha a escala neutra de bordas (Disabled E5 · Faint D9 · Subtle CC · Moderate 99 · Hover 73 · Strong 57). Mesmo valor do Content/Secondary, categoria de papel diferente: aqui a cor é CONTORNO, não tinta",
+   "dark": "#7A818E",
+   "cssVar": "--border-strong",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Focus",
+   "hex": "#5644AD",
+   "nota": "Anel de foco sobre fundo CLARO. Sobre fundo escuro ou preenchido ele desaparece (1,00 a 2,03:1 ✕) — ali use Border/Inverse",
+   "dark": "#9D95FE",
+   "cssVar": "--border-focus",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/FocusInner",
+   "hex": "#E1DDF7",
+   "nota": "ANTES chamado Background/FocusInner, e estava na categoria errada: é o anel INTERNO do halo de foco (box-shadow), não um fundo. Contrasta 4,1 a 5,3:1 ✓ contra qualquer preenchimento",
+   "dark": "#2B274F",
+   "cssVar": "--border-focus-inner",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Inverse",
+   "hex": "#F2F2F2",
+   "nota": "Borda e anel de foco sobre preenchimento sólido ou fundo escuro. É a única borda que passa em TODOS os preenchimentos (3,35 a 13,47:1 ✓); nenhuma borda cinza passa em nenhum",
+   "dark": "#0F1619",
+   "cssVar": "--border-inverse",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Brand",
+   "hex": "#6B55D8",
+   "nota": "Contorno de marca — círculo ativo do wizard, chip, traço do spinner",
+   "dark": "#726AC0",
+   "cssVar": "--border-brand",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/BrandSubtle",
+   "hex": "#EAE6FF",
+   "nota": "TOKEN NOVO (2026-08-02) — contorno de tarja pastel de marca: a etiqueta de tipo de cobertura ZeroDefault (`_utilities.scss:288`), que tem fundo BrandSelected e precisa de um contorno um passo mais forte, sem virar contorno de marca cheio. Mesmo valor do Background/BrandSubtle, categoria de papel diferente: aqui a cor é CONTORNO, não fundo",
+   "dark": "#2F2B3E",
+   "cssVar": "--border-brand-subtle",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Disabled",
+   "hex": "#E5E5E5",
+   "nota": "Contorno de campo ou controle desabilitado — isento do mínimo",
+   "dark": "#303537",
+   "cssVar": "--border-disabled",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Success",
+   "hex": "#009933",
+   "nota": "Contorno da família sucesso — botão de contorno em repouso e badge sobre linha em hover",
+   "dark": "#348542",
+   "cssVar": "--border-success",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/SuccessPressed",
+   "hex": "#007A29",
+   "nota": "Contorno do botão de contorno NO CLIQUE — 3,30:1 ◐ contra o fundo pressionado. Em repouso o Border/Success reprova ali (2,24:1 ✕). Mesmo valor do Background/Success, categoria diferente",
+   "dark": "#57A761",
+   "cssVar": "--border-success-pressed",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Danger",
+   "hex": "#E50000",
+   "nota": "Contorno da família perigo — inclui a borda do campo em erro",
+   "dark": "#BA584B",
+   "cssVar": "--border-danger",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/DangerPressed",
+   "hex": "#B70000",
+   "nota": "Contorno do botão de contorno danger no clique — 4,70:1 ✓. Mesma regra do Border/SuccessPressed",
+   "dark": "#E17364",
+   "cssVar": "--border-danger-pressed",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Info",
+   "hex": "#3355FF",
+   "nota": "Contorno da família informação",
+   "dark": "#5571C2",
+   "cssVar": "--border-info",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Warning",
+   "hex": "#AE9300",
+   "nota": "Contorno da família alerta. O código tem #cca300, que reprova a 2,38:1 ✕ — é o único border semântico que falha hoje",
+   "dark": "#827536",
+   "cssVar": "--border-warning",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Borda",
+   "nome": "Border/Risk",
+   "hex": "#DE7B05",
+   "nota": "Contorno da família risco. Token novo: não existe no código (só é citado numa story, descrevendo um token que nunca foi declarado)",
+   "dark": "#A0683A",
+   "cssVar": "--border-risk",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Fundo",
+   "nome": "Background/Surface",
+   "hex": "#FFFFFF",
+   "nota": "Superfície padrão — card, painel, popover",
+   "dark": "#1B2429",
+   "cssVar": "--background-primary",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Fundo",
+   "nome": "Background/Canvas",
+   "hex": "#F8F8F8",
+   "nota": "Fundo de página ou área decorativa — trilho, filtro",
+   "dark": "#0D1519",
+   "cssVar": "--background-canvas",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Fundo",
+   "nome": "Background/Hover",
+   "hex": "#F2F2F2",
+   "nota": "Hover de lista, linha, item de árvore",
+   "dark": "#2B3539",
+   "cssVar": "--background-hover",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Fundo",
+   "nome": "Background/Track",
+   "hex": "#CCCCCC",
+   "nota": "TOKEN NOVO (2026-08-02) — trilha vazia de barra de progresso e de trilho de controle. A paleta de fundos só tinha claros (Canvas, Hover): nenhum servia de trilha, porque a trilha precisa aparecer contra o cartão branco. Mesmo valor do Border/Subtle, categoria de papel diferente: aqui a cor é PREENCHIMENTO da faixa, não contorno",
+   "dark": "#4A4A4A",
+   "cssVar": "--background-track",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Fundo",
+   "nome": "Background/Neutral",
+   "hex": "#666666",
+   "nota": "TOKEN NOVO (2026-08-02) — preenchimento neutro sobre a trilha: progresso sem cor de estado, etapa concluída de um passo a passo. Conteúdo em cima usa Content/OnFill (5,74:1 ✓). Mesmo valor do Content/Tertiary, categoria de papel diferente",
+   "dark": "#9B9B9B",
+   "cssVar": "--background-neutral",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Fundo",
+   "nome": "Background/Inverse",
+   "hex": "#002A3A",
+   "nota": "Fundo escuro com conteúdo claro em cima — tooltip, ribbon dark. Mesmo hex do Content/Primary, papel de token diferente",
+   "dark": "#EAEDEF",
+   "cssVar": "--background-inverse",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Sucesso",
+   "nome": "Background/SuccessVivid",
+   "hex": "#2ECC71",
+   "nota": "SÓ decorativo — faixa, ilustração, gráfico. CORREÇÃO desta rodada: a nota anterior dizia que passava em texto ou ícone grande; medido, dá 2,10:1 ✕ — reprova até o mínimo de ícone (3:1). Nunca use como conteúdo",
+   "dark": "#4CBF75",
+   "cssVar": "--background-success-vivid",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Sucesso",
+   "nome": "Background/Success",
+   "hex": "#007A29",
+   "nota": "Preenchimento de sucesso — botão de aprovar. Conteúdo em cima usa Content/OnFill (5,10:1 ✓)",
+   "dark": "#81CC89",
+   "cssVar": "--background-success",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Sucesso",
+   "nome": "Content/Success",
+   "hex": "#007A29",
+   "nota": "Texto e ícone de sucesso — 4,92:1 ✓ sobre branco e canvas, e também sobre Background/SuccessSubtle. Um valor serve nos dois fundos, por isso não existe um OnSuccessSubtle separado",
+   "dark": "#58C068",
+   "cssVar": "--content-success",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Conteúdo",
+   "nome": "Content/OnSuccessSubtle",
+   "hex": "#005C1F",
+   "nota": "TOKEN NOVO (2026-08-02) — tinta sobre o pastel de success (7.62:1 ✓) e cor de texto do botão de contorno dessa família (8.23:1 ✓ sobre branco). Mesmo valor do Background/SuccessHover, categoria de papel diferente: aqui a cor é TINTA, não fundo. Fecha a simetria com a família Perigo, que já tinha Content/OnDangerSubtle",
+   "dark": "#6FBC7A",
+   "cssVar": "--content-success-bold",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Sucesso",
+   "nome": "Background/SuccessHover",
+   "hex": "#005C1F",
+   "nota": "TOKEN NOVO — preenchimento de sucesso sob o mouse (7,35:1 ✓ com Content/OnFill). Também é a cor de TEXTO do botão de contorno de sucesso (8,23:1 ✓ sobre branco): era um valor usado em 2 papéis sem nome nenhum",
+   "dark": "#9BDCA1",
+   "cssVar": "--background-success-hover",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Sucesso",
+   "nome": "Background/SuccessPressed",
+   "hex": "#003D14",
+   "nota": "TOKEN NOVO — preenchimento de sucesso no clique (11,18:1 ✓)",
+   "dark": "#B3E9B8",
+   "cssVar": "--background-success-pressed",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Sucesso",
+   "nome": "Background/SuccessSubtle",
+   "hex": "#EAFAF1",
+   "nota": "Contêiner claro de sucesso — badge, tag, chip. Sobre linha em hover ou selecionada o badge ganha contorno em Border/Success, senão a pílula desaparece (1,00:1 ✕)",
+   "dark": "#004100",
+   "cssVar": "--background-success-subtle",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Sucesso",
+   "nome": "Background/SuccessSubtleHover",
+   "hex": "#E2FCEA",
+   "nota": "TOKEN NOVO — botão de contorno de sucesso sob o mouse",
+   "dark": "#035019",
+   "cssVar": "--background-success-subtle-hover",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Sucesso",
+   "nome": "Background/SuccessSubtlePressed",
+   "hex": "#99D6AD",
+   "nota": "TOKEN NOVO — botão de contorno de sucesso no clique",
+   "dark": "#116225",
+   "cssVar": "--background-success-subtle-pressed",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Sucesso",
+   "nome": "Content/OnSuccessSubtlePressed",
+   "hex": "#001F0A",
+   "nota": "TOKEN NOVO — texto do botão de contorno de sucesso no clique (10,48:1 ✓)",
+   "dark": "#D5F5D7",
+   "cssVar": "--content-on-success-subtle-pressed",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Perigo",
+   "nome": "Content/Danger",
+   "hex": "#E50000",
+   "nota": "Texto e ícone de erro sobre fundo claro neutro — 4,85:1 ✓. Asterisco de campo obrigatório, mensagem de erro",
+   "dark": "#FF7665",
+   "cssVar": "--content-danger",
+   "situacao": "já existe"
+  },
+  {
+   "grupo": "Perigo",
+   "nome": "Background/Danger",
+   "hex": "#B70000",
+   "nota": "Preenchimento de perigo — botão de excluir. Conteúdo em cima usa Content/OnFill (6,22:1 ✓)",
+   "dark": "#FF8D7C",
+   "cssVar": "--background-danger",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Perigo",
+   "nome": "Content/OnDangerSubtle",
+   "hex": "#B70000",
+   "nota": "Texto e ícone sobre Background/DangerSubtle — 6,22:1 ✓. Aqui os dois valores da família diferem (o Content/Danger é mais claro), então cada fundo tem o seu",
+   "dark": "#FF7665",
+   "cssVar": "--content-on-danger-subtle",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Perigo",
+   "nome": "Background/DangerHover",
+   "hex": "#890000",
+   "nota": "TOKEN NOVO — preenchimento de perigo sob o mouse (9,09:1 ✓)",
+   "dark": "#FFAA9B",
+   "cssVar": "--background-danger-hover",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Perigo",
+   "nome": "Background/DangerPressed",
+   "hex": "#5C0000",
+   "nota": "TOKEN NOVO — preenchimento de perigo no clique (12,89:1 ✓)",
+   "dark": "#FFC3B6",
+   "cssVar": "--background-danger-pressed",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Perigo",
+   "nome": "Content/OnDangerSubtlePressed",
+   "hex": "#5C0000",
+   "nota": "TOKEN NOVO — texto do botão de contorno danger no clique (9,73:1 ✓). Mesmo valor do Background/DangerPressed, categoria diferente",
+   "dark": "#FFDED6",
+   "cssVar": "--content-on-danger-subtle-pressed",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Perigo",
+   "nome": "Background/DangerSubtle",
+   "hex": "#FFCBC0",
+   "nota": "Contêiner claro de perigo — badge, tag, chip. Também é o fundo do botão de contorno danger sob o mouse",
+   "dark": "#640000",
+   "cssVar": "--background-danger-subtle",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Perigo",
+   "nome": "Background/DangerSubtlePressed",
+   "hex": "#FFAFA0",
+   "nota": "TOKEN NOVO — botão de contorno danger no clique",
+   "dark": "#7C261E",
+   "cssVar": "--background-danger-subtle-pressed",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Alerta",
+   "nome": "Background/WarningVivid",
+   "hex": "#E8CD46",
+   "nota": "SÓ decorativo — 1,59:1 ✕, reprova como texto E como ícone. Nunca use sozinho para conteúdo",
+   "dark": "#CEB84B",
+   "cssVar": "--background-warning-vivid",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Alerta",
+   "nome": "Background/Warning",
+   "hex": "#6F5D00",
+   "nota": "TOKEN NOVO (2026-08-01) — preenchimento de alerta. Mesmo valor do Content/Warning, categoria de papel diferente: aqui a cor é FUNDO, não tinta. Conteúdo em cima usa Content/OnFill",
+   "dark": "#C5B87D",
+   "cssVar": "--background-warning",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Alerta",
+   "nome": "Background/WarningHover",
+   "hex": "#544500",
+   "nota": "TOKEN NOVO — preenchimento de alerta sob o mouse. Mesmo passo de escurecimento das outras famílias (−0,088 de L em OKLCH)",
+   "dark": "#D5CA96",
+   "cssVar": "--background-warning-hover",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Alerta",
+   "nome": "Background/WarningPressed",
+   "hex": "#382D00",
+   "nota": "TOKEN NOVO — preenchimento de alerta no clique",
+   "dark": "#E3DAAF",
+   "cssVar": "--background-warning-pressed",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Alerta",
+   "nome": "Content/Warning",
+   "hex": "#6F5D00",
+   "nota": "Texto e ícone de alerta — 7,24:1 ✓, sobre fundo claro neutro e sobre Background/WarningSubtle",
+   "dark": "#B6A655",
+   "cssVar": "--content-warning",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Conteúdo",
+   "nome": "Content/OnWarningSubtle",
+   "hex": "#544500",
+   "nota": "TOKEN NOVO (2026-08-02) — tinta sobre o pastel de warning (7.49:1 ✓) e cor de texto do botão de contorno dessa família (9.42:1 ✓ sobre branco). Mesmo valor do Background/WarningHover, categoria de papel diferente: aqui a cor é TINTA, não fundo. Fecha a simetria com a família Perigo, que já tinha Content/OnDangerSubtle",
+   "dark": "#B5A569",
+   "cssVar": "--content-warning-bold",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Alerta",
+   "nome": "Background/WarningSubtle",
+   "hex": "#F6E697",
+   "nota": "Contêiner claro de alerta — badge, tag, chip",
+   "dark": "#3D3100",
+   "cssVar": "--background-warning-subtle",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Risco",
+   "nome": "Background/RiskVivid",
+   "hex": "#DF8124",
+   "nota": "SÓ decorativo — 2,85:1 ✕, reprova como texto e como ícone",
+   "dark": "#EA9853",
+   "cssVar": "--background-risk-vivid",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Risco",
+   "nome": "Background/Risk",
+   "hex": "#6B2300",
+   "nota": "TOKEN NOVO (2026-08-01) — preenchimento de risco. Mesmo valor do Content/Risk, categoria de papel diferente: aqui a cor é FUNDO, não tinta. Conteúdo em cima usa Content/OnFill",
+   "dark": "#E2AA7E",
+   "cssVar": "--background-risk",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Risco",
+   "nome": "Background/RiskHover",
+   "hex": "#4B1000",
+   "nota": "TOKEN NOVO — preenchimento de risco sob o mouse. Mesmo passo de escurecimento das outras famílias (−0,088 de L em OKLCH)",
+   "dark": "#F0BD97",
+   "cssVar": "--background-risk-hover",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Risco",
+   "nome": "Background/RiskPressed",
+   "hex": "#2B0000",
+   "nota": "TOKEN NOVO — preenchimento de risco no clique",
+   "dark": "#FAD0B0",
+   "cssVar": "--background-risk-pressed",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Risco",
+   "nome": "Content/Risk",
+   "hex": "#6B2300",
+   "nota": "Texto e ícone de risco, sobre fundo claro neutro e sobre Background/RiskSubtle",
+   "dark": "#DA9256",
+   "cssVar": "--content-risk",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Conteúdo",
+   "nome": "Content/OnRiskSubtle",
+   "hex": "#4B1000",
+   "nota": "TOKEN NOVO (2026-08-02) — tinta sobre o pastel de risk (10.90:1 ✓) e cor de texto do botão de contorno dessa família (15.29:1 ✓ sobre branco). Mesmo valor do Background/RiskHover, categoria de papel diferente: aqui a cor é TINTA, não fundo. Fecha a simetria com a família Perigo, que já tinha Content/OnDangerSubtle",
+   "dark": "#D8917C",
+   "cssVar": "--content-risk-bold",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Risco",
+   "nome": "Background/RiskSubtle",
+   "hex": "#FFD29E",
+   "nota": "Contêiner claro de risco — badge, tag, chip",
+   "dark": "#561E00",
+   "cssVar": "--background-risk-subtle",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Informação",
+   "nome": "Content/InfoLarge",
+   "hex": "#3B83F4",
+   "nota": "APENAS ícone ou texto grande (≥24px) — 3,66:1 ◐, reprova como texto pequeno",
+   "dark": "#639EFA",
+   "cssVar": "--content-info-large",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Informação",
+   "nome": "Background/Info",
+   "hex": "#2944CC",
+   "nota": "TOKEN NOVO (2026-08-01) — preenchimento de informação. Mesmo valor do Content/Info, categoria de papel diferente: aqui a cor é FUNDO, não tinta. Conteúdo em cima usa Content/OnFill",
+   "dark": "#92B3FF",
+   "cssVar": "--background-info",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Informação",
+   "nome": "Background/InfoHover",
+   "hex": "#1824AE",
+   "nota": "TOKEN NOVO — preenchimento de informação sob o mouse. Mesmo passo de escurecimento das outras famílias (−0,088 de L em OKLCH)",
+   "dark": "#ADC7FF",
+   "cssVar": "--background-info-hover",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Informação",
+   "nome": "Background/InfoPressed",
+   "hex": "#10008E",
+   "nota": "TOKEN NOVO — preenchimento de informação no clique",
+   "dark": "#C4D8FF",
+   "cssVar": "--background-info-pressed",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Informação",
+   "nome": "Content/Info",
+   "hex": "#2944CC",
+   "nota": "Texto e ícone de informação, sobre fundo claro neutro e sobre Background/InfoSubtle",
+   "dark": "#7AA0FF",
+   "cssVar": "--content-info",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Conteúdo",
+   "nome": "Content/OnInfoSubtle",
+   "hex": "#1824AE",
+   "nota": "TOKEN NOVO (2026-08-02) — tinta sobre o pastel de info (9.84:1 ✓) e cor de texto do botão de contorno dessa família (11.04:1 ✓ sobre branco). Mesmo valor do Background/InfoHover, categoria de papel diferente: aqui a cor é TINTA, não fundo. Fecha a simetria com a família Perigo, que já tinha Content/OnDangerSubtle",
+   "dark": "#7D9FFC",
+   "cssVar": "--content-info-bold",
+   "situacao": "declarar"
+  },
+  {
+   "grupo": "Informação",
+   "nome": "Background/InfoSubtle",
+   "hex": "#E9F3FE",
+   "nota": "Contêiner claro de informação — badge, tag, chip",
+   "dark": "#162872",
+   "cssVar": "--background-info-subtle",
+   "situacao": "trocar valor"
+  },
+  {
+   "grupo": "Sobreposição",
+   "nome": "Overlay/Scrim",
+   "hex": "rgba(0,0,0,.5)",
+   "nota": "Único tom de escurecimento atrás de qualquer modal — 1 valor pra toda a plataforma. Nunca colocar conteúdo direto em cima: nenhum tom, claro ou escuro, passa 4,5:1 ✓ contra ele",
+   "dark": "rgba(0,0,0,.6)",
+   "cssVar": "--overlay-50",
+   "situacao": "já existe"
+  }
+ ],
+ "familias": [
+  {
+   "nome": "Marca",
+   "nota": "Border/Brand #6B55D8<br>hover #5644AD · clique #403382",
+   "faixas": [
+    {
+     "papel": "Background/Brand",
+     "claro": "#6b55d8",
+     "parClaro": "#f2f2f2",
+     "escuro": "#b0a9ff",
+     "parEscuro": "#12181c"
+    },
+    {
+     "papel": "Content/OnFill",
+     "claro": "#f2f2f2",
+     "parClaro": "#6b55d8",
+     "escuro": "#12181c",
+     "parEscuro": "#b0a9ff"
+    },
+    {
+     "papel": "Background/BrandSubtle",
+     "claro": "#eae6ff",
+     "parClaro": "#5644ad",
+     "escuro": "#301f6f",
+     "parEscuro": "#9f93ff"
+    },
+    {
+     "papel": "Content/OnBrandSubtle",
+     "claro": "#5644ad",
+     "parClaro": "#eae6ff",
+     "escuro": "#9f93ff",
+     "parEscuro": "#301f6f"
+    }
+   ],
+   "pares": "preenchimento #6B55D8 + #F2F2F2 · 4,79:1 ✓contêiner #EAE6FF + #5644AD · 6,11:1 ✓"
+  },
+  {
+   "nome": "Perigo",
+   "nota": "Border/Danger #E50000<br>hover #890000 · clique #5C0000",
+   "faixas": [
+    {
+     "papel": "Background/Danger",
+     "claro": "#b70000",
+     "parClaro": "#f2f2f2",
+     "escuro": "#ff8d7c",
+     "parEscuro": "#12181c"
+    },
+    {
+     "papel": "Content/OnFill",
+     "claro": "#f2f2f2",
+     "parClaro": "#b70000",
+     "escuro": "#12181c",
+     "parEscuro": "#ff8d7c"
+    },
+    {
+     "papel": "Background/DangerSubtle",
+     "claro": "#ffcbc0",
+     "parClaro": "#b70000",
+     "escuro": "#640000",
+     "parEscuro": "#ff7665"
+    },
+    {
+     "papel": "Content/OnDangerSubtle",
+     "claro": "#b70000",
+     "parClaro": "#ffcbc0",
+     "escuro": "#ff7665",
+     "parEscuro": "#640000"
+    }
+   ],
+   "pares": "preenchimento #B70000 + #F2F2F2 · 6,22:1 ✓contêiner #FFCBC0 + #B70000 · 4,83:1 ✓"
+  },
+  {
+   "nome": "Sucesso",
+   "nota": "Border/Success #009933<br>hover #005C1F · clique #003D14",
+   "faixas": [
+    {
+     "papel": "Background/Success",
+     "claro": "#007a29",
+     "parClaro": "#f2f2f2",
+     "escuro": "#81cc89",
+     "parEscuro": "#12181c"
+    },
+    {
+     "papel": "Content/OnFill",
+     "claro": "#f2f2f2",
+     "parClaro": "#007a29",
+     "escuro": "#12181c",
+     "parEscuro": "#81cc89"
+    },
+    {
+     "papel": "Background/SuccessSubtle",
+     "claro": "#eafaf1",
+     "parClaro": "#007a29",
+     "escuro": "#004100",
+     "parEscuro": "#58c068"
+    },
+    {
+     "papel": "Content/Success",
+     "claro": "#007a29",
+     "parClaro": "#eafaf1",
+     "escuro": "#58c068",
+     "parEscuro": "#004100"
+    }
+   ],
+   "pares": "preenchimento #007A29 + #F2F2F2 · 4,92:1 ✓contêiner #EAFAF1 + #007A29 · 5,10:1 ✓"
+  },
+  {
+   "nome": "Informação",
+   "nota": "Border/Info #3355FF<br>hover #1824AE · clique #10008E",
+   "faixas": [
+    {
+     "papel": "Background/Info",
+     "claro": "#2944cc",
+     "parClaro": "#f2f2f2",
+     "escuro": "#92b3ff",
+     "parEscuro": "#12181c"
+    },
+    {
+     "papel": "Content/OnFill",
+     "claro": "#f2f2f2",
+     "parClaro": "#2944cc",
+     "escuro": "#12181c",
+     "parEscuro": "#92b3ff"
+    },
+    {
+     "papel": "Background/InfoSubtle",
+     "claro": "#e9f3fe",
+     "parClaro": "#2944cc",
+     "escuro": "#162872",
+     "parEscuro": "#7aa0ff"
+    },
+    {
+     "papel": "Content/Info",
+     "claro": "#2944cc",
+     "parClaro": "#e9f3fe",
+     "escuro": "#7aa0ff",
+     "parEscuro": "#162872"
+    }
+   ],
+   "pares": "preenchimento #2944CC + #F2F2F2 · 6,72:1 ✓contêiner #E9F3FE + #2944CC · 6,70:1 ✓"
+  },
+  {
+   "nome": "Alerta",
+   "nota": "Border/Warning #AE9300<br>hover #544500 · clique #382D00",
+   "faixas": [
+    {
+     "papel": "Background/Warning",
+     "claro": "#6f5d00",
+     "parClaro": "#f2f2f2",
+     "escuro": "#c5b87d",
+     "parEscuro": "#12181c"
+    },
+    {
+     "papel": "Content/OnFill",
+     "claro": "#f2f2f2",
+     "parClaro": "#6f5d00",
+     "escuro": "#12181c",
+     "parEscuro": "#c5b87d"
+    },
+    {
+     "papel": "Background/WarningSubtle",
+     "claro": "#f6e697",
+     "parClaro": "#6f5d00",
+     "escuro": "#3d3100",
+     "parEscuro": "#b6a655"
+    },
+    {
+     "papel": "Content/Warning",
+     "claro": "#6f5d00",
+     "parClaro": "#f6e697",
+     "escuro": "#b6a655",
+     "parEscuro": "#3d3100"
+    }
+   ],
+   "pares": "preenchimento #6F5D00 + #F2F2F2 · 5,79:1 ✓contêiner #F6E697 + #6F5D00 · 5,15:1 ✓"
+  },
+  {
+   "nome": "Risco",
+   "nota": "Border/Risk #DE7B05<br>hover #4B1000 · clique #2B0000",
+   "faixas": [
+    {
+     "papel": "Background/Risk",
+     "claro": "#6b2300",
+     "parClaro": "#f2f2f2",
+     "escuro": "#e2aa7e",
+     "parEscuro": "#12181c"
+    },
+    {
+     "papel": "Content/OnFill",
+     "claro": "#f2f2f2",
+     "parClaro": "#6b2300",
+     "escuro": "#12181c",
+     "parEscuro": "#e2aa7e"
+    },
+    {
+     "papel": "Background/RiskSubtle",
+     "claro": "#ffd29e",
+     "parClaro": "#6b2300",
+     "escuro": "#561e00",
+     "parEscuro": "#da9256"
+    },
+    {
+     "papel": "Content/Risk",
+     "claro": "#6b2300",
+     "parClaro": "#ffd29e",
+     "escuro": "#da9256",
+     "parEscuro": "#561e00"
+    }
+   ],
+   "pares": "preenchimento #6B2300 + #F2F2F2 · 10,06:1 ✓contêiner #FFD29E + #6B2300 · 8,02:1 ✓"
+  }
+ ],
+ "superficies": [
+  {
+   "nome": "Background/Surface",
+   "desc": "Card, painel, popover — a superfície padrão",
+   "hex": "#FFFFFF + Content/Primary · 15,08:1"
+  },
+  {
+   "nome": "Background/Canvas",
+   "desc": "Fundo de página ou área decorativa",
+   "hex": "#F8F8F8 + Content/Primary · 14,20:1"
+  },
+  {
+   "nome": "Background/Hover",
+   "desc": "Hover de lista, linha, item de árvore",
+   "hex": "#F2F2F2 + Content/Primary · 13,47:1"
+  },
+  {
+   "nome": "Background/Inverse",
+   "desc": "Tooltip e faixa escuros — inverte a relação",
+   "hex": "#002A3A + Content/OnFill · 13,47:1"
+  }
+ ],
+ "alias": [
+  {
+   "hex": "#6B55D8",
+   "papeis": [
+    {
+     "nome": "Background/Brand",
+     "uso": "preenchimento — botão primário, chip selecionado"
+    },
+    {
+     "nome": "Content/Brand",
+     "uso": "texto, ícone e link de marca sobre fundo neutro"
+    },
+    {
+     "nome": "Border/Brand",
+     "uso": "contorno — círculo do wizard, traço do spinner"
+    },
+    {
+     "nome": "Control/Accent",
+     "uso": "accent-color nativo de checkbox, radio e switch"
+    }
+   ]
+  },
+  {
+   "hex": "#007A29",
+   "papeis": [
+    {
+     "nome": "Background/Success",
+     "uso": "preenchimento do botão de aprovar"
+    },
+    {
+     "nome": "Content/Success",
+     "uso": "texto e ícone de sucesso"
+    },
+    {
+     "nome": "Border/SuccessPressed",
+     "uso": "contorno do botão de contorno no clique"
+    }
+   ]
+  },
+  {
+   "hex": "#5644AD",
+   "papeis": [
+    {
+     "nome": "Background/BrandHover",
+     "uso": "preenchimento de marca sob o mouse"
+    },
+    {
+     "nome": "Content/OnBrandSubtle",
+     "uso": "texto de marca sobre fundo claro de marca"
+    },
+    {
+     "nome": "Border/Focus",
+     "uso": "anel de foco sobre fundo claro"
+    }
+   ]
+  },
+  {
+   "hex": "#F2F2F2",
+   "papeis": [
+    {
+     "nome": "Content/OnFill",
+     "uso": "conteúdo sobre preenchimento sólido"
+    },
+    {
+     "nome": "Border/Inverse",
+     "uso": "anel de foco sobre preenchimento sólido"
+    },
+    {
+     "nome": "Background/Hover",
+     "uso": "hover de lista, linha, item de árvore"
+    }
+   ]
+  },
+  {
+   "hex": "#B70000",
+   "papeis": [
+    {
+     "nome": "Background/Danger",
+     "uso": "preenchimento do botão de excluir"
+    },
+    {
+     "nome": "Content/OnDangerSubtle",
+     "uso": "texto sobre o pastel de perigo"
+    },
+    {
+     "nome": "Border/DangerPressed",
+     "uso": "contorno do botão de contorno no clique"
+    }
+   ]
+  },
+  {
+   "hex": "#002A3A",
+   "papeis": [
+    {
+     "nome": "Content/Primary",
+     "uso": "título e texto principal"
+    },
+    {
+     "nome": "Background/Inverse",
+     "uso": "fundo escuro de tooltip e ribbon"
+    }
+   ]
+  }
+ ]
+}

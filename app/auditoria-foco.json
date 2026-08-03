@@ -1,0 +1,163 @@
+{
+ "paginas": {
+  "matricula": [],
+  "home": [],
+  "faturas": [],
+  "repasses": [],
+  "turmas": [],
+  "alunos": []
+ },
+ "componentes": {
+  "edsbutton": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado no preenchimento",
+    "onde": "button.eds-button.d-flex"
+   }
+  ],
+  "edsbuttonremove": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado",
+    "onde": "button.eds-button.d-flex"
+   }
+  ],
+  "edsbuttonicon": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado no preenchimento",
+    "onde": "button.eds-button-icon.d-flex"
+   }
+  ],
+  "athinputdatepicker": [
+   {
+    "tipo": "sem-anel",
+    "detalhe": "nenhum anel nem sombra ao focar, nem no contêiner",
+    "onde": "input.form-control.w-100"
+   }
+  ],
+  "athinputmonthyearpicker": [
+   {
+    "tipo": "sem-anel",
+    "detalhe": "nenhum anel nem sombra ao focar, nem no contêiner",
+    "onde": "input.form-control.w-100"
+   }
+  ],
+  "athsignerslistinput": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado",
+    "onde": "button.eds-button.d-flex"
+   }
+  ],
+  "navnotifications": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado",
+    "onde": "button.eds-button-icon.d-flex"
+   }
+  ],
+  "athpanelfinishedsuccess": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado no preenchimento",
+    "onde": "button.eds-button.d-flex"
+   },
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado",
+    "onde": "button.eds-button.d-flex"
+   }
+  ],
+  "athpanelsheetsent": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado",
+    "onde": "button.eds-button.d-flex"
+   }
+  ],
+  "athspreadsheetinspectionpanel": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado",
+    "onde": "button.eds-button.d-flex"
+   }
+  ],
+  "athpanelfinisheddata": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado no preenchimento",
+    "onde": "button.eds-button.d-flex"
+   }
+  ],
+  "athspreadsheetimportsuccesspanel": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado",
+    "onde": "button.eds-button.d-flex"
+   },
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado no preenchimento",
+    "onde": "button.eds-button.d-flex"
+   }
+  ],
+  "athspreadsheeterrorpanel": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado no preenchimento",
+    "onde": "button.eds-button.d-flex"
+   },
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado",
+    "onde": "button.eds-button.d-flex"
+   }
+  ],
+  "athspreadsheetdownloadsuccesspanel": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado",
+    "onde": "button.eds-button.d-flex"
+   },
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado no preenchimento",
+    "onde": "button.eds-button.d-flex"
+   }
+  ],
+  "athspreadsheetdownloadinprogresspanel": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado",
+    "onde": "button.eds-button.d-flex"
+   }
+  ],
+  "athpanelfinishederror": [
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado no preenchimento",
+    "onde": "button.eds-button.d-flex"
+   },
+   {
+    "tipo": "sem-afastamento",
+    "detalhe": "outline-offset 0px — anel colado",
+    "onde": "button.eds-button.d-flex"
+   }
+  ],
+  "athtreejs": [
+   {
+    "tipo": "contraste",
+    "detalhe": "#f2f2f2 sobre #ffffff = 1.12:1 (piso 3)",
+    "onde": "input.form-check-input"
+   }
+  ],
+  "athtreejsmultisearch": [
+   {
+    "tipo": "contraste",
+    "detalhe": "#f2f2f2 sobre #ffffff = 1.12:1 (piso 3)",
+    "onde": "input.form-check-input"
+   }
+  ]
+ }
+}

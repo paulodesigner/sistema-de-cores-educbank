@@ -1,0 +1,246 @@
+/* GERADO por gerar-tokens-css.py — não edite à mão.
+   O código do EducbankPay entra por alias, read-only. Este arquivo é o único
+   lugar onde as cores do padrão são impostas: ele redeclara as variáveis que os
+   componentes já consomem, então o componente REAL renderiza com a cor NOVA.
+   Carregado DEPOIS de educbank.scss em main.ts. */
+:root:root:root:where([data-cores='novas']) {
+  /* ── 1 · Os nomes do padrão ─────────────────────────────────── */
+  --background-brand: #6B55D8;   /* Background/Brand */
+  --content-brand: #6B55D8;   /* Content/Brand */
+  --background-brand-hover: #5644AD;   /* Background/BrandHover */
+  --content-on-brand-subtle: #5644AD;   /* Content/OnBrandSubtle */
+  --background-brand-pressed: #403382;   /* Background/BrandPressed */
+  --background-brand-subtle: #EAE6FF;   /* Background/BrandSubtle */
+  --background-brand-selected: #F3F1FF;   /* Background/BrandSelected */
+  --control-accent: #6B55D8;   /* Control/Accent */
+  --content-primary: #002A3A;   /* Content/Primary */
+  --content-secondary: #575E6A;   /* Content/Secondary */
+  --content-tertiary: #666666;   /* Content/Tertiary */
+  --content-on-fill: #FFFFFF;   /* Content/OnFill */
+  --content-disabled: #B2B2B2;   /* Content/Disabled */
+  --border-default: #8C8C8C;   /* Border/Default */
+  --border-moderate: #999999;   /* Border/Moderate */
+  --border-subtle: #CCCCCC;   /* Border/Subtle */
+  --border-faint: #D9D9D9;   /* Border/Faint */
+  --border-hover: #737373;   /* Border/Hover */
+  --border-strong: #575E6A;   /* Border/Strong */
+  --border-focus: #5644AD;   /* Border/Focus */
+  --border-focus-inner: #E1DDF7;   /* Border/FocusInner */
+  --border-inverse: #F2F2F2;   /* Border/Inverse */
+  --border-brand: #6B55D8;   /* Border/Brand */
+  --border-brand-subtle: #EAE6FF;   /* Border/BrandSubtle */
+  --border-disabled: #E5E5E5;   /* Border/Disabled */
+  --border-success: #009933;   /* Border/Success */
+  --border-success-pressed: #007A29;   /* Border/SuccessPressed */
+  --border-danger: #E50000;   /* Border/Danger */
+  --border-danger-pressed: #B70000;   /* Border/DangerPressed */
+  --border-info: #3355FF;   /* Border/Info */
+  --border-warning: #AE9300;   /* Border/Warning */
+  --border-risk: #DE7B05;   /* Border/Risk */
+  --background-surface: #FFFFFF;   /* Background/Surface */
+  --background-canvas: #F8F8F8;   /* Background/Canvas */
+  --background-hover: #F2F2F2;   /* Background/Hover */
+  --background-track: #CCCCCC;   /* Background/Track */
+  --background-neutral: #666666;   /* Background/Neutral */
+  --background-inverse: #002A3A;   /* Background/Inverse */
+  --background-success-vivid: #2ECC71;   /* Background/SuccessVivid */
+  --background-success: #007A29;   /* Background/Success */
+  --content-success: #007A29;   /* Content/Success */
+  --content-on-success-subtle: #005C1F;   /* Content/OnSuccessSubtle */
+  --background-success-hover: #005C1F;   /* Background/SuccessHover */
+  --background-success-pressed: #003D14;   /* Background/SuccessPressed */
+  --background-success-subtle: #EAFAF1;   /* Background/SuccessSubtle */
+  --background-success-subtle-hover: #E2FCEA;   /* Background/SuccessSubtleHover */
+  --background-success-subtle-pressed: #99D6AD;   /* Background/SuccessSubtlePressed */
+  --content-on-success-subtle-pressed: #001F0A;   /* Content/OnSuccessSubtlePressed */
+  --content-danger: #E50000;   /* Content/Danger */
+  --background-danger: #B70000;   /* Background/Danger */
+  --content-on-danger-subtle: #B70000;   /* Content/OnDangerSubtle */
+  --background-danger-hover: #890000;   /* Background/DangerHover */
+  --background-danger-pressed: #5C0000;   /* Background/DangerPressed */
+  --content-on-danger-subtle-pressed: #5C0000;   /* Content/OnDangerSubtlePressed */
+  --background-danger-subtle: #FFCBC0;   /* Background/DangerSubtle */
+  --background-danger-subtle-pressed: #FFAFA0;   /* Background/DangerSubtlePressed */
+  --background-warning-vivid: #E8CD46;   /* Background/WarningVivid */
+  --background-warning: #6F5D00;   /* Background/Warning */
+  --background-warning-hover: #544500;   /* Background/WarningHover */
+  --background-warning-pressed: #382D00;   /* Background/WarningPressed */
+  --content-warning: #6F5D00;   /* Content/Warning */
+  --content-on-warning-subtle: #544500;   /* Content/OnWarningSubtle */
+  --background-warning-subtle: #F6E697;   /* Background/WarningSubtle */
+  --background-risk-vivid: #DF8124;   /* Background/RiskVivid */
+  --background-risk: #6B2300;   /* Background/Risk */
+  --background-risk-hover: #4B1000;   /* Background/RiskHover */
+  --background-risk-pressed: #2B0000;   /* Background/RiskPressed */
+  --content-risk: #6B2300;   /* Content/Risk */
+  --content-on-risk-subtle: #4B1000;   /* Content/OnRiskSubtle */
+  --background-risk-subtle: #FFD29E;   /* Background/RiskSubtle */
+  --content-info-large: #3B83F4;   /* Content/InfoLarge */
+  --background-info: #2944CC;   /* Background/Info */
+  --background-info-hover: #1824AE;   /* Background/InfoHover */
+  --background-info-pressed: #10008E;   /* Background/InfoPressed */
+  --content-info: #2944CC;   /* Content/Info */
+  --content-on-info-subtle: #1824AE;   /* Content/OnInfoSubtle */
+  --background-info-subtle: #E9F3FE;   /* Background/InfoSubtle */
+  --overlay-scrim: rgba(0,0,0,.5);   /* Overlay/Scrim */
+
+  /* ── 2 · Os nomes que o código já usa, apontando para o TOKEN NOVO ── */
+  /* ALIAS, não hex: `--ath-color-secondary-900: var(--content-primary)`.
+     O comando máximo do Paulo (2026-08-02): ao INSPECIONAR no DevTools, a
+     regra do produto mostra o nome legado (o repo é READ-ONLY, isso não
+     muda) — mas a CADEIA de var() deve exibir o token novo. Com hex cru a
+     cadeia morria no numero; com alias, o DevTools mostra o caminho
+     legado → token novo → valor. A ponte vira documentação inspecionável:
+     cada nome antigo declara PARA QUAL token novo ele foi mapeado. */
+  --ath-color-primary-900: var(--background-brand);   /* Background/Brand #6B55D8 */
+  --ath-color-primary-700: var(--content-brand);   /* Content/Brand #6B55D8 */
+  --ath-color-primary-500: var(--background-brand-hover);   /* Background/BrandHover #5644AD */
+  --ath-color-primary-100: var(--background-brand-subtle);   /* Background/BrandSubtle #EAE6FF */
+  --ath-color-primary-50: var(--background-brand-selected);   /* Background/BrandSelected #F3F1FF */
+  --background-selected: var(--background-brand-selected);   /* Background/BrandSelected #F3F1FF */
+  --ath-color-secondary-900: var(--content-primary);   /* Content/Primary #002A3A */
+  --ath-color-secondary-700: var(--content-secondary);   /* Content/Secondary #575E6A */
+  --ath-color-secondary-600: var(--content-secondary);   /* Content/Secondary #575E6A */
+  --ath-color-secondary-500: var(--content-tertiary);   /* Content/Tertiary #666666 */
+  --ath-color-secondary-400: var(--border-default);   /* Border/Default #8C8C8C */
+  --ath-color-secondary-300: var(--border-subtle);   /* Border/Subtle #CCCCCC */
+  --ath-border-color: var(--border-subtle);   /* Border/Subtle #CCCCCC */
+  --content-primary-inverse: var(--content-on-fill);   /* Content/OnFill #FFFFFF */
+  --content-secondary-inverse: var(--content-on-fill);   /* Content/OnFill #FFFFFF */
+  --content-tertiary-inverse: var(--content-on-fill);   /* Content/OnFill #FFFFFF */
+  --border-primary: var(--border-default);   /* Border/Default #8C8C8C */
+  --border-secondary: var(--border-subtle);   /* Border/Subtle #CCCCCC */
+  --border-tertiary: var(--border-faint);   /* Border/Faint #D9D9D9 */
+  --background-primary: var(--background-surface);   /* Background/Surface #FFFFFF */
+  --background-pressed: var(--background-hover);   /* Background/Hover #F2F2F2 */
+  --background-disabled: var(--background-hover);   /* Background/Hover #F2F2F2 */
+  --content-success-bold: var(--content-on-success-subtle);   /* Content/OnSuccessSubtle #005C1F */
+  --content-success-darker: var(--content-on-success-subtle-pressed);   /* Content/OnSuccessSubtlePressed #001F0A */
+  --background-success-outline-hover: var(--background-success-subtle-hover);   /* Background/SuccessSubtleHover #E2FCEA */
+  --background-success-outline-pressed: var(--background-success-subtle-pressed);   /* Background/SuccessSubtlePressed #99D6AD */
+  --background-positive: var(--background-success);   /* Background/Success #007A29 */
+  --background-positive-subtle: var(--background-success-subtle);   /* Background/SuccessSubtle #EAFAF1 */
+  --content-danger-bold: var(--content-on-danger-subtle);   /* Content/OnDangerSubtle #B70000 */
+  --content-danger-darker: var(--content-on-danger-subtle-pressed);   /* Content/OnDangerSubtlePressed #5C0000 */
+  --background-negative: var(--background-danger);   /* Background/Danger #B70000 */
+  --background-negative-subtle: var(--background-danger-subtle);   /* Background/DangerSubtle #FFCBC0 */
+  --background-negative-outline-hover: var(--background-danger-subtle);   /* Background/DangerSubtle #FFCBC0 */
+  --background-negative-outline-pressed: var(--background-danger-subtle-pressed);   /* Background/DangerSubtlePressed #FFAFA0 */
+  --content-warning-bold: var(--content-on-warning-subtle);   /* Content/OnWarningSubtle #544500 */
+  --content-risk-bold: var(--content-on-risk-subtle);   /* Content/OnRiskSubtle #4B1000 */
+  --background-notice: var(--background-risk);   /* Background/Risk #6B2300 */
+  --background-notice-subtle: var(--background-risk-subtle);   /* Background/RiskSubtle #FFD29E */
+  --content-info-bold: var(--content-on-info-subtle);   /* Content/OnInfoSubtle #1824AE */
+  --content-link: var(--content-brand);   /* Content/Brand #6B55D8 */
+  --content-link-hover: var(--content-on-brand-subtle);   /* Content/OnBrandSubtle #5644AD */
+  --content-link-pressed: var(--background-brand-pressed);   /* Background/BrandPressed #403382 */
+  --overlay-50: var(--overlay-scrim);   /* Overlay/Scrim rgba(0,0,0,.5) */
+  --ath-color-success: var(--content-success);   /* Content/Success #007A29 */
+  --ath-color-success-light: var(--background-success-subtle);   /* Background/SuccessSubtle #EAFAF1 */
+  --ath-color-info: var(--content-info);   /* Content/Info #2944CC */
+  --ath-color-info-light: var(--background-info-subtle);   /* Background/InfoSubtle #E9F3FE */
+  --ath-color-danger: var(--content-on-danger-subtle);   /* Content/OnDangerSubtle #B70000 */
+  --ath-color-danger-light: var(--background-danger-subtle);   /* Background/DangerSubtle #FFCBC0 */
+  --ath-color-warning: var(--content-warning);   /* Content/Warning #6F5D00 */
+  --ath-color-warning-dark: var(--content-warning);   /* Content/Warning #6F5D00 */
+  --ath-color-warning-light: var(--background-warning-subtle);   /* Background/WarningSubtle #F6E697 */
+  --ath-color-risk: var(--content-risk);   /* Content/Risk #6B2300 */
+  --ath-color-risk-light: var(--background-risk-subtle);   /* Background/RiskSubtle #FFD29E */
+  --ath-color-light: var(--background-canvas);   /* Background/Canvas #F8F8F8 */
+  --ath-color-white: var(--background-surface);   /* Background/Surface #FFFFFF */
+  --ath-icon-color: var(--content-secondary);   /* Content/Secondary #575E6A */
+  --ath-link: var(--content-brand);   /* Content/Brand #6B55D8 */
+  --ath-color-primary-200: var(--border-focus-inner);   /* Border/FocusInner #E1DDF7 */
+  --ath-color-primary-300: var(--background-brand-subtle);   /* Background/BrandSubtle #EAE6FF */
+  --ath-color-primary-400: var(--background-brand-hover);   /* Background/BrandHover #5644AD */
+  --ath-color-primary-600: var(--background-brand-hover);   /* Background/BrandHover #5644AD */
+  --ath-color-primary-800: var(--background-brand-pressed);   /* Background/BrandPressed #403382 */
+  --ath-color-secondary-100: var(--border-disabled);   /* Border/Disabled #E5E5E5 */
+  --ath-color-secondary-200: var(--border-subtle);   /* Border/Subtle #CCCCCC */
+  --ath-color-secondary-800: var(--content-primary);   /* Content/Primary #002A3A */
+  /* usada dentro de rgba(): precisa dos canais, não de hex */
+  --ath-color-primary-rgb: 107, 85, 216;   /* Background/Brand em canais */
+}
+
+/* O tema escuro do produto só redeclara o legado; o par escuro de cada token
+   fica disponível aqui para quando a decisão de produto acontecer. */
+:root:root:root:where([data-cores='novas'])[data-esquema="escuro"] {
+  --background-brand: #B0A9FF;
+  --content-brand: #9F93FF;
+  --background-brand-hover: #C2BFFF;
+  --content-on-brand-subtle: #9F93FF;
+  --background-brand-pressed: #D4D2FF;
+  --background-brand-subtle: #301F6F;
+  --background-brand-selected: #252244;
+  --control-accent: #B0A9FF;
+  --content-primary: #DAE2E6;
+  --content-secondary: #A6AFB3;
+  --content-tertiary: #99A1A5;
+  --content-on-fill: #12181C;
+  --content-disabled: #54595C;
+  --border-default: #7A8286;
+  --border-moderate: #798286;
+  --border-subtle: #434A4E;
+  --border-faint: #333B3E;
+  --border-hover: #848C91;
+  --border-strong: #7A818E;
+  --border-focus: #9D95FE;
+  --border-focus-inner: #2B274F;
+  --border-inverse: #0F1619;
+  --border-brand: #726AC0;
+  --border-brand-subtle: #2F2B3E;
+  --border-disabled: #303537;
+  --border-success: #348542;
+  --border-success-pressed: #57A761;
+  --border-danger: #BA584B;
+  --border-danger-pressed: #E17364;
+  --border-info: #5571C2;
+  --border-warning: #827536;
+  --border-risk: #A0683A;
+  --background-surface: #1B2429;
+  --background-canvas: #0D1519;
+  --background-hover: #2B3539;
+  --background-track: #4A4A4A;
+  --background-neutral: #9B9B9B;
+  --background-inverse: #EAEDEF;
+  --background-success-vivid: #4CBF75;
+  --background-success: #81CC89;
+  --content-success: #58C068;
+  --content-on-success-subtle: #6FBC7A;
+  --background-success-hover: #9BDCA1;
+  --background-success-pressed: #B3E9B8;
+  --background-success-subtle: #004100;
+  --background-success-subtle-hover: #035019;
+  --background-success-subtle-pressed: #116225;
+  --content-on-success-subtle-pressed: #D5F5D7;
+  --content-danger: #FF7665;
+  --background-danger: #FF8D7C;
+  --content-on-danger-subtle: #FF7665;
+  --background-danger-hover: #FFAA9B;
+  --background-danger-pressed: #FFC3B6;
+  --content-on-danger-subtle-pressed: #FFDED6;
+  --background-danger-subtle: #640000;
+  --background-danger-subtle-pressed: #7C261E;
+  --background-warning-vivid: #CEB84B;
+  --background-warning: #C5B87D;
+  --background-warning-hover: #D5CA96;
+  --background-warning-pressed: #E3DAAF;
+  --content-warning: #B6A655;
+  --content-on-warning-subtle: #B5A569;
+  --background-warning-subtle: #3D3100;
+  --background-risk-vivid: #EA9853;
+  --background-risk: #E2AA7E;
+  --background-risk-hover: #F0BD97;
+  --background-risk-pressed: #FAD0B0;
+  --content-risk: #DA9256;
+  --content-on-risk-subtle: #D8917C;
+  --background-risk-subtle: #561E00;
+  --content-info-large: #639EFA;
+  --background-info: #92B3FF;
+  --background-info-hover: #ADC7FF;
+  --background-info-pressed: #C4D8FF;
+  --content-info: #7AA0FF;
+  --content-on-info-subtle: #7D9FFC;
+  --background-info-subtle: #162872;
+  --overlay-scrim: rgba(0,0,0,.6);
+}

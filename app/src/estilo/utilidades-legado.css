@@ -1,0 +1,105 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   PACOTE 1 · As 42 classes utilitárias de cor, rescritas na LÍNGUA NOVA.
+
+   O achado do Paulo (2026-08-02, print do SecurityAccount): inspecionando um
+   `<span class="ath-color--secondary">`, a regra vencedora era
+       .ath-color--secondary { color: var(--ath-color-secondary-900) !important }
+   — nome antigo na classe E na variável. O alias da ponte já fazia a cadeia
+   resolver no token novo, mas a REGRA que vence seguia falando a língua velha.
+
+   Esta folha redeclara cada utilitária consumindo o TOKEN NOVO diretamente.
+   Como ela entra DEPOIS do educbank.scss com a mesma especificidade (o gate usa
+   `:where`, peso zero) e o mesmo `!important`, a regra vencedora no DevTools
+   passa a ser ESTA — e a inspeção mostra `var(--content-primary)`.
+
+   A classe no HTML continua `.ath-color--secondary` (o repositório é READ-ONLY;
+   renomear classe é o Pacote 5, do produto). O que muda é a declaração que vence.
+
+   Fonte do inventário: `_colors.scss` (34 classes) + `_utilities.scss:128-180`
+   (bordas). Uso medido nos templates: 90× ath-color--primary, 76× secondary-500,
+   61× secondary-900, 45× ath-border--bottom… O mapeamento é POR PAPEL, não por
+   hex parecido (lição do M80): utilitária de texto ganha Content/*, de fundo
+   ganha Background/*, de borda ganha Border/*.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Texto de marca ─────────────────────────────────────────────────────────
+   `--primary` e `--primary-900` viravam roxo de tinta; `--primary-500` é o
+   degrau escuro (#5644AD), cujo nome de papel de TEXTO é Content/OnBrandSubtle. */
+:where(:root[data-cores='novas']) .ath-color--primary,
+:where(:root[data-cores='novas']) .ath-color--primary-700,
+:where(:root[data-cores='novas']) .ath-color--primary-900,
+:where(:root[data-cores='novas']) .ath-color--link {
+  color: var(--content-brand) !important;
+}
+:where(:root[data-cores='novas']) .ath-color--primary-500 {
+  color: var(--content-on-brand-subtle) !important;
+}
+
+/* ── Texto neutro ───────────────────────────────────────────────────────────
+   secondary-900 é o texto principal; 600/700/dark/subtitle/title são o apoio;
+   400/500/placeholder/label eram CINZA DE BORDA pintando texto (3,36:1 — a
+   dívida da Parte 7.4 item 4): sobem para Content/Tertiary, que passa. */
+:where(:root[data-cores='novas']) .ath-color--secondary,
+:where(:root[data-cores='novas']) .ath-color--secondary-900 {
+  color: var(--content-primary) !important;
+}
+:where(:root[data-cores='novas']) .ath-color--secondary-600,
+:where(:root[data-cores='novas']) .ath-color--secondary-700,
+:where(:root[data-cores='novas']) .ath-color--dark,
+:where(:root[data-cores='novas']) .ath-color--text,
+:where(:root[data-cores='novas']) .ath-color--subtitle,
+:where(:root[data-cores='novas']) .ath-color--title {
+  color: var(--content-secondary) !important;
+}
+:where(:root[data-cores='novas']) .ath-color--secondary-400,
+:where(:root[data-cores='novas']) .ath-color--secondary-500,
+:where(:root[data-cores='novas']) .ath-color--placeholder,
+:where(:root[data-cores='novas']) .ath-color--label {
+  color: var(--content-tertiary) !important;
+}
+:where(:root[data-cores='novas']) .ath-color--white {
+  color: var(--content-on-fill) !important;
+}
+
+/* ── Texto das famílias semânticas ──────────────────────────────────────── */
+:where(:root[data-cores='novas']) .ath-color--success { color: var(--content-success) !important; }
+:where(:root[data-cores='novas']) .ath-color--info    { color: var(--content-info) !important; }
+:where(:root[data-cores='novas']) .ath-color--danger  { color: var(--content-danger) !important; }
+:where(:root[data-cores='novas']) .ath-color--danger-dark { color: var(--content-on-danger-subtle) !important; }
+:where(:root[data-cores='novas']) .ath-color--warning { color: var(--content-warning) !important; }
+:where(:root[data-cores='novas']) .ath-color--risk    { color: var(--content-risk) !important; }
+
+/* ── Fundos ────────────────────────────────────────────────────────────────
+   `ath-bg-secondary-light` (#8C8C8C) era cinza de BORDA como preenchimento — o
+   papel certo é Background/Neutral. `ath-bg-secondary-color`/`dark-color`
+   pintavam o navy: o papel é Background/Inverse. */
+:where(:root[data-cores='novas']) .ath-bg-primary-color,
+:where(:root[data-cores='novas']) .ath-bg-link-color {
+  background-color: var(--background-brand) !important;
+}
+:where(:root[data-cores='novas']) .ath-bg-primary-color-50 { background-color: var(--background-brand-selected) !important; }
+:where(:root[data-cores='novas']) .ath-bg-secondary-color,
+:where(:root[data-cores='novas']) .ath-bg-dark-color {
+  background-color: var(--background-inverse) !important;
+}
+:where(:root[data-cores='novas']) .ath-bg-secondary-light { background-color: var(--background-neutral) !important; }
+:where(:root[data-cores='novas']) .ath-bg-grey-clear      { background-color: var(--background-canvas) !important; }
+:where(:root[data-cores='novas']) .ath-bg-white-color     { background-color: var(--background-surface) !important; }
+:where(:root[data-cores='novas']) .ath-bg-success-color        { background-color: var(--background-success) !important; }
+:where(:root[data-cores='novas']) .ath-bg-success-light-color  { background-color: var(--background-success-subtle) !important; }
+:where(:root[data-cores='novas']) .ath-bg-info-color           { background-color: var(--background-info) !important; }
+:where(:root[data-cores='novas']) .ath-bg-danger-color         { background-color: var(--background-danger) !important; }
+:where(:root[data-cores='novas']) .ath-bg-danger-light-color,
+:where(:root[data-cores='novas']) .ath-bg-danger-clean-color {
+  background-color: var(--background-danger-subtle) !important;
+}
+:where(:root[data-cores='novas']) .ath-bg-warning-color       { background-color: var(--background-warning) !important; }
+:where(:root[data-cores='novas']) .ath-bg-warning-color-light { background-color: var(--background-warning-subtle) !important; }
+
+/* ── Bordas (`_utilities.scss:128-180`) ────────────────────────────────────
+   `ath-border--color` alimenta .ath-border e os quatro lados via @extend.
+   `ath-border-primary` contornava com o roxo de texto; `ath-border-secondary`
+   com o navy do próprio texto (a dívida do Border/Strong, Parte 7.2). */
+:where(:root[data-cores='novas']) .ath-border--color { border-color: var(--border-subtle) !important; }
+:where(:root[data-cores='novas']) .ath-border-primary { border-color: var(--border-brand) !important; }
+:where(:root[data-cores='novas']) .ath-border-secondary { border-color: var(--border-strong) !important; }

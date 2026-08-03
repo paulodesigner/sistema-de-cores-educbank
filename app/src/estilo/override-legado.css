@@ -1,0 +1,661 @@
+/* Cores que NÃO passam por variável — e por isso não têm como ser corrigidas
+   pelo tokens-padrao.css. Aqui cada regra existe por um motivo, com o ponto
+   exato do código a mudar. Esta folha é, ao mesmo tempo, o que faz a
+   documentação mostrar o padrão E a lista de tarefas de implementação.
+
+   Levantado pela auditoria `node auditar-cores.cjs` (mede a cor efetiva de
+   todo elemento dos 104 componentes e compara com a paleta).
+   ------------------------------------------------------------------------- */
+
+/* 1 · Herança da ferramenta dentro do palco.
+   Elemento sem cor própria herdava o texto da DOCUMENTAÇÃO (#16171a) em vez do
+   Content/Primary do produto. Não é dívida do produto: é escopo nosso. */
+.palco,
+.cheia__palco,
+/* teleportados: nascem como filhos do <body>, fora do palco.
+   A versão nova do @vuepic/vue-datepicker usa o prefixo `dp--` (não `dp__`). */
+.dp--menu-wrapper,
+.dp--outer-menu-wrap,
+.dp--main,
+.popover-simple-drop-box,
+.multiselect-dropdown {
+  color: var(--content-primary);
+}
+/* setas e ícones do calendário vêm com color:#000 do SVG da biblioteca */
+.dp--menu-wrapper svg,
+.dp--menu-wrapper svg path,
+.dp--main svg,
+.dp--main svg path,
+.dp--arrow-btn-nav svg,
+.dp__inner_nav svg {
+  color: var(--content-secondary) !important;
+}
+/* os botões de mês/ano da biblioteca nascem com `color:#000` (botão sem estilo);
+   o ícone herda daí. */
+.dp--arrow-btn-nav,
+.dp--btn-base {
+  color: var(--content-secondary) !important;
+}
+
+/* 2 · Carregamento esqueleto — hex direto no SFC.
+   TAREFA: `components/skeletons/AthSkeletonText.vue:38` e
+   `components/skeletons/AthSkeletonInput.vue:60` usam `background-color:#e2e2e2`.
+   Deve ser Background/Hover (#f2f2f2), com o brilho em Background/Surface. */
+.loading, .skeleton {
+  background-color: var(--background-hover) !important;
+}
+
+/* 3 · Caixa de marcar nativa — borda fora da escala.
+   TAREFA: a borda do `.form-check-input` (Bootstrap) chega em #898989, que não
+   é degrau nosso. Deve ser Border/Default (#8c8c8c). */
+/* !important porque o Bootstrap declara com seletor mais específico
+   (`.form-check .form-check-input`) e ganharia a cascata. */
+input.form-check-input {
+  border-color: var(--border-default) !important;
+}
+
+/* 4 · Utilitário do Bootstrap ainda em uso.
+   TAREFA: `.text-danger` pinta #dc3545, o vermelho do Bootstrap, onde o nosso é
+   Content/Danger (#e50000). Trocar a classe pelo token no componente. */
+.text-danger {
+  color: var(--content-danger) !important;
+}
+
+/* 5 · Editor de texto (Quill, biblioteca externa).
+   A barra e o corpo do editor têm paleta própria (#444, #000, #ccc). Não é
+   dívida do nosso DS — é tema de biblioteca. Aqui alinhamos ao nosso sistema
+   para a página não mostrar cinza estranho no meio do produto. */
+.ql-snow .ql-stroke {
+  stroke: var(--content-secondary);
+}
+.ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {
+  fill: var(--content-secondary);
+}
+.ql-snow .ql-picker {
+  color: var(--content-secondary);
+}
+.ql-toolbar.ql-snow,
+.ql-container.ql-snow {
+  border-color: var(--border-subtle);
+}
+.ql-editor td {
+  border-color: var(--border-subtle);
+}
+/* os ícones da barra do Quill herdam `color:#000` do próprio SVG */
+.ql-snow svg,
+.ql-snow svg path {
+  color: var(--content-secondary);
+}
+
+/* 6 · Calendário (@vuepic/vue-datepicker, biblioteca externa).
+   Ele tem a própria escala `--dp-*`. Sem mapear, o calendário aberto aparece
+   com azul e cinza da biblioteca no meio dos nossos campos — foi o que apareceu
+   na revisão do dia (a seta ativa com fundo lilás da lib).
+   Não é dívida do nosso DS: é tema de biblioteca, e o lugar de resolver é o
+   mesmo `@use` que carrega o CSS dela. */
+.dp--theme-light.dp--theme-light,
+.dp--theme-dark.dp--theme-dark,
+:root:root:root {
+  --dp-background-color: var(--background-surface);
+  --dp-text-color: var(--content-primary);
+  --dp-hover-color: var(--background-hover);
+  --dp-hover-text-color: var(--content-primary);
+  --dp-hover-icon-color: var(--content-secondary);
+  --dp-primary-color: var(--background-brand);
+  --dp-primary-disabled-color: var(--background-brand-subtle);
+  --dp-primary-text-color: var(--content-on-fill);
+  --dp-secondary-color: var(--content-tertiary);
+  --dp-border-color: var(--border-subtle);
+  --dp-menu-border-color: var(--border-subtle);
+  --dp-border-color-hover: var(--border-hover);
+  --dp-border-color-focus: var(--border-focus);
+  --dp-disabled-color: var(--background-hover);
+  --dp-disabled-color-text: var(--content-disabled);
+  --dp-scroll-bar-background: var(--background-hover);
+  --dp-scroll-bar-color: var(--border-default);
+  --dp-success-color: var(--background-success);
+  --dp-icon-color: var(--content-secondary);
+  --dp-danger-color: var(--background-danger);
+  --dp-marker-color: var(--content-danger);
+  --dp-tooltip-color: var(--background-surface);
+  --dp-highlight-color: var(--background-brand-subtle);
+  --dp-range-between-dates-background-color: var(--background-brand-subtle);
+  --dp-range-between-dates-text-color: var(--content-on-brand-subtle);
+  --dp-range-between-border-color: var(--border-subtle);
+}
+
+/* 7 · <button> não herda cor: o user-agent aplica `color: buttontext` (preto).
+   No app real isso não aparece porque cada botão define a sua cor; nos cartões
+   da home o texto fica no botão-contêiner e vinha preto.
+   TAREFA: `modules/home/components/HomeCardNavigator.vue` deveria declarar a cor
+   do texto do cartão (Content/Primary) em vez de contar com a herança. */
+.cheia__palco button,
+.palco button {
+  color: inherit;
+}
+/* mas botão que TEM cor própria continua manda: as regras do produto vêm depois
+   desta folha na cascata só quando têm classe — reforçamos as principais */
+.cheia__palco .eds-button,
+.palco .eds-button,
+.cheia__palco .btn,
+.palco .btn {
+  color: revert-layer;
+}
+
+/* 8 · Hex cru em `:style` no template da página — não passa por variável e nem
+   por classe, então a única forma de alcançar é casar o próprio atributo.
+   TAREFA: trocar o hex por `var(--background-risk-vivid)` no template. */
+[style*="#D98609"],
+[style*="#d98609"] {
+  --border-color: var(--background-risk-vivid) !important;
+}
+
+/* 9 · Botão de fechar do modal — cor crua em rgb() dentro do SFC.
+   TAREFA: quatro lugares declaram `rgb(148, 148, 148)` à mão —
+   `components/modal/AthModalCenter.vue:124`, `components/modal/AthModal.vue:164-167`
+   e `components/loader/AthProcessingLoader.vue`. Deve ser Border/Default. */
+.close-element,
+.modalVue__dialog .d-flex.align-items-center.justify-content-center {
+  border-color: var(--border-default) !important;
+}
+
+/* 10 · MENU LATERAL — a cor do item ativo é uma variável SCSS, fora do alcance
+   do override de tokens.
+   TAREFA: `assets/scss/_sidebar.scss:54` e `:59` declaram
+   `$color-active: #96b4c6` e `$bg-submenu: #96b4c6` — um azul-acinzentado que
+   não existe na paleta. Sobre o fundo escuro do menu (Background/Inverse), o
+   item ativo deve ser Content/OnFill (13,47:1 contra o fundo); o submenu, que
+   tem texto escuro, deve usar Background/Hover.
+   Os seletores abaixo espelham os do arquivo (`li.active > a`, `.icon-menu`,
+   `.submenu-container`). */
+#sidebar li.active > a,
+.sidebar li.active > a,
+#sidebar li.active template span,
+#sidebar li.active .icon-menu {
+  color: var(--content-on-fill) !important;
+  /* o filete do item ativo é tratado no bloco 14 (papel de BORDA, Border/Inverse) */
+}
+#sidebar ul li.active > a > span.icon > em.icon-menu,
+#sidebar li.active .icon-menu,
+.sidebar ul li.active > a > span.icon > em.icon-menu,
+.sidebar li.active .icon-menu,
+li.active em.icon-menu {
+  background: var(--content-on-fill) !important;
+  color: var(--background-inverse) !important;
+}
+#sidebar .submenu-container,
+.sidebar .submenu-container {
+  background: var(--background-hover) !important;
+}
+
+/* 11 · MENU E TOP BAR — foco por teclado sem anel definido.
+   Medido: navegando por Tab, os links do menu ficam com o anel PADRÃO DO
+   NAVEGADOR (#005fcc, o azul do sistema) — o DS não define foco ali. É o mesmo
+   achado que a auditoria de cor já tinha registrado em
+   `assets/scss/_sidebar.scss:361-365` ("foco reusa o estilo de hover, sem anel
+   próprio").
+   Aplicamos a regra nº 2 do sistema: sobre fundo escuro o anel é claro
+   (Border/Inverse); na top bar, que é clara, é o Border/Focus.
+   TAREFA: declarar `:focus-visible` nos itens do menu e da top bar. */
+#sidebar a:focus-visible,
+#sidebar button:focus-visible,
+.sidebar a:focus-visible,
+.sidebar button:focus-visible {
+  outline: 2px solid var(--border-inverse);
+  outline-offset: 2px;
+}
+.navbar a:focus-visible,
+.navbar button:focus-visible,
+.navbar input:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Blocos 12 a 15: achados da AUDITORIA DE PAPEL (2026-08-02).
+   A auditoria de valor perguntava "esse hex está na paleta?" e passava tudo. A
+   de papel pergunta "esse hex é o token CERTO para ESSE papel?" — e é ela que
+   pega o caso do Paulo: a etiqueta "Matriculado" com texto no verde Vivid
+   (#2ECC71 sobre #EAFAF1 = 1,95:1). Aquele caso foi corrigido na RAIZ, no
+   `gerar-tokens-css.py` (as 5 famílias de estado passaram a mapear para o tom
+   sólido, não para o Vivid). O que sobra aqui são casos de um seletor só.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* 12 · CARTÃO DE ALERTA com botão terciário dentro.
+   Medido na Home: o cartão `.container-error` tem fundo Background/DangerSubtle
+   (#FFCBC0) e dentro dele um `eds-button` terciário, cujo texto é
+   Content/Brand (#6B55D8) — 3,72:1, reprova para texto de 14px.
+   O roxo passa sobre branco (5,24:1); o que não funciona é o roxo sobre o
+   pastel de perigo. Regra do sistema: conteúdo sobre superfície pastel usa o
+   tom Content da MESMA família. Content/OnDangerSubtle dá 4,83:1 ✓.
+   TAREFA (produto): o botão terciário precisa herdar a família da superfície
+   em que está, em vez de ser sempre da marca. */
+.container-error .eds-button,
+.container-error .eds-button * {
+  color: var(--content-danger-bold) !important;
+}
+
+/* 13 · ETIQUETA DO CARTÃO DO FUNIL — token de FUNDO usado como BORDA.
+   `modules/student-area/components/enrollment-funnel/EnrollmentFunnelCard.vue:189`
+       border: 1px solid var(--background-info-subtle);
+   O componente é novo e já fala a língua dos tokens, mas pegou um token de
+   fundo para desenhar contorno. Além do papel errado, o efeito é que a borda
+   não existe: #E9F3FE sobre o cartão branco dá 1,10:1 — ninguém vê.
+   Border/Faint é o contorno sutil do sistema (o papel que ele queria).
+   TAREFA (produto): trocar por `var(--border-faint)` na linha 189. */
+.funnel-card__pill {
+  border-color: var(--border-faint) !important;
+}
+
+/* 14 · FILETE DO ITEM ATIVO DO MENU — branco puro fora de papel de borda.
+   Medido: `li.active > a` recebe `border-left: 3px solid #ffffff`. Branco puro
+   é Background/Surface e Content/OnFill; como CONTORNO o token do papel é
+   Border/Inverse — "borda e anel de foco sobre preenchimento sólido ou fundo
+   escuro" —, que dá 4,79:1 contra o roxo do menu. A diferença visual entre
+   #FFFFFF e #F2F2F2 num filete de 3px é imperceptível; a diferença de sistema
+   é ter um nome para o papel. */
+#sidebar li.active > a,
+.sidebar li.active > a,
+nav li.active > a {
+  border-left-color: var(--border-inverse) !important;
+}
+
+/* 15 · ÍCONE DO MENU — cor de FUNDO usada como tinta.
+   `assets/scss/_sidebar.scss:57`  $color-icon: var(--ath-color-light);
+   `--ath-color-light` é #F8F8F8 = Background/Canvas, o fundo das páginas. Aqui
+   ele pinta o ÍCONE, que é conteúdo sobre o preenchimento escuro do menu — o
+   token do papel é Content/OnFill (#FFFFFF, 5,36:1 sobre o roxo ✓).
+   Cobre também o rótulo do item, que herda do mesmo lugar.
+   TAREFA (produto): `$color-icon` e `$color-text-active` apontam para um token
+   de fundo; deveriam apontar para `--content-on-fill`. */
+#sidebar .icon,
+#sidebar li > a > .icon,
+.sidebar .icon,
+nav .menus li > a .icon,
+nav .menus li > a {
+  color: var(--content-on-fill);
+}
+
+/* 16 · LINHA DO TEMPO DE REPASSE — passo pendente ilegível.
+   `components/timeline/TimelineRepasse.vue:130,140,148`
+       .step-content { background: var(--ath-color-secondary-300) }   → #CCCCCC
+       .step-label   { color:      var(--ath-color-secondary-300) }
+       .step-icon    { color:      var(--ath-color-white) }
+   Duas falhas de leitura no MESMO passo: o ícone branco dentro do círculo cinza
+   claro dá 1,61:1, e o rótulo cinza claro sobre o cartão branco dá 1,61:1 — três
+   vezes abaixo do piso. O passo concluído está correto (verde com ícone branco);
+   quem não passa é o pendente.
+   O cinza claro é trilha (Background/Track): serve para a LINHA que liga os
+   passos, não para um círculo de 33px que carrega ícone, nem para texto.
+   Círculo pendente → Background/Neutral (ícone branco em cima: 5,74:1 ✓)
+   Rótulo pendente  → Content/Tertiary (5,74:1 ✓), que mantém o tom apagado.
+   TAREFA (produto): separar o token da trilha do token do círculo pendente. */
+.step:not(.completed) .step-content,
+:not(.completed) > .step > .step-content {
+  background: var(--background-neutral) !important;
+  border-color: var(--background-neutral) !important;
+}
+/* `!important` porque a regra do SFC é `.step-label[data-v-…]` — classe + atributo
+   ganha de classe sozinha. Vale para os blocos 19 e 20 pelo mesmo motivo. */
+.step-label {
+  color: var(--content-tertiary) !important;
+}
+.completed > .step-label {
+  color: var(--content-primary) !important;
+}
+
+/* 17 · CLASSE UTILITÁRIA DE TEXTO em cor de borda.
+   `assets/scss/_colors.scss:23`  .ath-color--secondary-400 { color: var(--ath-color-secondary-400) }
+   `--ath-color-secondary-400` é #8C8C8C = Border/Default: um valor de CONTORNO
+   sendo usado como tinta. Medido no AthFormTitleList, onde ele pinta um título:
+   3,36:1, reprova. Content/Tertiary (#666666, 5,74:1 ✓) é o tom apagado válido
+   para texto — mesma intenção visual, legível.
+   Vale para todos os usos da classe, que é o ponto: é utilitária. */
+.ath-color--secondary-400 {
+  color: var(--content-tertiary) !important;
+}
+
+/* 18 · FAIXA (AthRibbon) na variante escura — texto que ficou para trás.
+   `components/labels/AthRibbon.vue:47,54`
+       .ribbon      { color: var(--ath-color-secondary-700) }
+       .ribbon.dark { background-color: var(--ath-color-secondary-900) }
+   A variante escura troca o fundo e NÃO troca a tinta: sobra o cinza de texto
+   da regra base sobre o fundo #002A3A — 2,31:1. Sobre preenchimento sólido a
+   tinta do sistema é Content/OnFill (15,08:1 ✓).
+   TAREFA (produto): `.ribbon.dark` precisa declarar a própria cor de texto. */
+.box-ribbon.dark,
+.box-ribbon.dark span {
+  color: var(--content-on-fill) !important;
+}
+
+/* 19 · NAVEGAÇÃO DE MESES — cor de fundo desenhando borda.
+   `components/inputs/AthSwipeMonths.vue:225`
+       border-bottom: solid 1px var(--ath-color-light);   → #F8F8F8 = Canvas
+   Canvas é o fundo das páginas; como contorno some (1,04:1 sobre branco).
+   Border/Faint é o contorno mais leve do sistema — o papel que essa linha quer. */
+.box-swipe label,
+.picker-box-swipe label {
+  border-bottom-color: var(--border-faint) !important;
+}
+
+/* 20 · UTILITÁRIA DE BORDA no tom de texto.
+   `assets/scss/_utilities.scss:141`
+       .ath-border-secondary { border: 1px solid var(--ath-color-secondary-900) }
+   #002A3A é Content/Primary e Background/Inverse — nenhum papel de borda. Um
+   contorno tão escuro quanto o texto principal compete com o conteúdo.
+   Border/Strong é o contorno escuro do sistema (o token que nasceu deste
+   levantamento, para o chip da top bar). */
+.ath-border-secondary,
+.action-button {
+  border-color: var(--border-strong) !important;
+}
+
+/* 22 · TARJA DE TIPO DE COBERTURA — token de FUNDO desenhando contorno.
+   `assets/scss/_utilities.scss:283-288`
+       .plan-zerodefault { background: var(--ath-color-primary-50);
+                           border: solid 1px var(--ath-color-primary-100) }
+   Os dois lados vêm da escala de FUNDO da marca. O valor está bom (um contorno
+   pastel um passo mais forte que o preenchimento é exatamente o que a tarja
+   quer) — faltava o token existir no papel de borda. Nasceu daqui o
+   Border/BrandSubtle: mesmo valor, categoria do papel. */
+.plan-zerodefault {
+  border-color: var(--border-brand-subtle) !important;
+}
+
+/* 21 · ANEL DE FOCO DO NAVEGADOR em campos fora do menu.
+   O bloco 11 cobriu menu e top bar; o combobox do EdsInputSelect, quando
+   aberto, ainda mostrava o #005FCC (azul do sistema operacional) — valor que
+   não existe na paleta. Em vez de caçar componente por componente, o palco
+   inteiro passa a ter o anel do sistema: Border/Focus.
+   TAREFA (produto): o DS não define `:focus-visible` para campos; enquanto não
+   definir, cada navegador desenha o seu. */
+.cheia__palco :focus-visible,
+.palco :focus-visible,
+body > div:not(#app) :focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Blocos 23 a 27: achados que só apareceram DEPOIS de preencher props e slots
+   (2026-08-02). Prova da regra: auditoria só vê o que renderiza. Com o catálogo
+   mostrando a forma de verdade, cinco elementos coloridos entraram em cena.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* 23 · CARTÃO SELECIONADO — hex cru, com o TODO do próprio dev ao lado.
+   `components/cards/AthCard.vue:77-78,93-94`
+       //TODO: background-brand do novo DS
+       background-color: #6b55d8;
+       //TODO: background-brand-pressed do novo DS
+       background-color: #2b2256;
+   O primeiro por acaso é o valor certo (Background/Brand); o segundo, #2b2256,
+   não existe na paleta — é um degrau da escala primitiva de marca que nunca foi
+   promovido a papel. O token do estado é Background/BrandPressed (#403382).
+   TAREFA (produto): trocar os dois hex pelos tokens — o TODO já está escrito. */
+.ath-card.active,
+section.ath-card.active {
+  background-color: var(--background-brand-pressed) !important;
+}
+
+/* 24 · CAMPO SÓ-LEITURA com a cor de contorno no texto.
+   `components/inputs/fake/AthInputTextFake.vue:33`
+       <div class="form-control">{{ props.text }}</div>
+   O `.form-control` sem cor própria cai no cinza de borda (#8C8C8C = Border/Default)
+   — 3,36:1. Mas ali não é placeholder: é o VALOR do campo, só que sem edição.
+   Valor é conteúdo principal. */
+/* A raiz é `assets/scss/input/_input.scss:23`:
+       .form-control:read-only { color: var(--ath-color-secondary-400) }
+   `--ath-color-secondary-400` é #8C8C8C = Border/Default — cor de CONTORNO
+   pintando o valor de um campo. Resultado: 3,36:1, reprova.
+   Dois detalhes que me custaram duas tentativas erradas:
+   · `:read-only` NÃO é só para input — a pseudo-classe casa com qualquer
+     elemento não editável, inclusive o `<div class="form-control">` do
+     AthInputTextFake. Foi por isso que o campo falso herdou o cinza sem que
+     ninguém tivesse escrito nada sobre ele;
+   · e por isso `div.form-control` (0,1,1) perdia para `.form-control:read-only`
+     (0,2,0). O seletor tem que espelhar o do produto.
+   Valor de campo só-leitura é informação, não placeholder: Content/Secondary
+   (6,53:1) mantém o tom de apoio e passa.
+   TAREFA (produto): trocar o token em `_input.scss:23`. */
+.form-control:read-only {
+  color: var(--content-secondary);
+}
+
+/* 25 · ABAS DE ÍCONE — branco puro como separador.
+   `components/tab/AthTabsIcon.vue:94`  border-right: 1px solid var(--ath-color-white)
+   Branco é Background/Surface e Content/OnFill; como CONTORNO o token do papel é
+   Border/Inverse. Mesmo caso do bloco 14, em outro componente. */
+.tab-icon {
+  border-right-color: var(--border-inverse) !important;
+}
+
+/* 26 · ÍCONE-SOMBRA do cartão de visão geral.
+   `components/cards/AthCardOverviewDetails.vue:93-95`
+       .background-icon { color: var(--ath-color-secondary-300) }
+   É o ícone DECORATIVO que fica atrás do ícone de status (o de cima tem
+   `z-index: 1` e a cor da família). Dois problemas: #CCCCCC é Border/Subtle, e
+   como tinta ele dá 1,51:1 sobre o fundo do cartão.
+   Content/Disabled é o token certo nos dois eixos: é categoria de CONTEÚDO e é
+   isento do piso de contraste por norma (WCAG 1.4.3) — que é exatamente o
+   estatuto de um ornamento. */
+.background-icon {
+  color: var(--content-disabled) !important;
+  /* Marcador lido pela auditoria: este elemento é ORNAMENTO — o ícone de status
+     de verdade fica em cima dele, com `z-index: 1` e a cor da família
+     (AthCardOverviewDetails.vue:52-55). A WCAG isenta decoração pura do piso de
+     contraste, e um ícone-sombra que passasse 3:1 competiria com o ícone real.
+     Declarado aqui em vez de o auditor tentar deduzir "está atrás de outro". */
+  --ornamento: 1;
+}
+
+/* 27 · A CASCA DA FERRAMENTA VAZANDO PARA DENTRO DO PALCO.
+   `src/estilo/casca.css:221`  .ds-panel h2, .ds-panel h3, .ds-panel h4 { color: var(--tx) }
+   Não é dívida do produto: é escopo nosso. O palco vive dentro do `.ds-panel`, e
+   qualquer título do componente real herdava o #16171a da DOCUMENTAÇÃO em vez do
+   Content/Primary. Só apareceu quando a linha do tempo passou a renderizar o
+   próprio `<h3>`. Mesma família do bloco 1, que cobria só a cor herdada do palco
+   — este cobre a regra ESPECÍFICA da casca, que ganhava na cascata. */
+/* Classe duplicada de propósito: `casca.css` é importada DEPOIS desta folha
+   (main.ts:20-21), então `.ds-panel h3` empatava em especificidade com
+   `.palco h3` e ganhava pela ordem. `.palco.palco` sobe para 0,2,1 e resolve sem
+   `!important` — o mesmo truque do `:root:root:root` dos tokens. */
+.palco.palco h1, .palco.palco h2, .palco.palco h3,
+.palco.palco h4, .palco.palco h5, .palco.palco h6,
+.cheia__palco.cheia__palco h1, .cheia__palco.cheia__palco h2,
+.cheia__palco.cheia__palco h3, .cheia__palco.cheia__palco h4,
+.cheia__palco.cheia__palco h5, .cheia__palco.cheia__palco h6 {
+  color: var(--content-primary);
+}
+
+/* 28 · SEGMENTO SELECIONADO — laranja escrito à mão, fora da paleta.
+   `components/segmentControl/SegmentControl.vue:145-147`
+       [type='radio']:checked + label { color: #cf6700 }
+   #CF6700 não existe no sistema — é um laranja solto, e dá 3,75:1 sobre o branco.
+   Sinalizar "este é o segmento ativo" é papel de MARCA, não de laranja: o
+   controle inteiro é da família de marca (o trilho selecionado usa
+   Background/BrandSubtle). Content/Brand dá 5,24:1 ✓.
+   TAREFA (produto): trocar o hex por `var(--content-brand)` na linha 146. */
+[type='radio']:checked + label.tab,
+.segment-control [type='radio']:checked + label {
+  color: var(--content-brand) !important;
+}
+
+/* 29 · PASSO PENDENTE DO WIZARD — o mesmo caso do bloco 16, em outro componente.
+   `components/wizard/AthWizard.vue:92` mostra `.wizard-step-label`, cujo estado
+   base herda o cinza de trilha (#CCCCCC = Border/Subtle) — 1,61:1, ilegível. Os
+   estados `.active` e `.finish` estão corretos (marca e sucesso); quem não passa
+   é o pendente, que é a maioria dos passos na maior parte do tempo.
+   Só apareceu agora porque o rótulo só existe quando `steps` chega com o campo
+   certo (`{step, label}`) — antes o wizard renderizava três bolinhas sem texto.
+   TAREFA (produto): declarar a cor do rótulo pendente (Content/Tertiary). */
+/* `!important` pelo mesmo motivo do bloco 16: a regra do SFC é
+   `.wizard-step-label[data-v-…]` — classe + atributo ganha de classe sozinha. */
+.wizard-step-label {
+  color: var(--content-tertiary) !important;
+}
+/* os estados que JÁ estão certos continuam mandando (marca e sucesso) */
+.active > .wizard-step-label {
+  color: var(--content-brand) !important;
+}
+.finish > .wizard-step-label {
+  color: var(--content-success) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Blocos 30 a 32: REGRAS DE USO do sistema que estavam decididas e não
+   aplicadas (2026-08-02).
+
+   Achado do Paulo olhando a tela: a regra 3 ("etiqueta ganha contorno quando a
+   linha está sob o mouse") existe desde 2026-07-31, está escrita na Parte 4 da
+   spec de implementação com o ponto de código exato, e nunca foi aplicada.
+   Nenhuma auditoria pegava: não há valor errado ali — há regra não implementada.
+   Foi o que motivou o `auditar-regras.cjs`, que mediu as 5 regras verificáveis e
+   achou violação em 3 delas.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* 30 · REGRA 3 · a etiqueta desaparece quando a linha muda de fundo.
+   Medido em hover: "Receita garantida" fica a 1,00:1 contra a linha
+   (#F3F1FF sobre #F2F2F2) e "Matriculado" a 1,04:1 — a pílula perde a forma
+   exatamente no momento em que a pessoa está apontando para ela.
+   Decisão do Paulo (2026-07-31): o contorno aparece SÓ no hover/seleção da linha;
+   em repouso o badge segue sem contorno. A borda existe sempre em `transparent`
+   e só troca de cor, para nada deslocar 1px.
+
+   `currentColor` em vez de um mapa família→cor: cada pílula JÁ tem `color` da
+   família dela (Content/Success, Content/Info, Content/Risk…), então a borda
+   herda a cor certa sozinha. A alternativa era listar as ~60 classes de estado do
+   `_table.scss` (`.active`, `.paid`, `.enrolled`, `.evaded`, `.atrisk`…) e mapear
+   cada uma — mais código, mais chance de esquecer uma, e envelheceria a cada
+   estado novo que o produto criasse.
+
+   TAREFA (produto): `DataTableRow.vue:151-167`, sob `&:hover` e
+   `&--selected`, com `:deep()` (o `<style>` é scoped e o badge vem de
+   `formatter` como string HTML, sem o atributo de scope). */
+[class*='label-status-bg'],
+.plan-zerodefault,
+.plan-gateway,
+.ath-tag {
+  border: 1px solid transparent;
+}
+/* `!important` aqui é para vencer o BLOCO 22, não o produto: ele fixa a borda da
+   tarja de cobertura com `!important` (o contorno de repouso, Border/BrandSubtle),
+   e `!important` vence qualquer especificidade. Sem isso a tarja ficava a 1,00:1
+   em hover mesmo com esta regra escrita — dois blocos meus disputando, e o do
+   repouso ganhando no estado errado. */
+tr:hover [class*='label-status-bg'],
+tr:hover .plan-zerodefault,
+tr:hover .plan-gateway,
+tr:hover .ath-tag,
+.data-table-row--selected [class*='label-status-bg'],
+.data-table-row--selected .plan-zerodefault,
+.data-table-row--selected .plan-gateway,
+.data-table-row--selected .ath-tag {
+  border-color: currentColor !important;
+}
+
+/* 31 · REGRA 5 · três modais escurecem o fundo com um cinza próprio.
+   `components/modal/AthModalCenter.vue:139`, `AthModalInformation.vue:128` e
+   `AthModal.vue:214` declaram `rgba(51, 51, 51, 0.5)` à mão. O sistema tem UM
+   valor de escurecimento para toda a plataforma — Overlay/Scrim rgba(0,0,0,.5) —
+   e três cinzas diferentes atrás de modais diferentes é justamente o tipo de
+   inconsistência que ninguém nota isolada e todo mundo sente no conjunto.
+   TAREFA (produto): trocar os três hex por `var(--overlay-50)`. */
+/* `.modal-mask` entrou depois: a regra R5 passava porque o AthModalCenter NÃO
+   ABRIA — o registry tinha `gatilhoProp: modelValue` e o componente recebe `show`.
+   Corrigido o gatilho, o modal abriu e a violação apareceu. É a terceira vez que
+   isto acontece no projeto: auditoria só vê o que renderiza, e um componente que
+   não abre esconde os próprios defeitos. */
+.modalVue__backdrop,
+.modal-backdrop,
+.modal-mask,
+[class*='modal'] > [class*='backdrop'],
+[class*='modal-mask'],
+.ath-modal__overlay {
+  background-color: var(--overlay-50) !important;
+}
+
+/* 32 · REGRA 7 · texto de marca sobre fundo de marca sem o degrau próprio.
+   `assets/scss/_utilities.scss:283-286` — a tarja de cobertura tem
+   `color: var(--ath-color-primary-900)` (o roxo cheio) sobre
+   `background: var(--ath-color-primary-50)` (o pastel de marca). O sistema tem um
+   degrau feito para esse par: Content/OnBrandSubtle, um passo mais escuro.
+   Content/Brand serve sobre branco e sobre o canvas; sobre o pastel da própria
+   família, quem serve é o OnBrandSubtle (6,11:1 contra 4,78:1).
+   TAREFA (produto): trocar por `var(--content-on-brand-subtle)` na linha 284. */
+.plan-zerodefault {
+  color: var(--content-on-brand-subtle) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Bloco 33: ANEL DE FOCO — as TAREFAS. As regras vivem em `estilo/foco.css`.
+
+   Por que separado: medido, o CSS do SFC vencia este arquivo mesmo com
+   `!important` e especificidade maior deste lado. As regras passaram a ser
+   injetadas como a ÚLTIMA folha (`lib/foco.ts`), onde a aplicação não depende de
+   contagem de especificidade. Este bloco fica como o registro do que o produto
+   precisa corrigir.
+
+   Achado do Paulo, navegando por Tab: o botão primário roxo mostra um anel escuro
+   COLADO no preenchimento. Documentado na Parte 2 da spec desde 31/07. Medindo
+   todos os focáveis um por um (`auditar-foco.cjs`): 66 achados — 15 de contraste,
+   29 sem afastamento, 18 sem anel nenhum, 4 com glow difuso no lugar de anel.
+   A auditoria de regras dizia "ok" porque media o anel de UM elemento.
+
+   TAREFAS (produto), na ordem de dependência:
+   · `assets/scss/input/_input.scss:84-91` — REMOVER o reset
+       `.form-control:focus { box-shadow: none !important; outline: 0 !important }`
+     É o bloqueador: enquanto existir, nenhum anel novo vale nos campos. Foi o que
+     deixou 18 focáveis sem anel algum.
+   · `components/buttons/EdsButton.vue:136-140` — `outline-offset: 0px` sobre o
+     preenchimento de marca dá 1,39:1 (no hover, 1,00:1). Precisa de afastamento e
+     do traço claro do halo duplo.
+   · `components/buttons/EdsButtonIcon.vue` — anel em `var(--ath-color-primary-200)`
+     (#E1DDF7) sobre preenchimento; mesmo caso.
+   · `components/inputs/AthInputCheckbox.vue:129-132` + as cópias em
+     `components/tree/lib/TreeRow.vue:272-275` e
+     `.../details/tabs/TabEnrollments.vue:274-277` — `outline: none` mais
+     `box-shadow: 0 0 4px 0 var(--ath-color-primary-700)`: glow difuso na MESMA cor
+     do fundo marcado, 1,00:1.
+   · `components/inputs/EdsInputSelect.vue:1250-1253` — botão de fechar dentro do
+     pill roxo, anel escuro com offset 1px.
+   · `components/tables/eds-table/.../DataTablePagination.vue` — a página ativa é
+     preenchida de marca e o anel é escuro.
+   Detalhe e tabela completa: Parte 2 de `.claude/references/ds-color-implementation-spec.md`.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+
+/* 34 · BOOTSTRAP e SWEETALERT2 — os dois temas de biblioteca que faltavam.
+   Achado da auditoria de VARIÁVEIS (3 rodadas idênticas, 2026-08-02): 14
+   variáveis de tema resolvendo fora da paleta no modo "novas" —
+   `--bs-link-color: #0d6efd`, `--bs-form-valid-color: #198754`,
+   `--swal2-confirm-button-background-color: #7066e0`…
+   O calendário (@vuepic) ganhou este mapa no bloco 6; o Bootstrap e o SweetAlert2
+   ficaram para trás porque as auditorias de PIXEL fecham em zero — os consumidores
+   dessas variáveis ou estão sobrescritos ponto a ponto ou só aparecem em telas de
+   formulário/alerta que o palco não exercita. A cadeia, porém, continua apontando
+   para as cores das bibliotecas, e qualquer uso novo vazaria.
+   Não é dívida do nosso DS: é tema de biblioteca, mapeado por variável — o mesmo
+   remédio, e a inspeção passa a mostrar o token novo na cadeia. */
+:root:root:root {
+  /* Bootstrap */
+  --bs-body-color: var(--content-primary);
+  --bs-body-bg: var(--background-surface);
+  --bs-secondary-color: var(--content-tertiary);
+  --bs-secondary-bg: var(--background-hover);
+  --bs-tertiary-bg: var(--background-hover);
+  --bs-highlight-color: var(--content-primary);
+  --bs-border-color: var(--border-faint);
+  --bs-code-color: var(--content-brand);
+  --bs-link-color: var(--content-brand);
+  --bs-link-hover-color: var(--content-on-brand-subtle);
+  --bs-form-valid-color: var(--content-success);
+  --bs-form-valid-border-color: var(--border-success);
+  --bs-form-invalid-color: var(--content-danger);
+  --bs-form-invalid-border-color: var(--border-danger);
+  /* SweetAlert2 */
+  --swal2-background: var(--background-surface);
+  --swal2-color: var(--content-secondary);
+  --swal2-confirm-button-background-color: var(--background-brand);
+  --swal2-deny-button-background-color: var(--background-danger);
+  --swal2-cancel-button-background-color: var(--background-neutral);
+}
