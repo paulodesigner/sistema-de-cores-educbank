@@ -61,12 +61,6 @@
     localStorage.setItem('ds.tema', t)
   })
 
-  function sair() {
-    if (confirm('Sair da plataforma? Você vai precisar digitar a senha de novo pra entrar.')) {
-      window.location.href = '/__logout'
-    }
-  }
-
   async function pintarConteudo() {
     await nextTick()
     if (caixaConteudo.value) enriquecer(caixaConteudo.value)
@@ -156,7 +150,6 @@
                   @click="tema = tema === 'escuro' ? 'claro' : 'escuro'">
             {{ tema === 'escuro' ? '☾' : '☀' }}
           </button>
-          <button class="ds-top__btn" aria-label="Sair" title="Sair" @click="sair">⏻</button>
         </div>
       </div>
     </header>
